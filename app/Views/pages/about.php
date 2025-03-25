@@ -2,21 +2,17 @@
 
 <?= $this->section('content'); ?>
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <h1>About Page</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero incidunt molestias error, odit,
-                voluptatibus
-                perferendis doloremque maxime animi mollitia dolorem qui ratione fugit, rerum officiis minus voluptatum
-                corporis
-                enim nesciunt.</p>
-            <?php foreach ($test as $value) {
-                echo $value . ' ';
-            }
-            // dd($test); //var_dump lalu die
-            // d($test); //var_dump
-            ?>
-        </div>
+    &nbsp;&nbsp;<span class="text-info border-bottom" style="font-size: small;">ABOUT SPIN CYCLE</span>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="intro-about">Selamat datang di Spin Cycle, solusi terbaik untuk pengelolaan laundry Anda!
+            Kami adalah tim pengembang yang berkomitmen menghadirkan teknologi yang mempermudah bisnis laundry dalam
+            mengelola pesanan, pelanggan, dan operasional sehari-hari. Dengan fitur lengkap dan tampilan yang
+            user-friendly, kami memastikan pengalaman yang lebih efisien bagi pemilik dan pelanggan laundry. <br><br>
+            ✔️ Meningkatkan efisiensi pengelolaan laundry dengan sistem yang modern. <br>
+            ✔️ Memberikan laporan yang akurat untuk membantu pengambilan keputusan bisnis.<br>
+            ✔️ Mempermudah komunikasi antara pelanggan dan penyedia layanan laundry.</div>
+        <div class="intro-about"></div>
     </div>
+
 </div>
 <?= $this->endSection(); ?>

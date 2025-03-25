@@ -7,9 +7,7 @@ class Pages extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Home | PWL',
-            'status' => 'active',
-
+            'title' => 'Home | Spin Cycle'
         ];
         return view('pages/home', $data);
 
@@ -17,8 +15,7 @@ class Pages extends BaseController
     public function about()
     {
         $data = [
-            'title' => 'About | PWL',
-            'status' => 'active',
+            'title' => 'About | Spin Cycle',
             'test' => ['Alfa', 'Emen', 'Abe']
         ];
         return view('pages/about', $data);
@@ -26,8 +23,7 @@ class Pages extends BaseController
     public function contact()
     {
         $data = [
-            'title' => 'Contact | PWL',
-            'status' => 'active',
+            'title' => 'Contact | Spin Cycle',
             'contact' => [
                 'tel' => '081246881584',
                 'alamat' => 'abekolin@outlook.com'

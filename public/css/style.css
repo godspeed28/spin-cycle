@@ -1,0 +1,61 @@
+li {
+    margin: 10px;
+}
+
+.active {
+    border-bottom: 3px solid #3498db;
+}
+
+.b-top {
+    border-top: 3px solid #3498db;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.bg-home {
+    background-image: url('/img/bg-home.jpg');
+    /* Pastikan path benar */
+    background-size: cover;
+    /* Menyesuaikan ukuran gambar agar penuh */
+    background-position: center;
+    /* Pusatkan gambar */
+    background-repeat: no-repeat;
+    /* Hindari gambar berulang */
+    width: 100%;
+    /* Pastikan elemen memenuhi seluruh lebar */
+    height: 90vh;
+    /* Buat tinggi sesuai tinggi layar */
+    display: flex;
+    /* Agar kontennya bisa diatur dengan flex */
+    align-items: center;
+    /* Pusatkan konten secara vertikal */
+    justify-content: center;
+    /* Pusatkan konten secara horizontal */
+    color: white;
+    /* Warna teks agar kontras dengan background */
+    text-align: center;
+    /* Rata tengah untuk teks */
+    font-family: Arial, sans-serif;
+    /* Gunakan font yang umum */
+}
+
+.about-img {
+    width: 50%;
+}
+
+.intro-home {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+#about {
+    width: 100%;
+}
+
+.intro-about {
+    padding: 10px;
+    width: 50%;
+}
