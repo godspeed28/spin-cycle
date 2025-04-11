@@ -2,17 +2,17 @@
 
 <?= $this->section('content'); ?>
 <div class="container">
-    &nbsp;&nbsp;<span class="text-info border-bottom" style="font-size: small;">ABOUT SPIN CYCLE</span>
-    <div class="d-flex justify-content-center align-items-center">
-        <div class="intro-about">Selamat datang di Spin Cycle, solusi terbaik untuk pengelolaan laundry Anda!
-            Kami adalah tim pengembang yang berkomitmen menghadirkan teknologi yang mempermudah bisnis laundry dalam
-            mengelola pesanan, pelanggan, dan operasional sehari-hari. Dengan fitur lengkap dan tampilan yang
-            user-friendly, kami memastikan pengalaman yang lebih efisien bagi pemilik dan pelanggan laundry. <br><br>
-            ✔️ Meningkatkan efisiensi pengelolaan laundry dengan sistem yang modern. <br>
-            ✔️ Memberikan laporan yang akurat untuk membantu pengambilan keputusan bisnis.<br>
-            ✔️ Mempermudah komunikasi antara pelanggan dan penyedia layanan laundry.</div>
-        <div class="intro-about"></div>
-    </div>
+    &nbsp;&nbsp;<span class="text-info border-bottom" style="font-size: small;">ABOUT US</span>
+    <section class="py-3 bg-white" id="about">
+        <div class="container">
+            <p class="text-muted">
+                Kami adalah penyedia layanan laundry profesional yang berdiri sejak tahun <strong>2023</strong>. Kami hadir untuk mempermudah hidup Anda dengan layanan cuci, setrika, dan antar-jemput pakaian yang cepat, bersih, dan terpercaya.
+                Dengan dukungan tenaga kerja berpengalaman dan peralatan modern, kami memastikan pakaian Anda dirawat dengan standar kualitas terbaik.
+            </p>
+            <a href="/Pages/services" class="btn btn-primary mt-3">Lihat Layanan Kami</a>
+        </div>
+    </section>
+
 
 </div>
 <?= $this->endSection(); ?>

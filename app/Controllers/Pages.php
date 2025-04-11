@@ -10,7 +10,6 @@ class Pages extends BaseController
             'title' => 'Home | Spin Cycle'
         ];
         return view('pages/home', $data);
-
     }
     public function about()
     {
@@ -25,10 +24,18 @@ class Pages extends BaseController
         $data = [
             'title' => 'Contact | Spin Cycle',
             'contact' => [
-                'tel' => '081246881584',
+                'tel' => '6281236262924',
+                'tl' => '+62 812-3626-2924',
                 'alamat' => 'abekolin@outlook.com'
             ]
         ];
         return view('pages/contact', $data);
+    }
+    public function services()
+    {
+        $data = [
+            'title' => 'Services | Spin Cycle'
+        ];
+        return view('pages/services', $data);
     }
 }

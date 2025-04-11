@@ -21,6 +21,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
+                <a href="/Login/" class="btn btn-primary" style="margin-right: 10px;">Login</a>
+                <a href="" class="btn btn-outline-primary" style="margin-right: 15px;">Daftar</a>
                 <a class="nav-link <?= (uri_string() == '') ? 'active' : '' ?>" href="/">Home</a>
                 <a class="nav-link <?= (uri_string() == 'Pages/about') ? 'active' : '' ?>" href="/Pages/about">About</a>
                 <a class="nav-link <?= (uri_string() == 'Pages/services') ? 'active' : '' ?>"

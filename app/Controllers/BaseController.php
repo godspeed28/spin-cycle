@@ -27,6 +27,7 @@ abstract class BaseController extends Controller
      * @var CLIRequest|IncomingRequest
      */
     protected $request;
+    protected $session; // ← Tambahkan ini
 
 
     /**
@@ -57,5 +58,6 @@ abstract class BaseController extends Controller
 
         // E.g.: $this->session = service('session');
         $this->nama = 'Abe';
+        $this->session = \Config\Services::session(); // ← Tambahkan ini
     }
 }
