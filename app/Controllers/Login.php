@@ -8,7 +8,11 @@ class Login extends BaseController
 {
     public function index()
     {
-        return view('login');
+        $data = [
+            'title' => 'Login | SpinCycle',
+            'title2' => 'Log in'
+        ];
+        return view('login', $data);
     }
 
     public function auth()
@@ -26,7 +30,7 @@ class Login extends BaseController
                     'username' => $data['username'],
                     'logged_in' => true
                 ]);
-                return redirect()->to('/dashboard');
+                return redirect()->to('/');
             } else {
                 return redirect()->back()->with('error', 'Password salah');
             }
@@ -38,6 +42,6 @@ class Login extends BaseController
     public function logout()
     {
         session()->destroy();
-        return redirect()->to('/login');
+        return redirect()->to('/');
     }
 }

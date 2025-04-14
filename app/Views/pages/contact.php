@@ -15,7 +15,7 @@
                                 <h5 class="text-info border-bottom" style="font-size: medium;">Info Kontak</h5>
                                 <p><strong>📍 Alamat:</strong> Jl. Nakula Raya No. 36, Kota Semarang</p>
                                 <p><strong>📱 Telepon / WA:</strong> <a href="https://wa.me/<?= esc($contact['tel']) ?>" target="_blank"><?= esc($contact['tl']) ?></a></p>
-                                <p><strong>📧 Email:</strong> info@laundrymu.com</p>
+                                <p><strong>📧 Email:</strong> spincyclelaundry@gmail.com</p>
                                 <p><strong>🕒 Jam Operasional:</strong> 08.00 - 21.00 (Setiap Hari)</p>
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3960.2327909451096!2d110.4083611!3d-6.9818333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sid!4v1744366896748!5m2!1sen!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>

@@ -18,9 +18,9 @@
                         <label for="email" class="form-label">Email</label>
                         <div class="input-group">
                             <span class="input-group-text">
-                                <i class="fa-solid fa-user"></i>
+                                <i class="fas fa-envelope"></i>
                             </span>
-                            <input type="text" id="username" name="username" class="form-control" placeholder="Masukkan username" required>
+                            <input type="text" id="username" name="username" class="form-control" placeholder="Masukkan email" required>
                         </div>
                     </div>
                     <div class="mb-3">
@@ -34,7 +34,7 @@
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Login</button>
                 </form>
-                <p class="text-center mt-3">Belum punya akun? <a href="/Daftar/">Daftar</a></p>
+                <p class="text-center mt-3">Sudah punya akun? <a href="/Login/">Log in</a></p>
                 <hr>
                 <p class="text-center">Atau login dengan:</p>
                 <div class="text-center social-icons">
