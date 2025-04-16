@@ -15,3 +15,4 @@ $routes->get('/Login', [\App\Controllers\Login::class, 'index']);
 $routes->post('/Login/auth', [\App\Controllers\Login::class, 'auth']);
 $routes->get('Login/logout', [\App\Controllers\Login::class, 'logout']);
 $routes->get('/Wash', [\App\Controllers\Wash::class, 'index']);
+$routes->get('/Wash/checkout', [\App\Controllers\Wash::class, 'checkout']);

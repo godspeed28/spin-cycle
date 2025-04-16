@@ -13,14 +13,32 @@
             <?php endif; ?>
 
             <div class="login-card">
-                <form action="/Login/auth" method="post">
+                <form action="/register" method="post">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Username</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <input type="text" id="username" name="username" class="form-control" placeholder="Masukkan username" required>
+                        </div>
+                    </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
                         <div class="input-group">
                             <span class="input-group-text">
                                 <i class="fas fa-envelope"></i>
                             </span>
-                            <input type="text" id="username" name="username" class="form-control" placeholder="Masukkan email" required>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Masukkan email" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Nomor Telepon</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="fas fa-phone"></i>
+                            </span>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Masukkan nomor telepon" required pattern="[0-9]{10,15}">
                         </div>
                     </div>
                     <div class="mb-3">
@@ -32,15 +50,13 @@
                             <input type="password" id="password" name="password" class="form-control" placeholder="Masukkan password" required>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                    <button type="submit" class="btn btn-primary w-100">Daftar</button>
                 </form>
                 <p class="text-center mt-3">Sudah punya akun? <a href="/Login/">Log in</a></p>
                 <hr>
                 <p class="text-center">Atau login dengan:</p>
                 <div class="text-center social-icons">
                     <i class="fab fa-google"></i>
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
                 </div>
             </div>
     </div>

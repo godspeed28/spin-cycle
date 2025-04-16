@@ -15,7 +15,7 @@
             <div class="login-card">
                 <form action="/Login/auth" method="post">
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
+                        <label for="email" class="form-label">Username</label>
                         <div class="input-group">
                             <span class="input-group-text">
                                 <i class="fa-solid fa-user"></i>
@@ -39,8 +39,6 @@
                 <p class="text-center">Atau login dengan:</p>
                 <div class="text-center social-icons">
                     <i class="fab fa-google"></i>
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
                 </div>
             </div>
     </div>
