@@ -2,12 +2,15 @@
 
 namespace App\Controllers;
 
+use App\Models\UserModel;
+
+
 class Pages extends BaseController
 {
     public function index()
     {
         $data = [
-            'title' => 'Home | Spin Cycle'
+            'title' => 'Home | Spin Cycle',
         ];
         return view('pages/home', $data);
     }
@@ -15,6 +18,11 @@ class Pages extends BaseController
     {
         $data = [
             'title' => 'About | Spin Cycle',
+            'contact' => [
+                'tel' => '6281236262924',
+                'tl' => '+62 812-3626-2924',
+                'alamat' => 'abekolin@outlook.com'
+            ],
             'test' => ['Alfa', 'Emen', 'Abe']
         ];
         return view('pages/about', $data);
