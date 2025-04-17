@@ -28,7 +28,7 @@
                 <?php endif; ?>
 
                 <li class="nav-item">
-                    <a class="nav-link <?= (uri_string() == '') ? 'active' : '' ?>" href="/">Hom</a>
+                    <a class="nav-link <?= (uri_string() == '') ? 'active' : '' ?>" href="/">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?= (uri_string() == 'Pages/about') ? 'active' : '' ?>" href="/Pages/about">About</a>
