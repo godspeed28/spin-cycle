@@ -34,7 +34,7 @@
                         <!-- Service 3 (Dry Cleaning) - FIXED -->
                         <div class="col-md-6 col-lg-3">
                             <div class="card h-100 shadow-sm">
-                                <img src="https://cdn-icons-png.flaticon.com/512/869/869636.png" class="card-img-top w-50 mx-auto mt-3" alt="Dry Cleaning" style="height: 96px;">
+                                <img src="https://cdn-icons-png.flaticon.com/512/869/869636.png" class="card-img-top w-50 mx-auto mt-5 mb-3" alt="Dry Cleaning" style="height: 96px;">
                                 <div class="card-body">
                                     <h5 class="card-title">Dry Cleaning</h5>
                                     <p class="card-text">Perawatan profesional untuk jas, gaun pesta, dan bahan khusus lainnya.</p>
@@ -61,5 +61,6 @@
 
         </div>
     </div>
+
 </div>
 <?= $this->endSection(); ?>

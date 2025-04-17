@@ -27,18 +27,6 @@ class Pages extends BaseController
         ];
         return view('pages/about', $data);
     }
-    public function contact()
-    {
-        $data = [
-            'title' => 'Contact | Spin Cycle',
-            'contact' => [
-                'tel' => '6281236262924',
-                'tl' => '+62 812-3626-2924',
-                'alamat' => 'abekolin@outlook.com'
-            ]
-        ];
-        return view('pages/contact', $data);
-    }
     public function services()
     {
         $data = [

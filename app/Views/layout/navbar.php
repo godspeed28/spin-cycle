@@ -36,9 +36,6 @@
                 <li class="nav-item">
                     <a class="nav-link <?= (uri_string() == 'Pages/services') ? 'active' : '' ?>" href="/Pages/services">Services</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link <?= (uri_string() == 'Pages/contact') ? 'active' : '' ?>" href="/Pages/contact">Contact</a>
-                </li>
 
                 <?php if (session()->get('logged_in')) : ?>
                     <li class="nav-item">
