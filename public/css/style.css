@@ -1,3 +1,13 @@
+a.bg-info:hover {
+  outline: 2px solid #0dcaf0; /* Warna info Bootstrap */
+  outline-offset: 2px;         /* Jarak outline dari elemen */
+}
+input.bg-info:hover {
+  outline: 2px solid #0dcaf0; /* Warna info Bootstrap */
+  outline-offset: 2px;         /* Jarak outline dari elemen */
+}
+
+
 li {
     margin: 10px;
 }

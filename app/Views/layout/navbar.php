@@ -44,13 +44,8 @@
                 <?php endif; ?>
 
             </ul>
-            <?php if (!session()->get('logged_in')) : ?>
-                <a href="/Login/" id="login" class="btn btn-primary">Login</a>
-                &nbsp;&nbsp;
-                <a href="/Daftar/" id="daftar" class="btn btn-outline-primary">Daftar</a>
-            <?php else : ?>
-                <a href="/Login/logout" id="logout" class="btn btn-danger" style="margin-left: 10px;">Logout</a>
-            <?php endif; ?>
+            &nbsp;
+            <a href="" class="bg-info p-2 text-light fw-bold text-decoration-none">Schedule a Pickup</a>
         </div>
 
     </div>

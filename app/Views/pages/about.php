@@ -42,7 +42,7 @@
                         <!-- <label for="message" class="form-label">Pesan</label> -->
                         <textarea class="form-control" id="message" rows="4" placeholder="Tulis pesan atau pertanyaan Anda..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Kirim</button>
+                    <input type="submit" value="Kirim" class="bg-info text-light p-1 fw-bold border-0 text-decoration-none">
                 </form>
             </div>
         </div>

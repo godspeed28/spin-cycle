@@ -12,10 +12,11 @@
                         <!-- Service 1 -->
                         <div class="col-md-6 col-lg-3">
                             <div class="card h-100 shadow-sm">
-                                <img src="https://img.icons8.com/color/96/000000/washing-machine.png" class="card-img-top w-50 mx-auto mt-3" alt="Wash & Fold">
+                                <img width="50" height="50" src="https://img.icons8.com/ios/50/washing.png" class="mx-auto mt-5" alt="washing" />
                                 <div class="card-body">
                                     <h5 class="card-title">Regular Wash & Fold</h5>
                                     <p class="card-text">Cuci dan lipat pakaian sehari-hari dengan proses higienis dan cepat.</p>
+                                    <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
                                 </div>
                             </div>
                         </div>
@@ -23,10 +24,12 @@
                         <!-- Service 2 -->
                         <div class="col-md-6 col-lg-3">
                             <div class="card h-100 shadow-sm">
-                                <img src="https://img.icons8.com/color/96/000000/clock--v1.png" class="card-img-top w-50 mx-auto mt-3" alt="Express Laundry">
+                                <img width="50" height="50" src="https://img.icons8.com/ios/50/laundry-bag.png" class="mx-auto mt-5" alt="laundry-bag" />
                                 <div class="card-body">
                                     <h5 class="card-title">Express Laundry</h5>
                                     <p class="card-text">Layanan cepat, pakaian bersih dan rapi dalam 4–6 jam saja.</p>
+                                    <br>
+                                    <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
                                 </div>
                             </div>
                         </div>
@@ -34,10 +37,11 @@
                         <!-- Service 3 (Dry Cleaning) - FIXED -->
                         <div class="col-md-6 col-lg-3">
                             <div class="card h-100 shadow-sm">
-                                <img src="https://cdn-icons-png.flaticon.com/512/869/869636.png" class="card-img-top w-50 mx-auto mt-5 mb-3" alt="Dry Cleaning" style="height: 96px;">
+                                <img width="50" height="50" src="https://img.icons8.com/ios/50/dryclean-short-cycle.png" class="mx-auto mt-5" alt="dryclean-short-cycle" />
                                 <div class="card-body">
                                     <h5 class="card-title">Dry Cleaning</h5>
                                     <p class="card-text">Perawatan profesional untuk jas, gaun pesta, dan bahan khusus lainnya.</p>
+                                    <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
                                 </div>
                             </div>
                         </div>
@@ -45,10 +49,11 @@
                         <!-- Service 4 -->
                         <div class="col-md-6 col-lg-3">
                             <div class="card h-100 shadow-sm">
-                                <img src="https://img.icons8.com/color/96/000000/iron.png" class="card-img-top w-50 mx-auto mt-3" alt="Ironing">
+                                <img width="50" height="50" src="https://img.icons8.com/ios/50/iron.png" class="mx-auto mt-5" alt="ironing" />
                                 <div class="card-body">
                                     <h5 class="card-title">Ironing Only</h5>
-                                    <p class="card-text">Setrika pakaian kamu biar makin rapi dan siap dipakai.</p>
+                                    <p class="card-text">Setrika pakaian kamu biar makin rapi dan siap dipakai.</p><br>
+                                    <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
                                 </div>
                             </div>
                         </div>
