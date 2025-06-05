@@ -1,3 +1,37 @@
+/* slide show */
+.carousel-item .card {
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .three-cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .three-cards .card {
+      flex: 1 1 0;
+      max-width: 30%;
+    }
+    .card-body {
+      text-align: center;
+    }
+   .dot {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 0 6px;
+    background: gray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .dot.active {
+    background: skyblue;
+  }
+
+  /* slide show end */
+
+
 a.bg-info:hover {
   outline: 2px solid #0dcaf0; /* Warna info Bootstrap */
   outline-offset: 2px;         /* Jarak outline dari elemen */
@@ -12,7 +46,7 @@ li {
     margin: 10px;
 }
 
-.active {
+.active-nav {
     border-bottom: 3px solid #3498db;
 }
 

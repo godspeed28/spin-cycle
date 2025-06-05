@@ -6,7 +6,6 @@
                 <a href="/Pages/privacy" class="text-info text-decoration-none">Privacy Policy</a> |
                 <a href="/Pages/terms" class="text-info text-decoration-none">Terms of Service</a>
             </p>
-            <style></style>
             <div class="mt-2">
                 <a href="https://facebook.com" class="text-dark me-3"><i class="bi bi-facebook"></i></a>
                 <a href="https://instagram.com" class="text-dark me-3"><i class="bi bi-instagram"></i></a>

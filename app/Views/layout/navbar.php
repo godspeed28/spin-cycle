@@ -1,4 +1,4 @@
-<nav class="navbar mb-3 navbar-expand-lg bg-body-transparent">
+<nav class="navbar mb-3 navbar-expand-lg fixed-top " style="background-color: white;">
     <div class="container">
         <a class="navbar-brand" href="#">
             <svg width="50" height="50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
@@ -28,13 +28,13 @@
                 <?php endif; ?>
 
                 <li class="nav-item">
-                    <a class="nav-link <?= (uri_string() == '') ? 'active' : '' ?>" href="/">Home</a>
+                    <a class="nav-link <?= (uri_string() == '') ? 'active-nav' : '' ?>" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= (uri_string() == 'Pages/about') ? 'active' : '' ?>" href="/Pages/about">About</a>
+                    <a class="nav-link <?= (uri_string() == 'Pages/about') ? 'active-nav' : '' ?>" href="/Pages/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= (uri_string() == 'Pages/services') ? 'active' : '' ?>" href="/Pages/services">Services</a>
+                    <a class="nav-link <?= (uri_string() == 'Pages/services') ? 'active-nav' : '' ?>" href="/Pages/services">Services</a>
                 </li>
 
                 <?php if (session()->get('logged_in')) : ?>
