@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
 
-<div class="container d-flex flex-column bg-home" style="margin-top: 90px;">
+<div class=" d-flex flex-column bg-home" style="margin-top: 10px;">
     <?php $kata = "admin123";
     // dd(password_hash($kata, PASSWORD_DEFAULT)); 
     ?>
@@ -13,10 +13,10 @@
 <br>
 <hr class="text-info w-50 mx-auto">
 
-<div class="container d-flex text-center mt-5 mb-5">
+<div class="container d-xl-flex text-center mt-5 mb-5">
 
-    <div class="container position-relative"><img height="470" width="600" src="/img/washing-machine.jpg" alt="">
-        <p class="bg-info position-absolute z-2 fw-bold text-light" style="width: 140px;
+    <div class="container position-relative"><img class="img-fluid-custom" height="450" width="600" src="/img/washing-machine.jpg" alt="">
+        <p class="bg-info d-none d-xl-block position-absolute z-2 fw-bold text-light " style="width: 140px;
     height: 140px;
     padding: 0px;
     margin-top:-160px;
@@ -38,9 +38,9 @@
                 </ul>
             </div>
             <div style="margin-top:20px; width: 2px; height: 130px; background-color: #ccc;"></div>
-            <div class="container text-center mt-5"><i class="bg-light rounded-circle p-3 bi bi-telephone-fill text-info"></i>
-                <p class="text-secondary mt-4">Call for Quality Service</p>
-                <p class="fw-bold text-dark" style="margin-top:-20px;">+62 812-3456-7890</p>
+            <div class="container card-1 text-center mt-4"><i class="phone bg-light rounded-circle p-3 bi bi-telephone-fill text-info"></i>
+                <p class="text-secondary mt-3">Call for Quality Service</p>
+                <p class="fw-bold text-dark" style="margin-top:-20px;"><?= $tel ?></p>
             </div>
         </div>
     </div>
@@ -52,7 +52,7 @@
 </style>
 <div class="container text-dark text-center" style="max-width: 900px;">
     <div class="d-flex">
-        <div class="flex-fill bg-light p-2 align-items-center">
+        <div class="underline-hover flex-fill bg-light p-2 align-items-center">
             <div class="me-3 mt-2">
                 <i class="bi bi-clock fs-1 text-info"></i>
             </div>
@@ -63,7 +63,7 @@
             </div>
         </div>
 
-        <div class="flex-fill bg-light p-2 align-items-center" style="border-start: 1px solid rgba(0,0,0,0.1);">
+        <div class="underline-hover flex-fill bg-light p-2 align-items-center" style="border-start: 1px solid rgba(0,0,0,0.1);">
             <div class="me-3 mt-2">
                 <i class="bi bi-wallet2 fs-1 text-info"></i>
             </div>
@@ -74,7 +74,7 @@
             </div>
         </div>
 
-        <div class="flex-fill bg-light p-2 align-items-center" style="border-start: 1px solid rgba(0,0,0,0.1);">
+        <div class="underline-hover flex-fill bg-light p-2 align-items-center" style="border-start: 1px solid rgba(0,0,0,0.1);">
             <div class="me-3 mt-2">
                 <i class="fas fa-leaf fs-1 mt-3 text-info"></i>
             </div>
@@ -90,6 +90,19 @@
 <div class="container mt-5">
     <p class="text-center"><b class="text-info">[Our Services]</b>
     </p>
+    <style>
+        @media (max-width: 768px) {
+            .three-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .three-cards .card {
+                /* flex: 1 1 0; */
+                max-width: 100% !important;
+            }
+        }
+    </style>
     <p class="intro-home text-center">Dry Cleaning & Laundry</p>
     <section class="py-1 mt-1 ">
         <div class="container">
@@ -100,27 +113,27 @@
                             <div class="card p-3">
                                 <img width="50" height="50" src="https://img.icons8.com/ios/50/washing.png" class="mx-auto mt-5" alt="washing" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Regular Wash & Fold</h5>
+                                    <h5 class="card-title text">Regular Wash & Fold</h5>
                                     <p class="card-text">Cuci dan lipat pakaian sehari-hari dengan proses higienis dan cepat.</p>
-                                    <br>
-                                    <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
+                                    <!-- <br> -->
+                                    <!-- <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a> -->
                                 </div>
                             </div>
                             <div class="card p-3">
                                 <img width="50" height="50" src="https://img.icons8.com/ios/50/laundry-bag.png" class="mx-auto mt-5" alt="laundry-bag" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Express Laundry</h5>
+                                    <h5 class="card-title text">Express Laundry</h5>
                                     <p class="card-text">Layanan cepat, pakaian bersih dan rapi dalam 4–6 jam saja.</p>
-                                    <br>
-                                    <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
+                                    <!-- <br>
+                                    <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a> -->
                                 </div>
                             </div>
                             <div class="card p-3">
                                 <img width="50" height="50" src="https://img.icons8.com/ios/50/dryclean-short-cycle.png" class="mx-auto mt-5" alt="dryclean-short-cycle" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Dry Cleaning</h5>
+                                    <h5 class="card-title text">Dry Cleaning</h5>
                                     <p class="card-text">Perawatan profesional untuk jas, gaun pesta, dan bahan khusus lainnya.</p><br>
-                                    <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
+                                    <!-- <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a> -->
                                 </div>
                             </div>
                         </div>
@@ -131,26 +144,26 @@
                             <div class="card p-3">
                                 <img width="50" height="50" src="https://img.icons8.com/ios/50/iron.png" class="mx-auto mt-5" alt="ironing" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Ironing Only</h5>
+                                    <h5 class="card-title text">Ironing Only</h5>
                                     <p class="card-text">Setrika pakaian kamu biar makin rapi dan siap dipakai.</p><br>
-                                    <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
+                                    <!-- <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a> -->
                                 </div>
                             </div>
                             <div class="card p-3">
                                 <img width="50" height="50" src="https://img.icons8.com/ios/50/washing.png" class="mx-auto mt-5" alt="washing" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Regular Wash & Fold</h5>
+                                    <h5 class="card-title text">Regular Wash & Fold</h5>
                                     <p class="card-text">Cuci dan lipat pakaian sehari-hari dengan proses higienis dan cepat.</p><br>
-                                    <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
+                                    <!-- <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a> -->
                                 </div>
                             </div>
                             <div class="card p-3">
                                 <img width="50" height="50" src="https://img.icons8.com/ios/50/laundry-bag.png" class="mx-auto mt-5" alt="laundry-bag" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Express Laundry</h5>
+                                    <h5 class="card-title text">Express Laundry</h5>
                                     <p class="card-text">Layanan cepat, pakaian bersih dan rapi dalam 4–6 jam saja.</p>
-                                    <br>
-                                    <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
+                                    <!-- <br> -->
+                                    <!-- <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a> -->
                                 </div>
                             </div>
                         </div>
@@ -167,8 +180,8 @@
 
 <hr class="text-info w-50 mx-auto">
 
-<div class="container d-flex mt-5">
-    <div class="container text-start" style="margin-left:100px;">
+<div class="container d-md-flex mt-5">
+    <div class="container text-start mt-100px">
         <p><b class="text-info">Get Your Clothes Collected & Delivered</b></p>
         <p class="intro-home">How We Work</p>
         <p style="max-width: 500px;">
@@ -177,17 +190,27 @@
         <p style="max-width: 500px;">
             We have been in the laundry business for more than 12 years and would love to earn your business. Try us today and save $10 Off your first laundry service of 20 pounds or more.
         </p>
+        <br>
+        <a class="bg-info text-light p-2 fw-bold text-decoration-none" href="">Get Service Now</a>
     </div>
 
-
-    <div class="container">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum soluta est doloremque eveniet ex aliquam facere dolorem totam hic, maiores at quo quam itaque dolor. Voluptas quas est voluptatum beatae.
+    <div class="container d-md-flex mt-3 mtmin-130px">
+        <div class="container"><img height="300" width="300" src="/img/laundry-service.png" alt=""></div>
+        <div class="container mt-5 mt-1px">
+            <h3>
+                <p>We <span class="text-info">Clean</span> Your Clothes</p>
+            </h3>
+            <p>Our facilities are so good we guarantee you'll be satisfied we put a quality guarantee on all items</p>
+        </div>
     </div>
-
 
 </div>
 
+<hr class="text-info w-50 mt-5 mx-auto">
 
+<div class="container mt-5">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3960.2327909451096!2d110.4083611!3d-6.9818333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sid!4v1744366896748!5m2!1sen!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 
 
 

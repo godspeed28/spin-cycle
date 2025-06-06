@@ -87,12 +87,57 @@ li {
     /* Gunakan font yang umum */
 }
 
+#cart-menu {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    width: 300px;
+    background-color: #f8f9fa;
+    border-left: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+#cart-icon {
+    font-size: 2rem;
+    margin-left: 60px;margin-right: 20px;margin-top: 12px;
+    cursor: pointer;
+}
+
+@media(max-width:992px){
+    .cart-icon{
+        margin-left: 15px !important;
+    }
+    .badge{
+        padding-right:8px;
+        left: 25px !important;
+    }
+    
+}
+
+
+.bg-page {
+    background: url('/img/unsplash.jpg') center top / cover no-repeat;
+    height: 40vh; /* Potong bagian bawah, tampilkan sedikit bagian atas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-top: 100px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.hover-menu:hover{
+    color: blue !important;
+    transition: 0.3s;
+}
+
 .about-img {
     width: 50%;
 }
 
 .intro-home {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -158,5 +203,167 @@ li {
         margin-top:10px;
         
     }
+    .mt-1px{
+        margin-top: 1px !important;
+    }
   }
+
+  @media(min-width:992px){
+    .mt-100px{
+        margin-left: 100px;
+    }
+    .mtmin-130px{
+        margin-left: -130px;
+    }
+    .ukuran-img-about{
+    height: 300px;
+    width: 400px;
+   }
+    
+  }
+   @media(max-width:992px){
+   .ukuran-img-about{
+    height: 200px;
+    width: 300px;
+   }
+  }
+
+  /* about */
+  .about-circle{
+    background-color: #fcf4f4;
+    box-shadow: 0 4px 8px rgb(206, 202, 202);
+    padding: 5px;
+    border-radius:100px;
+  }
+  /* aboutend */
+
+  /* contact */
+  @media(min-width:768px){
+    .pindah-bawah{
+        position: absolute;
+        margin-left: 150px;
+    }
+  }
+  /* contactsend */
+
+  /* underline hover effect */
+
+ .underline-hover {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      color: #000;
+    }
+
+    .underline-hover::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 3px;
+      background-color: #0dcaf0;
+      transition: all 0.4s ease;
+      transform: translateX(-50%);
+    }
+
+    .underline-hover:hover::after {
+      width: 100%;
+    }
+
+    .text {
+      position: relative;
+      display: inline-block;
+      color: #000;
+    }
+
+    .text::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: #0dcaf0;
+      transition: width 0.4s ease;
+      transform: translateX(-50%);
+    }
+
+    .card:hover .text {
+      color:#0dcaf0;
+      transition: 0.3s;
+    }
+
+    .card:hover{
+        cursor: pointer;
+    }
+
+    .card:hover .text::after {
+      width: 100%;
+    }
+
+    .card-2{
+        transition: all 0.3s ease;
+    }
+
+    .card-2:hover{
+        transform: translateY(-10px);
+    }
+
+    /* underline hover end */
+
+    /* scroll to top */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      display: none;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      padding: 10px 14px;
+    }
+
+    /* scroll to top end */
+  
+    @media (max-width:768px){
+        .img-fluid-custom{
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        }
+    }
+
+     .icon {font-size: 50px;display: inline-block;transition: transform 0.3s ease; }
+     .card:hover .icon {animation: shake 0.5s;}
+     .phone {display: inline-block;transition: transform 0.3s ease; }
+     .card-1:hover{
+        cursor: pointer;
+     }
+     .card-1:hover .phone {
+        animation: shake 0.5s infinite;}
+
+                    @keyframes shake {
+                        0% {
+                            transform: translateX(0);
+                        }
+
+                        25% {
+                            transform: translateX(-5px);
+                        }
+
+                        50% {
+                            transform: translateX(5px);
+                        }
+
+                        75% {
+                            transform: translateX(-5px);
+                        }
+
+                        100% {
+                            transform: translateX(0);
+                        }
+                    }
+
+
   

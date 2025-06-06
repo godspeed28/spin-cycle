@@ -1,55 +1,142 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
-<div class="container" style="margin-top: 90px;">
-    &nbsp;&nbsp;<span class="text-info border-bottom" style="font-size: small;">ABOUT US</span>
-    <section class="py-3 bg-white" id="about">
-        <div class="container">
-            <p class="text-muted">
-                Kami adalah penyedia layanan laundry profesional yang berdiri sejak tahun <strong>2023</strong>. Hadir untuk mempermudah hidup Anda dengan layanan cuci, setrika, dan antar-jemput pakaian yang cepat, bersih, dan terpercaya.
-                Dengan dukungan tenaga kerja berpengalaman dan peralatan modern, kami memastikan pakaian Anda dirawat dengan standar kualitas terbaik.
-            </p>
-            <!-- <a href="/Pages/services" class="btn btn-primary mt-3">Lihat Layanan Kami</a> -->
-        </div>
-    </section>
-    <div class="row g-4 py-1 mt-1 bg-light">
-        <!-- Info Kontak -->
-        <div class="col-md-6">
-            <div class="bg-white shadow-sm rounded-4 p-4">
-                <h5 class="text-info border-bottom" style="font-size: medium;">Info Kontak</h5>
-                <p><strong>📍 Alamat:</strong> Jl. Nakula Raya No. 36, Kota Semarang</p>
-                <p><strong>📱 Telepon / WA:</strong> <a href="https://wa.me/<?= esc($contact['tel']) ?>" target="_blank"><?= esc($contact['tl']) ?></a></p>
-                <p><strong>📧 Email:</strong> spincyclelaundry@gmail.com</p>
-                <p><strong>🕒 Jam Operasional:</strong> 08.00 - 21.00 (Setiap Hari)</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3960.2327909451096!2d110.4083611!3d-6.9818333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sid!4v1744366896748!5m2!1sen!2sid" width="100%" height="110" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
 
-        <!-- Formulir Pesan -->
-        <div class="col-md-6">
-            <div class="bg-white shadow-sm rounded-4 p-4 h-100">
-                <h5 class="text-info border-bottom" style="font-size:medium;">Kirim Pesan</h5>
-                <form>
-                    <div class="mb-3">
-                        <!-- <label for="name" class="form-label">Nama</label> -->
-                        <input type="text" class="form-control" id="name" placeholder="Masukkan nama Anda">
-                    </div>
-                    <div class="mb-3">
-                        <!-- <label for="email" class="form-label">Email / No. HP</label> -->
-                        <input type="email" class="form-control" id="email" placeholder="Masukkan kontak Anda">
-                    </div>
-                    <div class="mb-3">
-                        <!-- <label for="message" class="form-label">Pesan</label> -->
-                        <textarea class="form-control" id="message" rows="4" placeholder="Tulis pesan atau pertanyaan Anda..."></textarea>
-                    </div>
-                    <input type="submit" value="Kirim" class="bg-info text-light p-1 fw-bold border-0 text-decoration-none">
-                </form>
-            </div>
+<div class=" text-start d-flex flex-column bg-page">
+    <h5 class="align-self-start" style="margin-left:150px;"><a href="/" class="hover-menu text-decoration-none text-info">Home</a> / About</h5>
+    <br>
+    <h1 class="align-self-start fw-bold" style="margin-left:150px;">About</h1>
+</div>
+
+<hr class="text-info w-50 mx-auto">
+
+<div class="container d-md-flex text-center mt-5 mb-5">
+
+    <div class="container position-relative">
+        <img class="img-fluid" height="470" width="600" src="/img/clean-clothes.jpg" alt="">
+        <img src="/img/classify-clothes.jpg" alt="Gambar baru"
+            class="position-absolute bottom-0 start-0 ukuran-img-about">
+    </div>
+
+    <div class="container text-start">
+
+        <b class="text-info">2 Years of Experience</b>
+        <p class="intro-home">Your Dry Cleaning and Laundry. Done.</p>
+        <p>We are professionals in the laundry and dry cleaning business, which means we always stay up to date on the latest technologies, cleaning methods, and solutions for dealing with stains or delicate fabrics. Plus, we maintain the highest standards of business integrity by following local and national regulations and environmental safety rules. We are passionate about changing the way you think about laundry!</p>
+
+
+        <div class="container">
+            <ul class="list-unstyled">
+                <li><i class="bi bi-check-circle-fill text-primary"></i> Eco-friendly cleaning processes</li>
+                <li><i class="bi bi-check-circle-fill text-primary"></i> Fast turnaround time</li>
+                <li><i class="bi bi-check-circle-fill text-primary"></i> Free pick-up and delivery service</li>
+                <li><i class="bi bi-check-circle-fill text-primary"></i> Best Quality</li>
+            </ul>
         </div>
 
     </div>
 
+</div>
 
+<hr class="text-info w-50 mx-auto">
+
+<div class="container">
+    <p class="text-info text-center"><b>Our Advantages</b></p>
+    <p class="intro-home text-center">Why Choose Us</p>
+    <div class="container my-5">
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="card bg-transparent border-0 shadow-none text-dark " style="backdrop-filter: blur(10px);">
+                    <div class="card-body">
+                        <i class="about-circle bi bi-lightbulb text-info fs-3"></i>
+                        &nbsp;
+                        <h5 class="card-title mt-3 text">Persionalized Experience</h5>
+                        <br>
+                        <br>
+                        <p class="card-text">
+                            We take utmost care of your clothes, segregating based on the cloth type and giving you instant clothes to make a statement. </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="card bg-transparent border-0 shadow-none text-dark" style="backdrop-filter: blur(10px);">
+                    <div class="card-body">
+                        <i class="about-circle bi bi-tags text-info fs-3"></i>
+                        &nbsp;
+                        <h5 class="card-title mt-3 text">Affordable Pricing</h5>
+                        <br><br>
+                        <p class="card-text">
+                            Prices that suits your pocket is one of our USP. An option of choosing between 2 types of pricing is available. </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card bg-transparent border-0 shadow-none text-dark" style="backdrop-filter: blur(10px);">
+                    <div class="card-body">
+                        <i class="about-circle bi bi-phone text-info fs-3"></i>
+                        &nbsp;
+                        <h5 class="card-title mt-3 text">Convenience</h5>
+                        <br><br>
+                        <p class="card-text">
+
+                            With just a tap of a button, your laundry gets done, giving your leisure time to spend with family and friends. </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-4">
+                <div class="card bg-transparent border-0 shadow-none text-dark" style="backdrop-filter: blur(10px);">
+                    <div class="card-body">
+                        <i class="about-circle bi bi-award text-info fs-3"></i>
+                        &nbsp;
+                        <h5 class="card-title mt-3 text">Quality</h5>
+                        <br><br>
+                        <p class="card-text">
+
+                            We use the best in class products, to assure that your favorite clothes are always there for you to wear. </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-4">
+                <div class="card bg-transparent border-0 shadow-none text-dark" style="backdrop-filter: blur(10px);">
+                    <div class="card-body">
+                        <i class="about-circle bi bi-truck text-info fs-3"></i>
+                        &nbsp;
+                        <h5 class="card-title mt-3 text">Express Delivery</h5>
+                        <br>
+                        <br>
+                        <p class="card-text">
+                            With our super express delivery, we would get your laundry done in less than 8 hours. </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-4">
+                <div class="card bg-transparent border-0 shadow-none text-dark" style="backdrop-filter: blur(10px);">
+                    <div class="card-body">
+                        <i class="about-circle bi bi-bag-check text-info fs-3"></i>
+                        &nbsp;
+                        <h5 class="card-title mt-3 text">Instant Order Update</h5>
+                        <br><br>
+                        <p class="card-text">
+                            Regular updates of your order, to help you keep a track of your laundry and plan accordingly. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
+
+<hr class="text-info w-50 mx-auto">
+
 <?= $this->endSection(); ?>

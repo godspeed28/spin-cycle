@@ -12,5 +12,5 @@
                 <a href="https://twitter.com" class="text-dark"><i class="bi bi-twitter"></i></a>
             </div>
         </div>
+    </footer>
 </div>
-</footer>
