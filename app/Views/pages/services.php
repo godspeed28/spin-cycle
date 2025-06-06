@@ -17,42 +17,9 @@
     <section class="py-3">
         <div class="container text-center">
             <div class="row g-4">
-                <style>
-                    .icon {
-                        font-size: 50px;
-                        display: inline-block;
-                        transition: transform 0.3s ease;
-                    }
-
-                    .card:hover .icon {
-                        animation: shake 0.5s;
-                    }
-
-                    @keyframes shake {
-                        0% {
-                            transform: translateX(0);
-                        }
-
-                        25% {
-                            transform: translateX(-5px);
-                        }
-
-                        50% {
-                            transform: translateX(5px);
-                        }
-
-                        75% {
-                            transform: translateX(-5px);
-                        }
-
-                        100% {
-                            transform: translateX(0);
-                        }
-                    }
-                </style>
                 <!-- Service 1 -->
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
+                    <div class="card rounded-0 h-100 shadow-sm">
                         <img width="50" height="50" src="https://img.icons8.com/ios/50/washing.png" class="icon mx-auto mt-5" alt="washing" />
                         <div class="card-body">
                             <h5 class="card-title text">Regular Wash & Fold</h5>
@@ -64,7 +31,7 @@
 
                 <!-- Service 2 -->
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
+                    <div class="card rounded-0 h-100 shadow-sm">
                         <img width="50" height="50" src="https://img.icons8.com/ios/50/laundry-bag.png" class="icon mx-auto mt-5" alt="laundry-bag" />
                         <div class="card-body">
                             <h5 class="card-title text">Express Laundry</h5>
@@ -77,7 +44,7 @@
 
                 <!-- Service 3 (Dry Cleaning) - FIXED -->
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
+                    <div class="card rounded-0 h-100 shadow-sm">
                         <img width="50" height="50" src="https://img.icons8.com/ios/50/dryclean-short-cycle.png" class="icon mx-auto mt-5" alt="dryclean-short-cycle" />
                         <div class="card-body">
                             <h5 class="card-title text">Dry Cleaning</h5>
@@ -89,7 +56,7 @@
 
                 <!-- Service 4 -->
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
+                    <div class="card rounded-0 h-100 shadow-sm">
                         <img width="50" height="50" src="https://img.icons8.com/ios/50/iron.png" class="icon mx-auto mt-5" alt="ironing" />
                         <div class="card-body">
                             <h5 class="card-title text">Ironing Only</h5>
@@ -113,7 +80,7 @@
         <div class="row g-4">
             <!-- Card 1 -->
             <div class="col-md-4">
-                <div class="card card-2 bg-light border-0 shadow-none text-dark " style="backdrop-filter: blur(10px);">
+                <div class="card rounded-0 card-2 bg-light border-0 shadow-none text-dark " style="backdrop-filter: blur(10px);">
                     <div class="card-body">
                         <i class="about-circle fas fa-leaf fs-3 text-info"></i>
                         <h5 class="card-title mt-3">Eco-Friendly Dry Cleaning</h5>
@@ -125,7 +92,7 @@
 
             <!-- Card 2 -->
             <div class="col-md-4">
-                <div class="card card-2 bg-transparent border-0 text-dark" style="backdrop-filter: blur(10px);">
+                <div class="card rounded-0 card-2 bg-transparent border-0 text-dark" style="backdrop-filter: blur(10px);">
                     <div class="card-body">
                         <i class="fas fa-shirt about-circle text-info fs-3" style="font-size: 2rem;"></i>
                         <h5 class="card-title mt-3">Wash & Fold</h5>
@@ -137,7 +104,7 @@
 
             <!-- Card 3 -->
             <div class="col-md-4">
-                <div class="card card-2 bg-light border-0 shadow-none text-dark" style="backdrop-filter: blur(10px);">
+                <div class="card rounded-0 card-2 bg-light border-0 shadow-none text-dark" style="backdrop-filter: blur(10px);">
                     <div class="card-body">
                         <i class="about-circle bi bi-box text-info fs-3"></i>
                         <h5 class="card-title mt-3">Package Delivery</h5>

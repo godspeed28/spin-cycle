@@ -11,7 +11,8 @@ class Pages extends BaseController
     {
         $data = [
             'title' => 'Home | Spin Cycle',
-            'tel' => '+62 812-3626-2924'
+            'tel' => '+62 812-3626-2924',
+            'phone' => '6281236262924'
         ];
         return view('pages/home', $data);
     }
@@ -20,7 +21,8 @@ class Pages extends BaseController
         $data = [
             'title' => 'About | Spin Cycle',
             'tel' => '+62 812-3626-2924',
-            'test' => ['Alfa', 'Emen', 'Abe']
+            'test' => ['Alfa', 'Emen', 'Abe'],
+            'phone' => '6281236262924'
         ];
         return view('pages/about', $data);
     }
@@ -28,7 +30,8 @@ class Pages extends BaseController
     {
         $data = [
             'title' => 'Services | Spin Cycle',
-            'tel' => '+62 812-3626-2924'
+            'tel' => '+62 812-3626-2924',
+            'phone' => '6281236262924'
         ];
         return view('pages/services', $data);
     }
@@ -36,7 +39,8 @@ class Pages extends BaseController
     {
         $data = [
             'title' => 'Contact | Spin Cycle',
-            'tel' => '+62 812-3626-2924'
+            'tel' => '+62 812-3626-2924',
+            'phone' => '6281236262924'
         ];
         return view('pages/contact', $data);
     }

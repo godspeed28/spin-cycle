@@ -22,7 +22,7 @@
                         <i class="about-circle bi bi-geo-alt text-info fs-3"></i>
                         <h4 class="card-title mt-3">Post Address</h4>
                         <p class="card-text">
-                            Semarang Tengah, Semarang City 50136.</p>
+                            Jln. Nakula Raya No. 36, Pendirikan Kidul, Kota Semarang 50136.</p>
                     </div>
                 </div>
             </div>
