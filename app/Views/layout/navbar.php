@@ -60,7 +60,7 @@
         </ul>
         &nbsp;
         <br>
-        <a href="" class="bg-info p-2 text-light fw-bold text-decoration-none">Schedule a Pickup</a>
+        <a href="/Wash" class="bg-info p-2 text-light fw-bold text-decoration-none">Schedule a Pickup</a>
     </div>
 </nav>
 

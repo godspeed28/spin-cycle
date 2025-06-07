@@ -10,7 +10,9 @@ class Login extends BaseController
     {
         $data = [
             'title' => 'Login | SpinCycle',
-            'title2' => 'Log in'
+            'title2' => 'Log in',
+            'tel' => '+62 812-3626-2924',
+            'phone' => '6281236262924'
         ];
         return view('login', $data);
     }

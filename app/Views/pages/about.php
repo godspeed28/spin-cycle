@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
 
-<div class=" text-start d-flex flex-column bg-page">
+<div class="text-start d-flex flex-column bg-page">
     <h5 class="align-self-start" style="margin-left:150px;"><a href="/" class="hover-menu text-decoration-none text-info">Home</a> / About</h5>
     <br>
     <h1 class="align-self-start fw-bold" style="margin-left:150px;">About</h1>

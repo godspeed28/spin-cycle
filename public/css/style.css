@@ -150,11 +150,24 @@ li {
     width: 50%;
 }
 
+.woocommerce-info {
+  background-color: #e0f7fa;
+  border-top: 4px solid #00acc1;
+  padding: 10px;
+  width: 2%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #006064;
+}
+
+
+
 /* checkout */
 .card-header {
     background-color: #007bff;
     color: white;
-    border-bottom: 3px solid #0056b3;
+    border-top: 3px solid #0056b3;
+    border-bottom: none;
 }
 .card {
     border-radius: 12px;
