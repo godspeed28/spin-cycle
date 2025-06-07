@@ -64,13 +64,13 @@ li {
     /* Pastikan path benar */
     background-size: cover;
     /* Menyesuaikan ukuran gambar agar penuh */
-    background-position: center 20%;
+    background-position: center 10%;
     /* Pusatkan gambar */
     background-repeat: no-repeat;
     /* Hindari gambar berulang */
     width: 100%;
     /* Pastikan elemen memenuhi seluruh lebar */
-    height: 65.8vh;
+    height: 70.8vh;
     /* Buat tinggi sesuai tinggi layar */
     display: flex;
     /* Agar kontennya bisa diatur dengan flex */
@@ -227,6 +227,18 @@ li {
     width: 300px;
    }
   }
+
+  .hover-info{
+    color: black;
+    transition:color 0.2s ease;
+  }
+
+
+  .hover-info:hover{
+    color: #0dcaf0;
+    /* transition: 0.3s; */
+  }
+
 
   /* about */
   .about-circle{

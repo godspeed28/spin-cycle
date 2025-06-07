@@ -1,17 +1,17 @@
-<div class="d-md-flex d-none p-3">
-    <p class="mt-2 mb-1 text-secondary" style="margin-right:100px;">50136 Kota Semarang, Semarang Tengah.</p>
-    <p class="mt-2 mb-1 text-secondary" style="margin-right:100px;">Mon-Fri 08:00 AM - 05:00 PM</p>
-    <p class="mt-2 mb-1 text-secondary" style="margin-right:100px;">info@spincycle.com</p>
-    <p class="mt-2 mb-1" style="margin-right:80px;"><i class="bi bi-telephone-fill text-info" style="font-size: 0.85rem; "></i> <b><a href="https://wa.me/<?= $phone ?>" class="underline-hover text-decoration-none text-dark" target="_blank"><?= $tel ?></a>
+<div class="d-md-flex d-none border-bottom border-1 pr-3">
+    <p class="mt-3 ps-3 mb-2 text-secondary" style="margin-right:50px;">50136 Kota Semarang, Semarang Tengah.</p>
+    <p class="mt-3 mb-2 text-secondary" style="margin-right:50px;">Mon-Fri 08:00 AM - 05:00 PM</p>
+    <p class="mt-3 mb-2 text-secondary" style="margin-right:100px;">info@spincycle.com</p>
+    <p class="mt-3 mb-2" style="margin-right:50px; margin-left:200px"><i class="bi bi-telephone-fill text-info" style="font-size: 0.85rem; "></i> <b><a href="https://wa.me/<?= $phone ?>" class="underline-hover text-decoration-none text-dark" target="_blank"><?= $tel ?></a>
         </b></p>
-    <a href="https://facebook.com" class="text-dark me-3 mt-2 mb-1"><i class="bi bi-facebook"></i></a>
-    <a href="https://instagram.com" class="text-dark me-3 mt-2 mb-1"><i class="bi bi-instagram"></i></a>
-    <a href="https://twitter.com" style="margin-right:80px;" class=" text-dark mt-2 mb-1"><i class="bi bi-twitter"></i></a>
-    <div class="clock mt-2 mb-1" id="clock">00:00:00</div>
+    <a href="https://facebook.com" class="text-dark me-3 mt-3 mb-2"><i class="hover-info bi bi-facebook"></i></a>
+    <a href="https://instagram.com" class="text-dark me-3 mt-3 mb-2"><i class="hover-info bi bi-instagram"></i></a>
+    <a href="https://twitter.com" style="margin-right:50px;" class=" text-dark mt-3 mb-2"><i class="hover-info bi bi-twitter"></i></a>
+    <div class="clock mt-3 mb-2" id="clock">00:00:00</div>
 
 </div>
-<hr class="d-none d-md-block text-dark fw-bold">
-<nav class="navbar mb-3 p-3 navbar-expand-lg sticky-top" style="background-color: white;">
+<!-- <hr class="d-none d-md-block text-dark fw-bold"> -->
+<nav class="navbar px-3 navbar-expand-lg sticky-top" style="background-color: white;">
     <a class="navbar-brand" href="#">
         <svg width="50" height="50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
             <!-- Background Circle -->

@@ -28,7 +28,7 @@
         <p class="intro-home">We are Passionate About Laundry</p>
         <p>We are professionals in the laundry and dry cleaning business, which means we always stay up to date on the latest technologies, cleaning methods, and solutions for dealing with stains or delicate fabrics. Plus, we maintain the highest standards of business integrity by following local and national regulations and environmental safety rules. We are passionate about changing the way you think about laundry!</p>
 
-        <div class="container d-flex">
+        <div class="container d-md-flex">
             <div class="container">
                 <ul class="list-unstyled">
                     <li><i class="bi bi-check-circle-fill text-primary"></i> Eco-friendly cleaning processes</li>
@@ -37,12 +37,17 @@
                     <li><i class="bi bi-check-circle-fill text-primary"></i> Best Quality</li>
                 </ul>
             </div>
-            <div style="margin-top:20px; width: 2px; height: 130px; background-color: #ccc;"></div>
+
+            <hr class="text-info d-md-none">
+
+            <div class="d-none d-md-block" style="margin-top:20px; width: 2px; height: 135px; background-color: #ccc;"></div>
             <div class="container card-1 text-center mt-4"><i class="phone bg-light rounded-circle p-3 bi bi-telephone-fill text-info"></i>
-                <p class="text-secondary mt-3">Call for Quality Service</p>
+                <p class="text-secondary mt-1">Call for Quality Service</p>
                 <a href="https://wa.me/<?= $phone ?>" class="text-decoration-none text-dark underline-hover fw-bold" target="_blank"><?= $tel ?></a>
             </div>
         </div>
+        <hr class="text-info d-md-none">
+
     </div>
 </div>
 <style>
@@ -50,8 +55,10 @@
         border-left: 1px solid rgba(0, 0, 0, 0.1);
     }
 </style>
+
+
 <div class="container text-dark text-center" style="max-width: 900px;">
-    <div class="d-flex">
+    <div class="d-md-flex">
         <div class="underline-hover flex-fill bg-light p-2 align-items-center">
             <div class="me-3 mt-2">
                 <i class="bi bi-clock fs-1 text-info"></i>
@@ -123,15 +130,6 @@
                             </div>
                             <div class="col-12 col-md-4 mb-3 d-none d-md-block">
                                 <div class="card rounded-0 p-3 h-100">
-                                    <img width="50" height="50" src="https://img.icons8.com/ios/50/laundry-bag.png" class="mx-auto mt-5" alt="laundry-bag" />
-                                    <div class="card-body">
-                                        <h5 class="card-title text">Express Laundry</h5>
-                                        <p class="card-text">Layanan cepat, pakaian bersih dan rapi dalam 4–6 jam saja.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4 mb-3 d-none d-md-block">
-                                <div class="card rounded-0 p-3 h-100">
                                     <img width="50" height="50" src="https://img.icons8.com/ios/50/dryclean-short-cycle.png" class="mx-auto mt-5" alt="dryclean-short-cycle" />
                                     <div class="card-body">
                                         <h5 class="card-title text">Dry Cleaning</h5>
@@ -139,29 +137,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-12 col-md-4 mb-3">
-                                <div class="card rounded-0 p-3 h-100">
-                                    <img width="50" height="50" src="https://img.icons8.com/ios/50/iron.png" class="mx-auto mt-5" alt="ironing" />
-                                    <div class="card-body">
-                                        <h5 class="card-title text">Ironing Only</h5>
-                                        <p class="card-text">Setrika pakaian kamu biar makin rapi dan siap dipakai.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4 mb-3 d-none d-md-block">
-                                <div class="card rounded-0 p-3 h-100">
-                                    <img width="50" height="50" src="https://img.icons8.com/ios/50/washing.png" class="mx-auto mt-5" alt="washing" />
-                                    <div class="card-body">
-                                        <h5 class="card-title text">Regular Wash & Fold</h5>
-                                        <p class="card-text">Cuci dan lipat pakaian sehari-hari dengan proses higienis dan cepat.</p>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="col-12 col-md-4 mb-3 d-none d-md-block">
                                 <div class="card rounded-0 p-3 h-100">
                                     <img width="50" height="50" src="https://img.icons8.com/ios/50/laundry-bag.png" class="mx-auto mt-5" alt="laundry-bag" />
@@ -177,6 +152,15 @@
                     <div class="carousel-item">
                         <div class="row">
                             <div class="col-12 col-md-4 mb-3">
+                                <div class="card rounded-0 p-3 h-100">
+                                    <img width="50" height="50" src="https://img.icons8.com/ios/50/iron.png" class="mx-auto mt-5" alt="ironing" />
+                                    <div class="card-body">
+                                        <h5 class="card-title text">Ironing Only</h5>
+                                        <p class="card-text">Setrika pakaian kamu biar makin rapi dan siap dipakai.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 mb-3 d-none d-md-block">
                                 <div class="card rounded-0 p-3 h-100">
                                     <img width="50" height="50" src="https://img.icons8.com/ios/50/laundry-bag.png" class="mx-auto mt-5" alt="laundry-bag" />
                                     <div class="card-body">
@@ -194,12 +178,35 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-12 col-md-4 mb-3">
+                                <div class="card rounded-0 p-3 h-100">
+                                    <img width="50" height="50" src="https://img.icons8.com/ios/50/laundry-bag.png" class="mx-auto mt-5" alt="laundry-bag" />
+                                    <div class="card-body">
+                                        <h5 class="card-title text">Express Laundry</h5>
+                                        <p class="card-text">Layanan cepat, pakaian bersih dan rapi dalam 4–6 jam saja.</p>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-12 col-md-4 mb-3 d-none d-md-block">
                                 <div class="card rounded-0 p-3 h-100">
                                     <img width="50" height="50" src="https://img.icons8.com/ios/50/iron.png" class="mx-auto mt-5" alt="ironing" />
                                     <div class="card-body">
                                         <h5 class="card-title text">Ironing Only</h5>
                                         <p class="card-text">Setrika pakaian kamu biar makin rapi dan siap dipakai.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 mb-3 d-none d-md-block">
+                                <div class="card rounded-0 p-3 h-100">
+                                    <img width="50" height="50" src="https://img.icons8.com/ios/50/washing.png" class="mx-auto mt-5" alt="washing" />
+                                    <div class="card-body">
+                                        <h5 class="card-title text">Regular Wash & Fold</h5>
+                                        <p class="card-text">Cuci dan lipat pakaian sehari-hari dengan proses higienis dan cepat.</p>
                                     </div>
                                 </div>
                             </div>
