@@ -7,7 +7,7 @@
     // dd(password_hash($kata, PASSWORD_DEFAULT)); 
     ?>
     <div class="intro-home">DO YOUR LAUNDRY SMARTLY!</div>
-    <p>Your laundry gets delivered to you preferred experts in a click.</p>
+    <p>Cucian Anda akan dikirim ke ahli pilihan Anda hanya dengan satu klik.</p>
     <a class="bg-info text-light p-3 fw-bold text-decoration-none" href="/Wash/">Order Now</a>
 </div>
 <br>
@@ -26,7 +26,7 @@
     <div class="container text-start">
         <b class="text-info">[2 Years of Experience]</b>
         <p class="intro-home">We are Passionate About Laundry</p>
-        <p>We are professionals in the laundry and dry cleaning business, which means we always stay up to date on the latest technologies, cleaning methods, and solutions for dealing with stains or delicate fabrics. Plus, we maintain the highest standards of business integrity by following local and national regulations and environmental safety rules. We are passionate about changing the way you think about laundry!</p>
+        <p>Kami adalah profesional dalam bisnis laundry dan dry cleaning, yang berarti kami selalu mengikuti perkembangan teknologi, metode pembersihan, dan solusi terbaru untuk menangani noda atau kain halus. Selain itu, kami mempertahankan standar integritas bisnis tertinggi dengan mematuhi peraturan lokal dan nasional serta aturan keselamatan lingkungan. Kami bersemangat untuk mengubah cara anda berpikir tentang laundry!</p>
 
         <div class="container d-md-flex">
             <div class="container">
@@ -66,7 +66,7 @@
             <br>
             <div>
                 <h5>Save Time</h5>
-                <p>No more wasted time driving to your place, focus on what really matters while we handle the rest.</p>
+                <p>Tidak ada lagi waktu terbuang dalam perjalanan ke tempat anda, fokuslah pada hal yang penting sementara kami mengurus sisanya.</p>
             </div>
         </div>
 
@@ -77,7 +77,7 @@
             <br>
             <div>
                 <h5>Pay Online in Seconds</h5>
-                <p>Manage your Press account and billing online from your smartphone or computer.</p>
+                <p>Kelola akun dan penagihan anda secara daring dari telepon pintar atau komputer Anda.</p>
             </div>
         </div>
 
@@ -88,7 +88,7 @@
             <br>
             <div>
                 <h5>Eco-Friendly</h5>
-                <p>We use safe and clean perc-free solvents, so you, and the Earth, can look good.</p>
+                <p>Kami menggunakan pelarut bebas <abbr title="Pelarut bebas PERC (Perchloroethylene) adalah jenis pelarut yang tidak mengandung senyawa perchloroethylene (tetrachloroethylene), yaitu bahan kimia yang sering digunakan dalam dry cleaning atau pencucian kering.">perc</abbr> yang aman dan bersih, sehingga Anda dan Bumi dapat terlihat baik.</p>
             </div>
         </div>
     </div>
@@ -266,13 +266,12 @@
         <p><b class="text-info">Get Your Clothes Collected & Delivered</b></p>
         <p class="intro-home">How We Work</p>
         <p style="max-width: 500px;">
-            Our Service is dedicated to making your life easier by providing pick up laundry service. Give yourself one less thing to worry about and try our residential wash and fold service that includes pick up and delivery.
-        </p>
+            Layanan kami didedikasikan untuk memudahkan hidup Anda dengan menyediakan layanan laundry antar-jemput. Singkirkan satu hal dari beban anda dan cobalah layanan cuci dan lipat di rumah kami yang mencakup layanan jemput dan antar. </p>
         <p style="max-width: 500px;">
-            We have been in the laundry business for more than 12 years and would love to earn your business. Try us today and save $10 Off your first laundry service of 20 pounds or more.
+            Kami telah bergerak dalam bisnis laundry selama 2 tahun dan ingin sekali bekerja sama dengan anda.
         </p>
         <br>
-        <a class="bg-info text-light p-2 fw-bold text-decoration-none" href="">Get Service Now</a>
+        <a class="bg-info text-light p-2 fw-bold text-decoration-none" href="/Wash">Get Service Now</a>
     </div>
 
     <div class="container d-md-flex mt-3 mtmin-130px">
@@ -281,7 +280,7 @@
             <h3>
                 <p>We <span class="text-info">Clean</span> Your Clothes</p>
             </h3>
-            <p>Our facilities are so good we guarantee you'll be satisfied we put a quality guarantee on all items</p>
+            <p>Fasilitas kami sangat baik, kami jamin Anda akan puas, kami memberikan jaminan kualitas pada semua jenis pakaian.</p>
         </div>
     </div>
 

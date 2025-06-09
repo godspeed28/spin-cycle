@@ -19,7 +19,7 @@
 <div class="container">
     <?php if (session()->getFlashdata('error')) : ?>
         <div class="text-danger text-center" role="alert" style="max-width:300px;">
-            <?= session()->getFlashdata('error') ?> &nbsp; <a href="/Login/">Login</a>
+            <?= session()->getFlashdata('error') ?>&nbsp;<a href="/Login/">Login</a>
         </div>
     <?php endif; ?>
 </div>
@@ -32,31 +32,45 @@
 
         <div class="card-body">
             <form id="pickupForm" action="<?= base_url('/Wash/checkout') ?>" method="post">
+                <?= csrf_field(); ?>
                 <p class="text-start fw-bold">Order summary</p>
                 <hr class="text-info w-50 mx-auto">
                 <div class="row mb-3 text-start">
+
                     <div class="col-md-6">
                         <label class="form-label">Nama Pelanggan</label>
-                        <input autofocus type="text" class="custom-border rounded-0 form-control" name="nama" required>
+                        <input autofocus type="text" value="<?= old('nama') ?>" class="custom-border rounded-0 form-control <?= (isset($validation) && $validation->hasError('nama')) ? 'is-invalid' : ''; ?>" name="nama">
+                        <div class="invalid-feedback">
+                            <?php if (isset($validation)): ?>
+                                <?= $validation->getError('nama'); ?>
+                            <?php endif; ?>
+                        </div>
                     </div>
+
                     <div class="col-md-6">
                         <label class="form-label">Jenis Layanan</label>
-                        <select class="custom-border form-select rounded-0" name="jenis_layanan" required>
-                            <option value="">Pilih Layanan</option>
-                            <option value="Cuci Kering">Cuci Kering - Rp 5.000/kg</option>
-                            <option value="Cuci Setrika">Cuci Setrika - Rp 7.000/kg</option>
-                            <option value="Setrika Saja">Setrika Saja - Rp 4.000/kg</option>
+                        <select class="custom-border <?= (isset($validation) && $validation->hasError('jenis_layanan')) ? 'is-invalid' : ''; ?> form-select rounded-0" name="jenis_layanan">
+                            <option value="" disabled <?= old('jenis_layanan') ? '' : 'selected'; ?>>Pilih Layanan</option>
+                            <?php foreach ($jenis_layanan as $item) : ?>
+                                <option value="<?= $item['nama'] ?>" <?= old('jenis_layanan') == $item['nama'] ? 'selected' : ''; ?>><?= $item['nama'] ?> - Rp <?= number_format($item['harga_per_kg'] ?? 0, 0, ',', '.'); ?>/kg</option>
+                            <?php endforeach; ?>
                         </select>
+                        <div class="invalid-feedback">
+                            <?php if (isset($validation)): ?>
+                                <?= $validation->getError('jenis_layanan'); ?>
+                            <?php endif; ?>
+                        </div>
                     </div>
+
                 </div>
 
                 <!-- Dropdown Jenis Pakaian -->
                 <div class="row mb-0">
                     <div class="col-md-6 text-start">
-                        <select class="custom-border form-select rounded-0" id="jenisPakaian" required>
-                            <option value="">Pilih jenis pakaian</option>
+                        <label class="form-label">Pilih Jenis Pakaian</label>
+                        <select multiple class=" custom-border form-select rounded-0" id="jenisPakaian">
                             <?php foreach ($pakaian as $item): ?>
-                                <option value="<?= $item['nama'] ?>"><?= $item['nama'] ?></option>
+                                <option value="<?= $item['nama'] ?>"><?= $item['nama'] ?>. Berat : <?= $item['berat'] ?> Kg</option>
                             <?php endforeach; ?>
                         </select>
                         <?php foreach ($pakaian as $item): ?>
@@ -68,12 +82,17 @@
                         <?php endforeach; ?>
                         <div class="mb-3 mt-3">
                             <label class="form-label" style="text-align: left !important; display:block;"></label>
-                            <textarea class="custom-border rounded-0 form-control" placeholder="Alamat penjemputan" name="alamat" rows="3" required></textarea>
+                            <textarea class="custom-border rounded-0 form-control  <?= (isset($validation) && $validation->hasError('alamat')) ? 'is-invalid' : ''; ?>" placeholder="Alamat penjemputan" name="alamat" rows="3"><?= old('alamat') ?></textarea>
+                            <div class="invalid-feedback">
+                                <?php if (isset($validation)): ?>
+                                    <?= $validation->getError('alamat'); ?>
+                                <?php endif; ?>
+                            </div>
                         </div>
                         <div class="mb-3">
                             <div class="form-check">
                                 <input type="hidden" name="expressService" value="no">
-                                <input class="form-check-input" type="checkbox" value="yes" id="expressService" name="expressService">
+                                <input class="form-check-input" type="checkbox" value=10000 id="expressService" name="expressService">
                                 <label class="form-check-label" for="expressCheckbox">
                                     Gunakan jasa express
                                 </label>
@@ -83,11 +102,11 @@
                         <div class="row mb-3">
                             <div class="col-md-6 text-start">
                                 <label class="form-label"></i>Tanggal Penjemputan</label>
-                                <input type="date" name="tanggal" id="tanggal" class="custom-border rounded-0 form-control">
+                                <input type="date" value="<?= old('tanggal') ?>" name="tanggal" id="tanggal" class="custom-border rounded-0 form-control">
                             </div>
                             <div class="col-md-6 text-start">
                                 <label class="form-label"></i>Waktu Penjemputan</label>
-                                <input type="time" name="waktu" id="waktu" class="custom-border rounded-0 form-control">
+                                <input type="time" name="waktu" value="<?= old('waktu') ?>" id="waktu" class="custom-border rounded-0 form-control">
                             </div>
                         </div>
 
@@ -101,7 +120,7 @@
                         <hr class="text-info w-0 mx-auto">
 
                         <label class="form-label" style="text-align: left !important; display:block;">Catatan tambahan (opsional)</label>
-                        <textarea class="custom-border rounded-0 form-control" name="catatan" rows="5" placeholder="Contoh: Tolong jemput sore, pakaian bayi pisahkan..."></textarea>
+                        <textarea class="custom-border rounded-0 form-control" name="catatan" rows="5" placeholder="Contoh: Tolong jemput sore, pakaian bayi pisahkan..."><?= old('catatan') ?></textarea>
                     </div>
                 </div>
 
@@ -116,12 +135,16 @@
                     <div class="mb-3 col-md-6">
                         <label class="form-label" style="text-align: left !important; display:block;">
                             Total Berat (kg)</label>
-                        <input type="text" class="custom-border rounded-0 form-control" id="total_berat" name="berat" readonly>
+                        <input type="text" class="custom-border rounded-0 form-control <?= (isset($validation) && $validation->hasError('berat')) ? 'is-invalid' : ''; ?>" id="total_berat" name="berat" readonly>
+                        <div class="text-start invalid-feedback">
+                            <?php if (isset($validation)): ?>
+                                <?= $validation->getError('berat'); ?>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
 
                 <hr class="text-info w-0 mx-auto">
-
 
                 <div class="row">
                     <div class="col-lg-12 d-flex justify-content-end">
@@ -148,26 +171,36 @@
         const dateInput = document.getElementById('tanggal').value;
         const timeInput = document.getElementById('waktu').value;
         const expressChecked = document.getElementById('expressService').checked;
+        const totalBerat = document.getElementById('total_berat').value;
 
-        if (!dateInput || !timeInput) {
-            alert('Tanggal dan waktu harus diisi');
-            return; // jangan lanjut submit
-        }
+        // if (!dateInput || !timeInput) {
+        //     alert('Tanggal dan waktu harus diisi');
+        //     return; // jangan lanjut submit
+        // }
 
         const date = new Date(dateInput);
         const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        date.setHours(0, 0, 0, 0);
 
         if (date < today) {
             Swal.fire({
                 icon: 'error',
                 title: 'Tanggal Tidak Valid',
-                text: 'Tanggal yang dipilih sudah lewat. Silakan pilih tanggal hari ini atau yang akan datang.',
-                confirmButtonText: 'OK'
+                text: 'Tanggal atau jam yang dipilih sudah lewat. Silakan pilih tanggal hari ini atau yang akan datang.',
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#0dcaf0'
             });
             return;
         }
+
+        // if (totalBerat < 1.0) {
+        //     Swal.fire({
+        //         icon: 'error',
+        //         title: 'Minimal 1 Kg',
+        //         text: 'Total berat tidak boleh kurang dari 1 Kg  ',
+        //         confirmButtonText: 'OK'
+        //     });
+        //     return;
+        // }
 
         const day = date.getDay();
         const timeParts = timeInput.split(':');
@@ -194,7 +227,8 @@
               <p><strong>Senin-Jumat:</strong> 08:00 - 17:00</p>
               <p><strong>Sabtu-Minggu:</strong> 10:00 - 17:00</p>
             `,
-                confirmButtonText: 'OK'
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#0dcaf0'
             });
             return;
         }
@@ -209,7 +243,8 @@
                 icon: 'error',
                 title: 'Layanan Express Tidak Valid',
                 text: 'Layanan express hanya tersedia untuk pemesanan sebelum jam 11 siang pada hari penjemputan.',
-                confirmButtonText: 'OK'
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#0dcaf0'
             });
             return;
         }

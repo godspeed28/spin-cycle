@@ -4,14 +4,18 @@ namespace App\Controllers;
 
 use CodeIgniter\HTTP\Request;
 
+use App\Models\PakaianModel;
+use App\Models\LayananModel;
+
 class Wash extends BaseController
 {
     public function index()
     {
-        // // Cek apakah sudah login
-        // if (!session()->get('logged_in')) {
-        //     return redirect()->to('/Login/')->with('error', 'Silakan login terlebih dahulu.');
-        // }
+        $pakaianModel = new PakaianModel();
+        $dataPakaianModel = $pakaianModel->findAll();
+
+        $layananModel = new LayananModel();
+        $datalayananModel = $layananModel->findAll();
 
         $data = [
             'phone' => '6281236262924',
@@ -19,59 +23,91 @@ class Wash extends BaseController
             'title' => 'Order | SpinCycle',
             'title2' => 'Order',
             'icon' => 'basket-fill',
-            'pakaian' => [
-                ['nama' => 'Kaos', 'berat' => 0.2, 'icon' => 'tshirt'],
-                ['nama' => 'Kemeja', 'berat' => 0.3, 'icon' => 'shirt'],
-                ['nama' => 'Celana Jeans', 'berat' => 0.6, 'icon' => 'slash-square'],
-                ['nama' => 'Celana Biasa', 'berat' => 0.4, 'icon' => 'bounding-box-circles'],
-                ['nama' => 'Jaket Tipis', 'berat' => 0.6, 'icon' => 'cloud-lightning'],
-                ['nama' => 'Jaket Tebal', 'berat' => 1.0, 'icon' => 'clouds'],
-                ['nama' => 'Handuk Kecil', 'berat' => 0.4, 'icon' => 'file-earmark-ruled'],
-                ['nama' => 'Handuk Besar', 'berat' => 0.8, 'icon' => 'file-earmark-richtext'],
-                ['nama' => 'Sprei Single', 'berat' => 0.7, 'icon' => 'grid-1x2-fill'],
-                ['nama' => 'Sprei King', 'berat' => 1.2, 'icon' => 'grid-3x3-gap-fill'],
-                ['nama' => 'Selimut Tipis', 'berat' => 1.0, 'icon' => 'journals'],
-                ['nama' => 'Selimut Tebal', 'berat' => 2.0, 'icon' => 'journal-check'],
-                ['nama' => 'Gorden Tipis', 'berat' => 0.8, 'icon' => 'arrows-expand'],
-                ['nama' => 'Gorden Tebal', 'berat' => 1.5, 'icon' => 'arrows-collapse'],
-                ['nama' => 'Baju Anak-anak', 'berat' => 0.1, 'icon' => 'emoji-smile-fill'],
-            ]
+            'validation' => session()->get('validation'),
+            'pakaian' => $dataPakaianModel,
+            'jenis_layanan' => $datalayananModel
         ];
         return view('wash', $data);
     }
     public function checkout()
     {
+        $pakaianModel = new PakaianModel();
+        $dataPakaianModel = $pakaianModel->findAll();
+
+        // Ubah jadi array asosiatif
+        $pakaian = [];
+        foreach ($dataPakaianModel as $row) {
+            $pakaian[] = str_replace(' ', '_', $row['nama']);
+        }
+
+        $layananModel = new LayananModel();
+        $datalayananModel = $layananModel->findAll();
+
+        // Ubah jadi array asosiatif
+        $harga_per_kg = [];
+        foreach ($datalayananModel as $row) {
+            $harga_per_kg[$row['nama']] = (int)$row['harga_per_kg'];
+        }
+
         if (!session()->get('logged_in')) {
             return redirect()->to('/Wash/')->with('error', 'Silakan login terlebih dahulu.');
         }
 
+        if (
+            !$this->validate([
+                'nama' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required' => '{field} harus diisi.'
+                    ]
+                ],
+                'alamat' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required' => '{field} harus diisi.'
+                    ]
+                ],
+                'jenis_layanan' => [
+                    'label' => 'jenis layanan',
+                    'rules' => 'required',
+                    'errors' => [
+                        'required' => '{field} harus diisi.'
+                    ]
+                ],
+                'berat' => [
+                    'rules' => 'required|greater_than_equal_to[1]',
+                    'errors' => [
+                        'greater_than_equal_to' => '{field} tidak boleh kurang dari 1 Kg.'
+                    ]
+                ]
+
+            ])
+        ) {
+            $validation = \Config\Services::validation();
+            return redirect()->to('/Wash')->withInput()->with('validation', $validation);
+        }
+
         $request = service('request');
-        // dd($request);
 
-        $harga_per_kg = [
-            'Cuci Kering' => 5000,
-            'Cuci Setrika' => 7000,
-            'Setrika Saja' => 4000,
-        ];
+        $jasa_express = $this->request->getPost('expressService') ?? 0;
+        $jasa_express = is_numeric($jasa_express) ? (int) $jasa_express : 0;
 
-
-        // Ambil data dari database (atau hardcode jika perlu)
-        $pakaian = [
-            'Kaos',
-            'Kemeja',
-            'Celana_Jeans',
-            'Celana_Biasa',
-            'Jaket_Tipis',
-            'Jaket_Tebal',
-            'Handuk_Kecil',
-            'Handuk_Besar',
-            'Sprei_Single',
-            'Sprei_King',
-            'Selimut_Tipis',
-            'Selimut_Tebal',
-            'Gorden_Tipis',
-            'Gorden_Tebal',
-            'Baju_Anak-anak'
+        $pakaianIcon = [
+            'Kaos' => '👕',
+            'Kemeja' => '👔',
+            'Celana_Jeans' => '👖',
+            'Celana_Biasa' => '🩳',
+            'Jaket_Tipis' => '🧥',
+            'Jaket_Tebal' => '🧥❄️',
+            'Handuk_Kecil' => '🧻',
+            'Handuk_Besar' => '🛁',
+            'Sprei_Single' => '🛏️',
+            'Sprei_King' => '🛌',
+            'Selimut_Tipis' => '🧣',
+            'Selimut_Tebal' => '🛌🧤',
+            'Gorden_Tipis' => '🪟',
+            'Gorden_Tebal' => '🪟🧵',
+            'Baju_Anak-anak' => '🧒👕'
         ];
 
         // Tangkap hanya pakaian yang jumlahnya > 0
@@ -94,48 +130,40 @@ class Wash extends BaseController
             }
         }
 
-        $berat_dibulatkan = ceil($total_berat);
-
         // Cek harga per kg berdasarkan jenis layanan, kalau tidak ada default 0
-        $total_harga = isset($harga_per_kg[$jenis_layanan]) ? $harga_per_kg[$jenis_layanan] * $berat_dibulatkan : 0;
+        $total_harga = isset($harga_per_kg[$jenis_layanan]) ? $harga_per_kg[$jenis_layanan] * $total_berat : 0;
 
-        $berat_per_item = [
-            'Kaos' => 0.2,
-            'Kemeja' => 0.3,
-            'Celana_Jeans' => 0.6,
-            'Celana_Biasa' => 0.4,
-            'Jaket_Tipis' => 0.6,
-            'Jaket_Tebal' => 1.0,
-            'Handuk_Kecil' => 0.4,
-            'Handuk_Besar' => 0.8,
-            'Sprei_Single' => 0.7,
-            'Sprei_King' => 1.2,
-            'Selimut_Tipis' => 1.0,
-            'Selimut_Tebal' => 2.0,
-            'Gorden_Tipis' => 0.8,
-            'Gorden_Tebal' => 1.5,
-            'Baju_Anak-anak' => 0.1
-        ];
+        $berat_per_item = [];
+        foreach ($dataPakaianModel as $row) {
+            $key = str_replace(' ', '_', $row['nama']);
+            $berat_per_item[$key] = (float) $row['berat'];
+        }
 
 
         $data = [
             'nama' => $request->getPost('nama'),
             'jenis_layanan' => $request->getPost('jenis_layanan'),
+            'harga_jenis_layanan' => $harga_per_kg,
+            'berat_satuan' => $berat_per_item,
             'berat' => $request->getPost('berat'),
             'alamat' => $request->getPost('alamat'),
             'catatan' => $request->getPost('catatan'),
             'tanggal' => $request->getPost('tanggal'),
             'waktu' => $request->getPost('waktu'),
             'jenis_pakaian' => json_encode($jenisPakaianTerpilih),
-            'jasa_express' => $request->getPost('expressService'),
+            'jasa_express' => $jasa_express,
             'title' => 'Checkout | SpinCycle',
             'title2' => 'Checkout',
             'tel' => '+62 812-3626-2924',
             'phone' => '6281236262924',
-            'icon' => 'basket-fill',
+            'iconPakaian' => $pakaianIcon,
             'total_harga' => $total_harga
         ];
 
         return view('checkout', $data);
+    }
+    public function showCheckout()
+    {
+        return view('checkout');
     }
 }

@@ -80,12 +80,13 @@
         <div class="row g-4">
             <!-- Card 1 -->
             <div class="col-md-4">
-                <div class="card rounded-0 card-2 bg-light border-0 shadow-none text-dark " style="backdrop-filter: blur(10px);">
+                <div class="card rounded-0 card-2 bg-light border-0 shadow-none text-dark" style="backdrop-filter: blur(10px);">
                     <div class="card-body">
                         <i class="about-circle fas fa-leaf fs-3 text-info"></i>
                         <h5 class="card-title mt-3">Eco-Friendly Dry Cleaning</h5>
                         <p class="card-text">
-                            Our commitment to eco-friendly practices extends beyond our use of 100% toxin-free cleaning techniques. Our company is also incredibly proud to be a carbon-neutral business. </p>
+                            Komitmen kami terhadap praktik ramah lingkungan tidak hanya pada penggunaan teknik pembersihan bebas racun 100%. Kami juga sangat bangga menjadi bisnis yang netral karbon.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -97,7 +98,8 @@
                         <i class="fas fa-shirt about-circle text-info fs-3" style="font-size: 2rem;"></i>
                         <h5 class="card-title mt-3">Wash & Fold</h5>
                         <p class="card-text py-2">
-                            We are excited to offer quality shoe repair & bag services alongside our second to none dry cleaning and wash & fold service. Our staff use the highest quality products. </p>
+                            Kami dengan senang hati menawarkan layanan perbaikan sepatu & tas berkualitas selain layanan dry cleaning dan wash & fold yang tiada duanya. Staf kami menggunakan produk dengan kualitas terbaik.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -109,11 +111,13 @@
                         <i class="about-circle bi bi-box text-info fs-3"></i>
                         <h5 class="card-title mt-3">Package Delivery</h5>
                         <p class="card-text py-1">
-                            Laundry services are considerably the most convenient services that people look for. Laundry is one of the most difficult chores that we have to deal with on a regular basis. </p>
+                            Layanan laundry adalah salah satu layanan paling praktis yang banyak dicari orang. Laundry adalah salah satu pekerjaan rumah yang paling sulit dan rutin harus kita hadapi.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 <hr class="text-info w-50 mx-auto">

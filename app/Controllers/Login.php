@@ -21,14 +21,21 @@ class Login extends BaseController
     {
         $session = session();
         $model = new UserModel();
-        $username = $this->request->getPost('username');
+        $nue = $this->request->getPost('nohp/username/email');
         $password = $this->request->getPost('password');
-        $data = $model->where('username', $username)->first();
+
+        // Cek berdasarkan username ATAU no_telp ATAU email
+        $data = $model
+            ->where('username', $nue)
+            ->orWhere('no_telp', $nue)
+            ->orWhere('email', $nue)
+            ->first();
 
         if ($data) {
             $pass = $data['password'];
             if (password_verify($password, $pass)) {
                 $session->set([
+                    'user_id' => $data['id'],
                     'username' => $data['username'],
                     'logged_in' => true
                 ]);
@@ -37,7 +44,7 @@ class Login extends BaseController
                 return redirect()->back()->with('error', 'Password salah');
             }
         } else {
-            return redirect()->back()->with('error', 'Username tidak ditemukan');
+            return redirect()->back()->with('error', 'Login gagal. Cek kembali data Anda');
         }
     }
 

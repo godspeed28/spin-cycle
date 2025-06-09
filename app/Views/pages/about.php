@@ -22,7 +22,7 @@
 
         <b class="text-info">2 Years of Experience</b>
         <p class="intro-home">Your Dry Cleaning and Laundry. Done.</p>
-        <p>We are professionals in the laundry and dry cleaning business, which means we always stay up to date on the latest technologies, cleaning methods, and solutions for dealing with stains or delicate fabrics. Plus, we maintain the highest standards of business integrity by following local and national regulations and environmental safety rules. We are passionate about changing the way you think about laundry!</p>
+        <p>Kami adalah profesional dalam bisnis laundry dan dry cleaning, yang berarti kami selalu mengikuti perkembangan teknologi, metode pembersihan, dan solusi terbaru untuk menangani noda atau kain halus. Selain itu, kami mempertahankan standar integritas bisnis tertinggi dengan mematuhi peraturan lokal dan nasional serta aturan keselamatan lingkungan. Kami bersemangat untuk mengubah cara anda berpikir tentang laundry!</p>
 
 
         <div class="container">
@@ -47,15 +47,15 @@
         <div class="row g-4">
             <!-- Card 1 -->
             <div class="col-md-4">
-                <div class="card bg-transparent border-0 shadow-none text-dark " style="backdrop-filter: blur(10px);">
+                <div class="card bg-transparent border-0 shadow-none text-dark" style="backdrop-filter: blur(10px);">
                     <div class="card-body">
                         <i class="about-circle bi bi-lightbulb text-info fs-3"></i>
                         &nbsp;
-                        <h5 class="card-title mt-3 text">Persionalized Experience</h5>
-                        <br>
-                        <br>
+                        <h5 class="card-title mt-3 text">Personalized Experience</h5>
+                        <br><br>
                         <p class="card-text">
-                            We take utmost care of your clothes, segregating based on the cloth type and giving you instant clothes to make a statement. </p>
+                            Kami sangat memperhatikan pakaian Anda, dengan memisahkan berdasarkan jenis kain dan memberikan pakaian instan untuk membuat Anda tampil menonjol.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,8 @@
                         <h5 class="card-title mt-3 text">Affordable Pricing</h5>
                         <br><br>
                         <p class="card-text">
-                            Prices that suits your pocket is one of our USP. An option of choosing between 2 types of pricing is available. </p>
+                            Harga yang ramah di kantong adalah salah satu keunggulan kami. Tersedia pilihan antara 2 jenis harga.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -83,8 +84,8 @@
                         <h5 class="card-title mt-3 text">Convenience</h5>
                         <br><br>
                         <p class="card-text">
-
-                            With just a tap of a button, your laundry gets done, giving your leisure time to spend with family and friends. </p>
+                            Hanya dengan satu sentuhan tombol, laundry Anda selesai, memberi Anda waktu luang untuk dihabiskan bersama keluarga dan teman.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -98,8 +99,8 @@
                         <h5 class="card-title mt-3 text">Quality</h5>
                         <br><br>
                         <p class="card-text">
-
-                            We use the best in class products, to assure that your favorite clothes are always there for you to wear. </p>
+                            Kami menggunakan produk terbaik di kelasnya, untuk memastikan pakaian favorit Anda selalu siap dikenakan.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -111,10 +112,10 @@
                         <i class="about-circle bi bi-truck text-info fs-3"></i>
                         &nbsp;
                         <h5 class="card-title mt-3 text">Express Delivery</h5>
-                        <br>
-                        <br>
+                        <br><br>
                         <p class="card-text">
-                            With our super express delivery, we would get your laundry done in less than 8 hours. </p>
+                            Dengan layanan antar super cepat kami, laundry Anda akan selesai dalam waktu kurang dari 8 jam.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -128,11 +129,13 @@
                         <h5 class="card-title mt-3 text">Instant Order Update</h5>
                         <br><br>
                         <p class="card-text">
-                            Regular updates of your order, to help you keep a track of your laundry and plan accordingly. </p>
+                            Pembaruan rutin atas pesanan Anda, agar Anda dapat memantau laundry dan merencanakan dengan lebih baik.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 
 </div>

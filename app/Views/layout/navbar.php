@@ -49,7 +49,7 @@
 
             <div class="cart-icon d-flex align-items-center position-relative ms-md-5 me-4 mt-0" style="margin-right: 10px;">
                 <h5 class="mb-0">
-                    <i class="bi bi-cart fs-3 text-dark"></i>
+                    <a href="/OrderController"><i class="fas fs-4 fa-truck"></i></a>
                 </h5>
                 <span id="cart-quantity" class="badge bg-info position-absolute top-1 start-100 translate-middle rounded-pill">
                     0
@@ -60,51 +60,38 @@
         </ul>
         &nbsp;
         <br>
-        <a href="/Wash" class="bg-info p-2 text-light fw-bold text-decoration-none">Schedule a Pickup</a>
-    </div>
-</nav>
+        <div class="d-flex">
+            <a href="/Wash" class="bg-info p-2 text-light fw-bold text-decoration-none">Schedule a Pickup</a>
+            &nbsp;
+            &nbsp;
+            <style>
+                .authhover:hover {
+                    color: gray !important;
+                }
 
-<!-- Modal -->
-<!-- <div class="modal fade" id="userSettingModal" tabindex="-1" aria-labelledby="userSettingModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content border-0 shadow-lg">
-            <form action="/user/update" method="post">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title" id="userSettingModalLabel"><i class="bi bi-person-circle me-2"></i>Account Settings</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div> -->
-
-<!-- <div class="modal-body p-4"> -->
-<!-- Username -->
-<!-- <div class="mb-3">
-                        <label for="username" class="form-label"><i class="bi bi-person-fill me-1"></i>Username</label>
-                        <input type="text" class="form-control" id="username" name="username" required placeholder="Masukkan username">
-                    </div> -->
-
-<!-- Email -->
-<!-- <div class="mb-3">
-                        <label for="email" class="form-label"><i class="bi bi-envelope-fill me-1"></i>Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required placeholder="contoh@email.com">
-                    </div> -->
-
-<!-- Alamat -->
-<!-- <div class="mb-3">
-                        <label for="alamat" class="form-label"><i class="bi bi-geo-alt-fill me-1"></i>Alamat</label>
-                        <textarea class="form-control" id="alamat" name="alamat" rows="2" required placeholder="Masukkan alamat lengkap"></textarea>
-                    </div> -->
-
-<!-- No Telepon -->
-<!-- <div class="mb-3">
-                        <label for="telp" class="form-label"><i class="bi bi-telephone-fill me-1"></i>No. Telepon</label>
-                        <input type="tel" class="form-control" id="telp" name="telp" required placeholder="08xxxxxxxxxx">
-                    </div>
+                @media(min-width:768px) {
+                    .dropdown-menu {
+                        margin-left: -130px;
+                    }
+                }
+            </style>
+            <?php if (!session()->get('logged_in')) : ?>
+                <div class="mt-2">
+                    <a href="/Login" class="authhover text-dark fw-bold text-decoration-none" style="margin-right: 3px;">Login</a>
+                    |
+                    <a href="/Daftar" class="authhover text-dark fw-bold text-decoration-none" style="margin-left: 3px;">Daftar</a>
                 </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Save</button>
+                <!-- Icon User Settings -->
+            <?php else : ?>
+                <div class="dropdown">
+                    <i style="margin:10px;" type="button" data-bs-toggle="dropdown" aria-expanded="false" class="dropdown-toggle fas fs-4 fa-user-cog"></i>
+                    <ul class="dropdown-menu" style=" margin-top: 10px;">
+                        <li><a class="dropdown-item" href="#">Akun Saya</a></li>
+                        <li><a class="dropdown-item" href="#">Pesanan Saya</a></li>
+                        <li><a class="dropdown-item text-danger" href="Login/logout">Logout</a></li>
+                    </ul>
                 </div>
-            </form>
+            <?php endif; ?>
         </div>
     </div>
-</div> -->
+</nav>

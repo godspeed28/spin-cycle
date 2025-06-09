@@ -16,3 +16,6 @@ $routes->post('/Login/auth', [\App\Controllers\Login::class, 'auth']);
 $routes->get('Login/logout', [\App\Controllers\Login::class, 'logout']);
 $routes->get('/Wash', [\App\Controllers\Wash::class, 'index']);
 $routes->post('/Wash/checkout', [\App\Controllers\Wash::class, 'checkout']);
+$routes->get('/OrderController', [\App\Controllers\OrderController::class, 'index']);
+$routes->post('checkout/proses', [\App\Controllers\Checkout::class, 'proses']);
+$routes->get('checkout/success', [\App\Controllers\Checkout::class, 'success']);

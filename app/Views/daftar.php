@@ -4,7 +4,7 @@
 <hr>
 <div class="bg-home d-flex justify-content-center">
     <!-- Login Card -->
-    <div class="card shadow-sm border-0 rounded-0 p-4 mb-4 mb-5 me-md-3" style="width: 100%; max-width: 400px;">
+    <div class="card shadow-sm border-0 rounded-1 p-4 mb-4 mb-5 me-md-3" style="width: 100%; max-width: 400px;">
         <h4 class="mb-4 text-start fw-bold"><?= esc($title2) ?></h4>
 
         <?php if (session()->getFlashdata('error')) : ?>
@@ -15,29 +15,17 @@
 
         <form action="/Login/auth" method="post">
             <div class="mb-3 text-start">
-                <label for="username" class="form-label">Username</label>
                 <div class="input-group">
-                    <span class="input-group-text bg-light">
-                        <i class="fa-solid fa-user"></i>
+                    <span class="input-group-text rounded-0 bg-light">
+                        <i class="fa-solid fa-phone"></i>
                     </span>
-                    <input type="text" id="username" name="username" class="form-control" placeholder="Masukkan username" required>
+                    <input type="text" id="username" name="username" class="rounded-0 form-control" placeholder="Nomor Telpon" required>
                 </div>
             </div>
-
-            <div class="mb-3 text-start">
-                <label for="password" class="form-label">Password</label>
-                <div class="input-group">
-                    <span class="input-group-text bg-light">
-                        <i class="fas fa-lock"></i>
-                    </span>
-                    <input type="password" id="password" name="password" class="form-control" placeholder="Masukkan password" required>
-                </div>
-            </div>
-
-            <button type="submit" class="btn btn-info rounded-0 text-white w-100">Daftar</button>
+            <button type="submit" class="btn btn-info rounded-0 text-white w-100">Berikutnya</button>
         </form>
 
-        <p class="text-center mt-3">Sudah punya akun? <a href="/Daftar/">Login</a></p>
+        <p class="text-center mt-3">Sudah punya akun? <a href="/Login/">Login</a></p>
         <hr>
         <p class="text-center mb-2">Atau daftar dengan:</p>
         <div class="text-center">
