@@ -19,4 +19,14 @@ class OrderItemsModel extends Model
     ];
 
     protected $useTimestamps = false;
+
+    public function getItemsByUserId($userId)
+    {
+        return $this->db->table('order_items')
+            ->select('order_items.*')
+            ->join('orders', 'order_items.order_id = orders.id')
+            ->where('orders.user_id', $userId)
+            ->get()
+            ->getResultArray();
+    }
 }

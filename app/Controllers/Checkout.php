@@ -6,11 +6,20 @@ use CodeIgniter\HTTP\Request;
 
 class Checkout extends BaseController
 {
+
     public function proses()
     {
+        function generateResi()
+        {
+            $timestamp = date('YmdHis'); // waktu sekarang
+            $random = strtoupper(substr(md5(uniqid()), 0, 3)); // 3 huruf acak
+            return 'SC' . $timestamp . $random;
+        }
+        $userId = session()->get('user_id');
         $session = session();
         $data = [
-            'user_id' => $session->get('user_id'),
+            'no_resi' => generateResi(),
+            'user_id' => $userId,
             'nama' => $this->request->getPost('nama'),
             'alamat' => $this->request->getPost('alamat'),
             'tanggal' => $this->request->getPost('tanggal'),
@@ -21,12 +30,23 @@ class Checkout extends BaseController
             'total_berat' => $this->request->getPost('total_berat'),
             'total_harga' => $this->request->getPost('total_harga'),
             'jenis_pakaian' => $this->request->getPost('jenis_pakaian'), // bisa JSON
-            'metode_pembayaran' => $this->request->getPost('metode_pembayaran')
+            'metode_pembayaran' => $this->request->getPost('metode_pembayaran'),
+            'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
+
         ];
+
+        // cek metode pembayaran
+        if ($data['metode_pembayaran'] == 'COD') {
+            $paid = 0;
+        } else {
+            $paid = 1;
+        }
 
         // Simpan ke database via model
         $orderModel = new \App\Models\OrderModel();
         $orderItemModel = new \App\Models\OrderItemsModel();
+        $statusModel = new \App\Models\OrderStatusModel();
+
         $orderModel->insert($data);
         $orderId = $orderModel->getInsertID();
 
@@ -50,6 +70,12 @@ class Checkout extends BaseController
                 'subtotal' => $subtotal[$i]
             ]);
         }
+
+        $statusModel->insert([
+            'order_id' => $orderId,
+            'status' => 'Diproses',
+            'paid' => $paid
+        ]);
 
         return redirect()->to('/checkout/success')->with('message', 'Pesanan berhasil dibuat!');
     }

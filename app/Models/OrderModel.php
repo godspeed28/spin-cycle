@@ -8,6 +8,7 @@ class OrderModel extends Model
 {
     protected $table = 'orders';
     protected $allowedFields = [
+        'no_resi',
         'user_id',
         'nama',
         'alamat',

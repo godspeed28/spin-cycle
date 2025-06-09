@@ -11,6 +11,7 @@ class Wash extends BaseController
 {
     public function index()
     {
+        $userId = session()->get('user_id');
         $pakaianModel = new PakaianModel();
         $dataPakaianModel = $pakaianModel->findAll();
 
@@ -25,12 +26,14 @@ class Wash extends BaseController
             'icon' => 'basket-fill',
             'validation' => session()->get('validation'),
             'pakaian' => $dataPakaianModel,
-            'jenis_layanan' => $datalayananModel
+            'jenis_layanan' => $datalayananModel,
+            'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
         ];
         return view('wash', $data);
     }
     public function checkout()
     {
+        $userId = session()->get('user_id');
         $pakaianModel = new PakaianModel();
         $dataPakaianModel = $pakaianModel->findAll();
 
@@ -157,7 +160,9 @@ class Wash extends BaseController
             'tel' => '+62 812-3626-2924',
             'phone' => '6281236262924',
             'iconPakaian' => $pakaianIcon,
-            'total_harga' => $total_harga
+            'total_harga' => $total_harga,
+            'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
+
         ];
 
         return view('checkout', $data);

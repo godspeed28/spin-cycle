@@ -52,7 +52,7 @@
                     <a href="/OrderController"><i class="fas fs-4 fa-truck"></i></a>
                 </h5>
                 <span id="cart-quantity" class="badge bg-info position-absolute top-1 start-100 translate-middle rounded-pill">
-                    0
+                    <?= esc($count ?? 0) ?>
                 </span>
             </div>
 
@@ -87,8 +87,8 @@
                     <i style="margin:10px;" type="button" data-bs-toggle="dropdown" aria-expanded="false" class="dropdown-toggle fas fs-4 fa-user-cog"></i>
                     <ul class="dropdown-menu" style=" margin-top: 10px;">
                         <li><a class="dropdown-item" href="#">Akun Saya</a></li>
-                        <li><a class="dropdown-item" href="#">Pesanan Saya</a></li>
-                        <li><a class="dropdown-item text-danger" href="Login/logout">Logout</a></li>
+                        <li><a class="dropdown-item" href="/OrderController/">Pesanan Saya</a></li>
+                        <li><a class="dropdown-item text-danger" href="/Login/logout">Logout</a></li>
                     </ul>
                 </div>
             <?php endif; ?>

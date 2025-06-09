@@ -3,8 +3,8 @@
 <?= $this->section('content'); ?>
 
 <div class=" d-flex flex-column bg-home" style="margin-top: 10px;">
-    <?php $kata = "admin123";
-    // dd(password_hash($kata, PASSWORD_DEFAULT)); 
+    <?php $kata = "user123";
+    // dd(password_hash($kata, PASSWORD_DEFAULT));
     ?>
     <div class="intro-home">DO YOUR LAUNDRY SMARTLY!</div>
     <p>Cucian Anda akan dikirim ke ahli pilihan Anda hanya dengan satu klik.</p>
