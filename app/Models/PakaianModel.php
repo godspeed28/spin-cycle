@@ -13,10 +13,4 @@ class PakaianModel extends Model
 
     // Jika ingin hasil dalam array, aktifkan ini:
     protected $returnType     = 'array';
-
-    // Optional: validation rules jika digunakan untuk insert/update dari form
-    // protected $validationRules = [
-    //     'nama' => 'required|string|max_length[50]',
-    //     'berat' => 'required|decimal'
-    // ];
 }
