@@ -19,7 +19,7 @@
 <div class="container mt-5">
     <div class="card shadow-none border-0">
         <div class="card-header text-white rounded-0" style="background-color:rgb(247, 242, 242);">
-            <h4><i class="bi bi-<?= $icon ?> me-2" style="color: black;"></i></h4>
+            <h4><i class="fs-5 fa fa-<?= $icon ?> me-2" style="color: black;"></i></h4>
         </div>
 
         <div class="card-body">
@@ -30,71 +30,74 @@
             <?php else: ?>
                 <div class="rounded-0 accordion" id="ordersAccordion">
                     <?php foreach ($orders as $index => $order): ?>
-                        <div class="rounded-0 accordion-item mb-3">
-                            <h2 class="accordion-header" id="heading<?= $index ?>">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
-                                    Order ID: <?= esc($order['no_resi']) ?> | Tanggal: <?= esc($order['tanggal']) ?>
-                                </button>
-                            </h2>
-                            <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#ordersAccordion">
-                                <div class="accordion-body">
-                                    <p><strong>Jenis Layanan:</strong> <?= esc($order['jenis_layanan']) ?></p>
-                                    <p><strong>Total Harga:</strong> <span class="badge bg-success">Rp<?= number_format($order['total_harga'], 0, ',', '.') ?></span></p>
-                                    <p><strong>Nama:</strong> <?= esc($order['nama']) ?></p>
-                                    <p><strong>Alamat:</strong> <?= esc($order['alamat']) ?></p>
-                                    <p><strong>Waktu:</strong> <?= esc($order['waktu']) ?></p>
-                                    <p><strong>Catatan:</strong> <?= esc($order['catatan']) ?></p>
-                                    <p><strong>Total Berat:</strong> <?= esc($order['total_berat']) ?> kg</p>
-                                    <p><strong>Metode Pembayaran:</strong> <?= esc($order['metode_pembayaran']) ?></p>
+                        <?php foreach ($orderStatuses[$order['id']] as $status): ?>
+                            <div class="rounded-0 accordion-item mb-3">
+                                <?php
+                                $warnaStatus = 'text-info'; // default
 
-                                    <h5 class="mt-4">Detail Pesanan:</h5>
-                                    <div class="table-responsive">
-                                        <table class="table table-striped table-bordered">
-                                            <thead class="table-dark">
-                                                <tr>
-                                                    <th>Nama Pakaian</th>
-                                                    <th>Jumlah</th>
-                                                    <th>Berat Satuan (kg)</th>
-                                                    <th>Total Berat (kg)</th>
-                                                    <th>Subtotal (Rp)</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php foreach ($orderItem as $item): ?>
-                                                    <?php if ($item['order_id'] == $order['id']): ?>
+                                if ($status['status'] === 'Dibatalkan') {
+                                    $warnaStatus = 'text-danger';
+                                } elseif ($status['status'] === 'Selesai') {
+                                    $warnaStatus = 'text-success';
+                                }
+                                ?>
+                                <h2 class="accordion-header" id="heading<?= $index ?>">
+                                    <button class="accordion-button <?= $warnaStatus ?> collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
+                                        <?= esc($status['status']) ?> | <?= esc($order['no_resi']) ?> | <?= date('d-F-Y', strtotime(esc($status['created_at']))) ?>
+                                    </button>
+                                </h2>
+                                <div id="collapse<?= $index ?>" class="text-start accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#ordersAccordion">
+                                    <div class="accordion-body">
+                                        <?php if (!empty($order['jasa_express']) && $order['jasa_express'] != 0): ?>
+                                            <p><strong>Jasa Express:</strong> Rp<?= number_format($order['jasa_express'], 0, ',', '.') ?></p>
+                                        <?php endif; ?>
+                                        <p><strong>Jenis Layanan:</strong> <?= esc($order['jenis_layanan']) ?></p>
+                                        <p><strong>Total Harga:</strong> <span class="badge bg-success">Rp<?= number_format($order['total_harga'], 0, ',', '.') ?></span></p>
+                                        <p><strong>Nama:</strong> <?= esc($order['nama']) ?></p>
+                                        <p><strong>Alamat:</strong> <?= esc($order['alamat']) ?></p>
+                                        <p><strong>Waktu:</strong> <?= esc($order['waktu']) ?></p>
+                                        <p><strong>Catatan:</strong> <?= esc($order['catatan']) ?></p>
+                                        <p><strong>Total Berat:</strong> <?= esc($order['total_berat']) ?> kg</p>
+                                        <p><strong>Metode Pembayaran:</strong> <?= esc($order['metode_pembayaran']) ?></p>
+
+                                        <div x-data="{ open: false }">
+                                            <button @click="open = !open">Detail Pesanan</button>
+                                            <div x-show="open" class="table-responsive">
+                                                <table class="table table-striped table-bordered">
+                                                    <thead class="table-dark">
                                                         <tr>
-                                                            <td><?= esc($item['nama_pakaian']) ?></td>
-                                                            <td><?= esc($item['jumlah']) ?></td>
-                                                            <td><?= esc($item['berat_satuan']) ?></td>
-                                                            <td><?= esc($item['total_berat']) ?></td>
-                                                            <td>Rp<?= number_format($item['subtotal'], 0, ',', '.') ?></td>
+                                                            <th>Nama Pakaian</th>
+                                                            <th>Jumlah</th>
+                                                            <th>Berat Satuan (kg)</th>
+                                                            <th>Total Berat (kg)</th>
+                                                            <th>Subtotal (Rp)</th>
                                                         </tr>
-                                                    <?php endif; ?>
-                                                <?php endforeach; ?>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-                                    <h5 class="mt-4">Status Pesanan:</h5>
-                                    <ul class="list-group">
-                                        <?php foreach ($orderStatuses[$order['id']] as $status): ?>
-                                            <li class="list-group-item">
-                                                <span class="badge bg-primary me-2"><?= esc($status['status']) ?></span>
-                                                <?= date('d-m-Y H:i:s', strtotime($status['updated_at'])) ?>
-                                            </li>
-                                        <?php endforeach; ?>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php foreach ($orderItem as $item): ?>
+                                                            <?php if ($item['order_id'] == $order['id']): ?>
+                                                                <tr>
+                                                                    <td><?= esc($item['nama_pakaian']) ?></td>
+                                                                    <td><?= esc($item['jumlah']) ?></td>
+                                                                    <td><?= esc($item['berat_satuan']) ?></td>
+                                                                    <td><?= esc($item['total_berat']) ?></td>
+                                                                    <td>Rp<?= number_format($item['subtotal'], 0, ',', '.') ?></td>
+                                                                </tr>
+                                                            <?php endif; ?>
+                                                        <?php endforeach; ?>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
                                     </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php endforeach; ?>
+                        <?php endforeach; ?>
                 </div>
             <?php endif; ?>
         </div>
     </div>
 </div>
-
-
-
-
 <?= $this->endSection(); ?>

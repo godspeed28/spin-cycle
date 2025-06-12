@@ -41,12 +41,11 @@ class OrderController extends BaseController
             'title' => 'Orders | Spin Cycle',
             'tel' => '+62 812-3626-2924',
             'phone' => '6281236262924',
-            'icon' => 'basket-fill',
+            'icon' => 'list-alt',
             'orders' => $orders,
             'orderItem' => $orderItemModel->getItemsByUserId($userId),
             'orderStatuses' => $orderStatuses,
             'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
-
         ];
 
         return view('order', $data);

@@ -69,8 +69,7 @@
                         <h5 class="card-title mt-3 text">Affordable Pricing</h5>
                         <br><br>
                         <p class="card-text">
-                            Harga yang ramah di kantong adalah salah satu keunggulan kami. Tersedia pilihan antara 2 jenis harga.
-                        </p>
+                            Kami selalu mengutamakan kualitas dalam setiap layanan yang kami berikan. Harga yang ramah di kantong adalah salah satu keunggulan kami.</p>
                     </div>
                 </div>
             </div>
