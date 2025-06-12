@@ -12,6 +12,7 @@ class OrderController extends BaseController
     public function index()
     {
         $userId = session()->get('user_id');
+        $noHp = session()->get('no_telp');
 
         // if (!$userId) {
         //     return redirect()->to('/Login');
@@ -41,6 +42,7 @@ class OrderController extends BaseController
             'title' => 'Orders | Spin Cycle',
             'tel' => '+62 812-3626-2924',
             'phone' => '6281236262924',
+            'noHp' => $noHp,
             'icon' => 'list-alt',
             'orders' => $orders,
             'orderItem' => $orderItemModel->getItemsByUserId($userId),

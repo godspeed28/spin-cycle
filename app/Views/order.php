@@ -43,28 +43,39 @@
                                 ?>
                                 <h2 class="accordion-header" id="heading<?= $index ?>">
                                     <button class="accordion-button <?= $warnaStatus ?> collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
-                                        <?= esc($status['status']) ?> | <?= esc($order['no_resi']) ?> | <?= date('d-F-Y', strtotime(esc($status['created_at']))) ?>
+                                        <?= esc($status['status']) ?> | <?= esc($order['no_resi']) ?> | Created At :<?= date('d-F-Y h:i:s A', strtotime(esc($status['created_at']))) ?>
                                     </button>
                                 </h2>
                                 <div id="collapse<?= $index ?>" class="text-start accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#ordersAccordion">
                                     <div class="accordion-body">
-                                        <?php if (!empty($order['jasa_express']) && $order['jasa_express'] != 0): ?>
-                                            <p><strong>Jasa Express:</strong> Rp<?= number_format($order['jasa_express'], 0, ',', '.') ?></p>
-                                        <?php endif; ?>
-                                        <p><strong>Jenis Layanan:</strong> <?= esc($order['jenis_layanan']) ?></p>
-                                        <p><strong>Total Harga:</strong> <span class="badge bg-success">Rp<?= number_format($order['total_harga'], 0, ',', '.') ?></span></p>
-                                        <p><strong>Nama:</strong> <?= esc($order['nama']) ?></p>
-                                        <p><strong>Alamat:</strong> <?= esc($order['alamat']) ?></p>
-                                        <p><strong>Waktu:</strong> <?= esc($order['waktu']) ?></p>
+                                        <p>Thank you. Your order has been received.</p>
+                                        <hr>
+                                        <div class="d-flex">
+                                            <div style="margin: 5px 10px;" class="text-secondary">Order Number: <?= esc($order['no_resi']) ?></div>
+                                            <div style=" border-left: 2px dashed #ccc;height: 20px;margin: 10px;"></div>
+                                            <div style="margin: 5px 10px;" class="text-secondary">Date Pickup: <?= esc($order['tanggal']) . '-' . $order['waktu'] ?></div>
+                                            <div style=" border-left: 2px dashed #ccc;height: 20px;margin: 10px;"></div>
+                                            <div style="margin: 5px 10px;" class="text-secondary">Total: Rp<?= number_format($order['total_harga'], 0, ',', '.') ?></div>
+                                            <div style=" border-left: 2px dashed #ccc;height: 20px;margin: 10px;"></div>
+                                            <div style="margin: 5px 10px;" class="text-secondary">Metode Pembayaran: <?= esc($order['metode_pembayaran']) ?></div>
+                                        </div>
+                                        <hr>
+                                        <div class="container">
+                                            <h5 class="text-start text-info mb-3"><i class="bi bi-geo-alt"></i> Alamat Pickup & Pengiriman</h5>
+                                            <h6 class="text-start"><?= esc($order['nama']) ?><?= ' (+62) ' . substr($noHp, 1) ?></h6>
+                                            <p class="text-start">
+                                                <?php setlocale(LC_TIME, 'id_ID'); ?>
+                                                <?= esc($order['alamat']) ?>
+                                            </p>
+                                        </div>
+                                        <hr>
                                         <p><strong>Catatan:</strong> <?= esc($order['catatan']) ?></p>
-                                        <p><strong>Total Berat:</strong> <?= esc($order['total_berat']) ?> kg</p>
-                                        <p><strong>Metode Pembayaran:</strong> <?= esc($order['metode_pembayaran']) ?></p>
-
+                                        <hr>
                                         <div x-data="{ open: false }">
-                                            <button @click="open = !open">Detail Pesanan</button>
+                                            <button @click="open = !open" class="btn mb-3"><u><b>Order details</u></b></button>
                                             <div x-show="open" class="table-responsive">
-                                                <table class="table table-striped table-bordered">
-                                                    <thead class="table-dark">
+                                                <table class="table">
+                                                    <thead class="table-transparent">
                                                         <tr>
                                                             <th>Nama Pakaian</th>
                                                             <th>Jumlah</th>
@@ -77,7 +88,7 @@
                                                         <?php foreach ($orderItem as $item): ?>
                                                             <?php if ($item['order_id'] == $order['id']): ?>
                                                                 <tr>
-                                                                    <td><?= esc($item['nama_pakaian']) ?></td>
+                                                                    <td><?= esc(str_replace('_', ' ', $item['nama_pakaian'])) ?></td>
                                                                     <td><?= esc($item['jumlah']) ?></td>
                                                                     <td><?= esc($item['berat_satuan']) ?></td>
                                                                     <td><?= esc($item['total_berat']) ?></td>
@@ -87,6 +98,12 @@
                                                         <?php endforeach; ?>
                                                     </tbody>
                                                 </table>
+                                                <?php if (!empty($order['jasa_express']) && $order['jasa_express'] != 0): ?>
+                                                    <p class="text-end text-secondary"><strong>Jasa Express:</strong> Rp<?= number_format($order['jasa_express'], 0, ',', '.') ?></p>
+                                                <?php endif; ?>
+                                                <p class="text-end text-secondary"><strong>Jenis Layanan:</strong> <?= esc($order['jenis_layanan']) ?></p>
+                                                <p class="text-end text-secondary"><strong>Total Berat:</strong> <?= esc($order['total_berat']) ?> kg</p>
+                                                <p class="text-end text-secondary"><strong>Total Harga:</strong> <span class="text-info fw-bold fs-3">Rp<?= number_format($order['total_harga'], 0, ',', '.') ?></p>
                                             </div>
                                         </div>
                                     <?php endforeach; ?>

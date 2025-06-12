@@ -36,6 +36,7 @@ class Login extends BaseController
             if (password_verify($password, $pass)) {
                 $session->set([
                     'user_id' => $data['id'],
+                    'no_telp' => $data['no_telp'],
                     'username' => $data['username'],
                     'logged_in' => true
                 ]);

@@ -24,7 +24,7 @@
             <h5 class="text-start text-info mb-3"><i class="bi bi-geo-alt"></i> Alamat Pickup & Pengiriman</h5>
             <div class="d-flex">
                 <div class="container" style="max-width:300px;">
-                    <h6 class="text-start"><?= esc($nama) ?> (+62) 81236262924</h6>
+                    <h6 class="text-start"><?= esc($nama) ?> <?= ' (+62) ' . substr($noHp, 1) ?></h6>
                 </div>
                 <div class="container-fluid p-0">
                     <p class="text-start">
@@ -125,7 +125,7 @@
                 <?php if ($jasa_express == 10000) : ?>
                     <h6 class="text-end text-secondary">Jasa Express : <span class="text-dark">Rp <?= number_format($jasa_express ?? 0, 0, ',', '.') ?></span></h6>
                 <?php endif; ?>
-                <h6 class="text-end text-secondary">Jenis Layanan : <span class="text-dark"><?= esc($jenis_layanan); ?>, Rp <?= number_format($harga_jenis_layanan[$jenis_layanan] ?? 0, 0, ',', '.') ?></span> </h6>
+                <h6 class="text-end text-secondary">Jenis Layanan: <span class="text-dark"><?= esc($jenis_layanan); ?>, Rp <?= number_format($harga_jenis_layanan[$jenis_layanan] ?? 0, 0, ',', '.') ?></span> </h6>
                 <h6 class="text-end text-secondary">Total Berat Produk: <span class="text-dark"><?= esc($berat); ?> Kg</span> </h6>
                 <h6 class="text-end text-secondary">Total Pesanan Produk: <span class="text-info fs-3">Rp <?= number_format($total_harga + $jasa_express ?? 0, 0, ',', '.') ?></span></h6>
             </div>

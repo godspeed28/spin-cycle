@@ -33,6 +33,7 @@ class Wash extends BaseController
     }
     public function checkout()
     {
+        $noHp = session()->get('no_telp');
         $userId = session()->get('user_id');
         $pakaianModel = new PakaianModel();
         $dataPakaianModel = $pakaianModel->findAll();
@@ -159,6 +160,7 @@ class Wash extends BaseController
             'title2' => 'Checkout',
             'tel' => '+62 812-3626-2924',
             'phone' => '6281236262924',
+            'noHp' => $noHp,
             'iconPakaian' => $pakaianIcon,
             'total_harga' => $total_harga,
             'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
