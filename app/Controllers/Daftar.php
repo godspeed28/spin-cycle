@@ -56,14 +56,6 @@ class Daftar extends BaseController
             'password' => $hashedPassword
         ]);
 
-        // // Set session (opsional setelah daftar)
-        // $newUser = $model->where('username', $username)->first();
-        // $session->set([
-        //     'user_id' => $newUser['id'],
-        //     'username' => $newUser['username'],
-        //     'logged_in' => true
-        // ]);
-
         return redirect()->to('/Login')->with('success', 'Pendaftaran berhasil!');
     }
 }

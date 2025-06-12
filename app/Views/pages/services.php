@@ -24,7 +24,7 @@
                         <div class="card-body">
                             <h5 class="card-title text">Regular Wash & Fold</h5>
                             <p class="card-text">Cuci dan lipat pakaian sehari-hari dengan proses higienis dan cepat.</p>
-                            <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
+                            <a href="/washfold" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
                         </div>
                     </div>
                 </div>
