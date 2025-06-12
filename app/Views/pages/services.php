@@ -37,7 +37,7 @@
                             <h5 class="card-title text">Express Laundry</h5>
                             <p class="card-text">Layanan cepat, pakaian bersih dan rapi dalam 4–6 jam saja.</p>
                             <br>
-                            <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
+                            <a href="/expresslaundry" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                         <div class="card-body">
                             <h5 class="card-title text">Dry Cleaning</h5>
                             <p class="card-text">Perawatan profesional untuk jas, gaun pesta, dan bahan khusus lainnya.</p>
-                            <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
+                            <a href="/drycleaning" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                         <div class="card-body">
                             <h5 class="card-title text">Ironing Only</h5>
                             <p class="card-text">Setrika pakaian kamu biar makin rapi dan siap dipakai.</p><br>
-                            <a href="" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
+                            <a href="/ironingonly" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
                         </div>
                     </div>
                 </div>
