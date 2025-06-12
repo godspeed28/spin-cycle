@@ -16,31 +16,54 @@ class Daftar extends BaseController
         ];
         return view('daftar', $data);
     }
-    public function register()
+    public function auth()
     {
-        helper(['form']);
+        $session = session();
+        $model = new UserModel();
 
-        if ($this->request->getMethod() === 'post') {
-            $rules = [
-                'name'     => 'required|min_length[3]',
-                'email'    => 'required|valid_email|is_unique[users.email]',
-                'password' => 'required|min_length[6]',
-            ];
+        $username = $this->request->getPost('username');
+        $email = $this->request->getPost('email');
+        $no_telp = $this->request->getPost('no_telp');
+        $password = $this->request->getPost('password');
+        // $password_confirm = $this->request->getPost('password_confirm');
 
-            if (!$this->validate($rules)) {
-                return view('auth/register', [
-                    'validation' => $this->validator
-                ]);
-            }
-
-            $userModel = new UserModel();
-            $userModel->save([
-                'name'     => $this->request->getPost('name'),
-                'email'    => $this->request->getPost('email'),
-                'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
-            ]);
-
-            return redirect()->to('/auth/register')->with('success', 'Registrasi berhasil!');
+        // Validasi sederhana
+        if (empty($username) || empty($email) || empty($no_telp) || empty($password)) {
+            return redirect()->back()->with('error', 'Semua field wajib diisi.');
         }
+
+        // Cek apakah username, email, atau no_telp sudah digunakan
+        $existing = $model
+            ->groupStart()
+            ->where('username', $username)
+            ->orWhere('email', $email)
+            ->orWhere('no_telp', $no_telp)
+            ->groupEnd()
+            ->first();
+
+        if ($existing) {
+            return redirect()->back()->with('error', 'Username, email, atau no. telp sudah digunakan.');
+        }
+
+        // Hash password
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+        // Simpan ke database
+        $model->save([
+            'username' => $username,
+            'email' => $email,
+            'no_telp' => $no_telp,
+            'password' => $hashedPassword
+        ]);
+
+        // Set session (opsional setelah daftar)
+        $newUser = $model->where('username', $username)->first();
+        $session->set([
+            'user_id' => $newUser['id'],
+            'username' => $newUser['username'],
+            'logged_in' => true
+        ]);
+
+        return redirect()->to('/')->with('success', 'Pendaftaran berhasil!');
     }
 }
