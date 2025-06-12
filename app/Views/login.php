@@ -36,13 +36,7 @@
         </form>
 
         <p class="text-center mt-3">Belum punya akun? <a href="/Daftar/">Daftar</a></p>
-        <hr>
-        <p class="text-center mb-2">Atau login dengan:</p>
-        <div class="text-center">
-            <a href="#" class="btn btn-outline-danger rounded-pill">
-                <i class="fab fa-google me-2"></i>Google
-            </a>
-        </div>
+        
     </div>
 </div>
 <?= $this->endSection(); ?>

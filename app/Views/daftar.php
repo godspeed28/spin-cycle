@@ -14,25 +14,48 @@
         <?php endif; ?>
 
         <form action="/Login/auth" method="post">
+            <div class="mb-3 me-3 ml-3 text-start">
+            <div class="input-group">
+                <span class="input-group-text rounded-0 bg-light">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+                <input type="username" id="username" name="username" class="rounded-0 form-control" placeholder="Username" required>
+            </div>
+        </div>
+            <div class="d-flex">
+                <div class="mb-3 me-3 ml-3 text-start">
+                <div class="input-group">
+                    <span class="input-group-text rounded-0 bg-light">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <input type="email" id="email" name="email" class="rounded-0 form-control" placeholder="E-mail" required>
+                </div>
+            </div>
+            <br>
+            
             <div class="mb-3 text-start">
                 <div class="input-group">
                     <span class="input-group-text rounded-0 bg-light">
                         <i class="fa-solid fa-phone"></i>
                     </span>
-                    <input type="text" id="username" name="username" class="rounded-0 form-control" placeholder="Nomor Telpon" required>
+                    <input type="text" id="no_telp" name="no_telp" class="rounded-0 form-control" placeholder="Nomor Telpon" required>
                 </div>
             </div>
-            <button type="submit" class="btn btn-info rounded-0 text-white w-100">Berikutnya</button>
+            </div>
+            <div class="mb-3 text-start">
+                <div class="input-group">
+                    <span class="input-group-text rounded-0 bg-light">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                    <input type="password" id="password" name="password" class="rounded-0 form-control" placeholder="Password" required>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn btn-info rounded-0 text-white w-100">Daftar</button>
         </form>
 
         <p class="text-center mt-3">Sudah punya akun? <a href="/Login/">Login</a></p>
-        <hr>
-        <p class="text-center mb-2">Atau daftar dengan:</p>
-        <div class="text-center">
-            <a href="#" class="btn btn-outline-danger rounded-pill">
-                <i class="fab fa-google me-2"></i>Google
-            </a>
-        </div>
+        
     </div>
 </div>
 <?= $this->endSection(); ?>
