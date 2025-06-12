@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
 <div class="text-start d-flex flex-column bg-page">
-    <h5 class="align-self-start" style="margin-left:150px;"><a href="/" class="hover-menu text-decoration-none text-info">Home</a> / <span class="text-info">Services</span> / <?= $item ?></h5>
+    <h5 class="align-self-start" style="margin-left:150px;"><a href="/" class="hover-menu text-decoration-none text-info">Home</a> / <a class="text-decoration-none hover-menu text-info" href="/Pages/services">Services</a> / <?= $item ?></h5>
     <br>
     <h1 class="align-self-start fw-bold" style="margin-left:150px;"><?= $item ?></h1>
 
