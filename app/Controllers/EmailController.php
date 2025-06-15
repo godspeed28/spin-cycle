@@ -8,6 +8,9 @@ class EmailController extends Controller
 {
     public function kirim()
     {
+        if (session()->get('logged_in_admin')) {
+            return redirect()->back();
+        }
         if (!session()->get('logged_in')) {
             return redirect()->to('/Login')->with('error', 'Silakan login terlebih dahulu.');
         }

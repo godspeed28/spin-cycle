@@ -8,6 +8,9 @@ class Login extends BaseController
 {
     public function index()
     {
+        if (session()->get('logged_in') || session()->get('logged_in_admin')) {
+            return redirect()->back();
+        }
         $data = [
             'title' => 'Login | SpinCycle',
             'title2' => 'Log in',
@@ -38,6 +41,7 @@ class Login extends BaseController
                     $session->set([
                         'user_id' => $data['id'],
                         'no_telp' => $data['no_telp'],
+                        'email' => $data['email'],
                         'username' => $data['username'],
                         'role' => $data['role'],
                         'logged_in_admin' => true
@@ -52,6 +56,7 @@ class Login extends BaseController
                 $session->set([
                     'user_id' => $data['id'],
                     'no_telp' => $data['no_telp'],
+                    'email' => $data['email'],
                     'username' => $data['username'],
                     'role' => $data['role'],
                     'logged_in' => true
@@ -69,5 +74,10 @@ class Login extends BaseController
     {
         session()->destroy();
         return redirect()->to('/');
+    }
+    public function logoutAdmin()
+    {
+        session()->destroy();
+        return redirect()->to('/Login');
     }
 }

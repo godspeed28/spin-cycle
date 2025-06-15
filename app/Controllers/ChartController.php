@@ -8,6 +8,9 @@ class ChartController extends BaseController
 {
     public function salesData()
     {
+        if (!session()->get('logged_in_admin')) {
+            return redirect()->back();
+        }
         $orderModel = new OrderModel();
 
         // Ambil data penjualan per bulan (contoh)

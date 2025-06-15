@@ -8,6 +8,9 @@ class Daftar extends BaseController
 {
     public function index()
     {
+        if (session()->get('logged_in') || session()->get('logged_in_admin')) {
+            return redirect()->back();
+        }
         $data = [
             'title' => 'Daftar | SpinCycle',
             'title2' => 'Daftar',

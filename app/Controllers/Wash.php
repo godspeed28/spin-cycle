@@ -11,6 +11,9 @@ class Wash extends BaseController
 {
     public function index()
     {
+        if (session()->get('logged_in_admin')) {
+            return redirect()->back();
+        }
         $userId = session()->get('user_id');
         $pakaianModel = new PakaianModel();
         $dataPakaianModel = $pakaianModel->findAll();

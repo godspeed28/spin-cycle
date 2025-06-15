@@ -2,6 +2,7 @@
 
 use App\Models\OrderModel;
 use App\Models\UserModel;
+// use App\Models\OrderStatusModel;
 
 function ubahRp($nilai)
 {
@@ -107,4 +108,24 @@ if (!function_exists('getPersenNewUsersToday')) {
 
         return max(0, min(100, round($persen))); // hasil 0–100
     }
+}
+
+function getEnumValues(string $table, string $column): array
+{
+    $db = \Config\Database::connect();
+    $query = $db->query("SHOW COLUMNS FROM `$table` WHERE Field = '$column'");
+    $row = $query->getRow();
+
+    if (!$row || !isset($row->Type)) {
+        return [];
+    }
+
+    if (preg_match("/^enum\((.*)\)$/", $row->Type, $matches)) {
+        $enumStr = $matches[1]; // isi: 'Diproses','Dalam Perjalanan',...
+        $enumStr = str_replace("'", "", $enumStr); // hilangkan tanda petik
+        $enumArr = explode(",", $enumStr); // pisah berdasarkan koma
+        return array_map('trim', $enumArr); // hilangkan spasi berlebih
+    }
+
+    return [];
 }

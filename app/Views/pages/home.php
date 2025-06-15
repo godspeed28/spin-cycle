@@ -70,7 +70,7 @@
             </div>
         </div>
 
-        <div class="underline-hover flex-fill bg-light p-2 align-items-center" style="border-start: 1px solid rgba(0,0,0,0.1);">
+        <div class="underline-hover flex-fill bg-light p-2 align-items-center">
             <div class="me-3 mt-2">
                 <i class="bi bi-wallet2 fs-1 text-info"></i>
             </div>
@@ -81,7 +81,7 @@
             </div>
         </div>
 
-        <div class="underline-hover flex-fill bg-light p-2 align-items-center" style="border-start: 1px solid rgba(0,0,0,0.1);">
+        <div class="underline-hover flex-fill bg-light p-2 align-items-center">
             <div class="me-3 mt-2">
                 <i class="fas fa-leaf fs-1 mt-3 text-info"></i>
             </div>

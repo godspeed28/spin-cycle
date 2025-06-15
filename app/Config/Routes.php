@@ -19,12 +19,15 @@ $routes->get('/Login', [\App\Controllers\Login::class, 'index']);
 $routes->post('/Login/auth', [\App\Controllers\Login::class, 'auth']);
 $routes->post('/Daftar/auth', [\App\Controllers\Daftar::class, 'auth']);
 $routes->get('/Login/logout', [\App\Controllers\Login::class, 'logout']);
+$routes->get('/logout', [\App\Controllers\Login::class, 'logoutAdmin']);
 $routes->get('/Wash', [\App\Controllers\Wash::class, 'index']);
 $routes->post('/Wash/checkout', [\App\Controllers\Wash::class, 'checkout']);
 $routes->get('/OrderController', [\App\Controllers\OrderController::class, 'index']);
 $routes->get('/test-download', [\App\Controllers\OrderController::class, 'generatePdf']);
 $routes->post('checkout/proses', [\App\Controllers\Checkout::class, 'proses']);
 $routes->get('checkout/success', [\App\Controllers\Checkout::class, 'success']);
+$routes->post('/checkout/callback', [\App\Controllers\Checkout::class, 'callback']);
+
 $routes->post('kirim-email', [\App\Controllers\EmailController::class, 'kirim']);
 
 // admin
@@ -52,3 +55,6 @@ $routes->post('clothes/delete/(:num)', [\App\Controllers\ClothesController::clas
 
 // API dailySales
 $routes->get('chart/sales', [\App\Controllers\ChartController::class, 'salesData']);
+
+$routes->get('admin/orders/detail/(:num)', [\App\Controllers\OrderAdminController::class, 'detail/$1']);
+$routes->post('order/update/(:num)', [\App\Controllers\OrderAdminController::class, 'update/$1']);

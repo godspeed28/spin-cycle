@@ -8,6 +8,9 @@ class ServicesItemController extends BaseController
 {
     public function washfold()
     {
+        if (session()->get('logged_in_admin')) {
+            return redirect()->back();
+        }
         $userId = session()->get('user_id');
         $data = [
             'title' => 'Regular Wash & Fold | Spin Cycle',
@@ -22,6 +25,9 @@ class ServicesItemController extends BaseController
 
     public function expresslaundry()
     {
+        if (session()->get('logged_in_admin')) {
+            return redirect()->back();
+        }
         $userId = session()->get('user_id');
         $data = [
             'title' => 'Express Laundry | Spin Cycle',
@@ -35,6 +41,9 @@ class ServicesItemController extends BaseController
 
     public function drycleaning()
     {
+        if (session()->get('logged_in_admin')) {
+            return redirect()->back();
+        }
         $userId = session()->get('user_id');
         $data = [
             'title' => 'Dry Cleaning | Spin Cycle',
@@ -49,6 +58,9 @@ class ServicesItemController extends BaseController
 
     public function ironingonly()
     {
+        if (session()->get('logged_in_admin')) {
+            return redirect()->back();
+        }
         $userId = session()->get('user_id');
         $data = [
             'title' => 'Ironing Only | Spin Cycle',

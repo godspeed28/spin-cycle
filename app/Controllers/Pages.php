@@ -10,6 +10,9 @@ class Pages extends BaseController
 {
     public function index()
     {
+        if (session()->get('logged_in_admin')) {
+            return redirect()->back();
+        }
         $userId = session()->get('user_id');
         $data = [
             'title' => 'Home | Spin Cycle',
@@ -22,6 +25,9 @@ class Pages extends BaseController
     }
     public function about()
     {
+        if (session()->get('logged_in_admin')) {
+            return redirect()->back();
+        }
         $userId = session()->get('user_id');
         $data = [
             'title' => 'About | Spin Cycle',
@@ -34,6 +40,9 @@ class Pages extends BaseController
     }
     public function services()
     {
+        if (session()->get('logged_in_admin')) {
+            return redirect()->back();
+        }
         $userId = session()->get('user_id');
         $data = [
             'title' => 'Services | Spin Cycle',
@@ -46,6 +55,9 @@ class Pages extends BaseController
     }
     public function contact()
     {
+        if (session()->get('logged_in_admin')) {
+            return redirect()->back();
+        }
         $userId = session()->get('user_id');
         $data = [
             'title' => 'Contact | Spin Cycle',

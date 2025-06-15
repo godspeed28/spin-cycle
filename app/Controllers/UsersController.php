@@ -15,6 +15,9 @@ class UsersController extends BaseController
 
     public function index()
     {
+        if (!session()->get('logged_in_admin')) {
+            return redirect()->back();
+        }
         $result = $this->userModel->findAll();
 
         $data = [

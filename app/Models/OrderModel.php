@@ -20,6 +20,7 @@ class OrderModel extends Model
         'total_berat',
         'total_harga',
         'metode_pembayaran',
-        'paid'
+        'paid',
+        'status'
     ];
 }

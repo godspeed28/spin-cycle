@@ -50,45 +50,39 @@
               <div class="sidebar-content">
                   <ul class="nav nav-secondary">
                       <li class="nav-item <?= (uri_string() == 'dashboard') ? 'active' : '' ?>">
-                          <a href="dashboard"
-                              class="collapsed">
+                          <a href="<?= base_url('dashboard') ?>" class="collapsed">
                               <i class="fas fa-home"></i>
                               <p>Dashboard</p>
                           </a>
                       </li>
                       <li class="nav-item <?= (uri_string() == 'users') ? 'active' : '' ?>">
-                          <a href="users">
+                          <a href="<?= base_url('users') ?>">
                               <i class="fas fa-user"></i>
                               <p>Users</p>
-                              <!-- <span class="caret"></span> -->
                           </a>
                       </li>
                       <li class="nav-item <?= (uri_string() == 'services') ? 'active' : '' ?>">
-                          <a href="services">
+                          <a href="<?= base_url('services') ?>">
                               <i class="fas fa-pump-soap"></i>
                               <p>Services</p>
-                              <!-- <span class="caret"></span> -->
                           </a>
                       </li>
                       <li class="nav-item <?= (uri_string() == 'clothes') ? 'active' : '' ?>">
-                          <a href="clothes">
+                          <a href="<?= base_url('clothes') ?>">
                               <i class="fas fa-tshirt"></i>
                               <p>Clothes</p>
-                              <!-- <span class="badge badge-success">4</span> -->
                           </a>
                       </li>
                       <li class="nav-item <?= (uri_string() == 'order') ? 'active' : '' ?>">
-                          <a href="order">
+                          <a href="<?= base_url('order') ?>">
                               <i class="fas fa-shopping-cart"></i>
                               <p>Order</p>
-                              <!-- <span class="badge badge-secondary">1</span> -->
                           </a>
                       </li>
                       <li class="nav-item <?= (uri_string() == 'report') ? 'active' : '' ?>">
-                          <a href="report">
+                          <a href="<?= base_url('report') ?>">
                               <i class="fas fa-money-check-alt"></i>
                               <p>Report</p>
-                              <!-- <span class="caret"></span> -->
                           </a>
                       </li>
                   </ul>
@@ -165,80 +159,6 @@
                                   </form>
                               </ul>
                           </li>
-                          <li class="nav-item topbar-icon dropdown hidden-caret">
-                              <a
-                                  class="nav-link dropdown-toggle"
-                                  href="#"
-                                  id="notifDropdown"
-                                  role="button"
-                                  data-bs-toggle="dropdown"
-                                  aria-haspopup="true"
-                                  aria-expanded="false">
-                                  <i class="fa fa-bell"></i>
-                                  <span class="notification">4</span>
-                              </a>
-                              <ul
-                                  class="dropdown-menu notif-box animated fadeIn"
-                                  aria-labelledby="notifDropdown">
-                                  <li>
-                                      <div class="dropdown-title">
-                                          You have 4 new notification
-                                      </div>
-                                  </li>
-                                  <li>
-                                      <div class="notif-scroll scrollbar-outer">
-                                          <div class="notif-center">
-                                              <a href="#">
-                                                  <div class="notif-icon notif-primary">
-                                                      <i class="fa fa-user-plus"></i>
-                                                  </div>
-                                                  <div class="notif-content">
-                                                      <span class="block"> New user registered </span>
-                                                      <span class="time">5 minutes ago</span>
-                                                  </div>
-                                              </a>
-                                              <a href="#">
-                                                  <div class="notif-icon notif-success">
-                                                      <i class="fa fa-comment"></i>
-                                                  </div>
-                                                  <div class="notif-content">
-                                                      <span class="block">
-                                                          Rahmad commented on Admin
-                                                      </span>
-                                                      <span class="time">12 minutes ago</span>
-                                                  </div>
-                                              </a>
-                                              <a href="#">
-                                                  <div class="notif-img">
-                                                      <img
-                                                          src="assets/img/profile2.jpg"
-                                                          alt="Img Profile" />
-                                                  </div>
-                                                  <div class="notif-content">
-                                                      <span class="block">
-                                                          Reza send messages to you
-                                                      </span>
-                                                      <span class="time">12 minutes ago</span>
-                                                  </div>
-                                              </a>
-                                              <a href="#">
-                                                  <div class="notif-icon notif-danger">
-                                                      <i class="fa fa-heart"></i>
-                                                  </div>
-                                                  <div class="notif-content">
-                                                      <span class="block"> Farrah liked Admin </span>
-                                                      <span class="time">17 minutes ago</span>
-                                                  </div>
-                                              </a>
-                                          </div>
-                                      </div>
-                                  </li>
-                                  <li>
-                                      <a class="see-all" href="javascript:void(0);">See all notifications<i class="fa fa-angle-right"></i>
-                                      </a>
-                                  </li>
-                              </ul>
-                          </li>
                           <li class="nav-item topbar-user dropdown hidden-caret">
                               <a
                                   class="dropdown-toggle profile-pic"
@@ -247,13 +167,13 @@
                                   aria-expanded="false">
                                   <div class="avatar-sm">
                                       <img
-                                          src="assets/img/profile.jpg"
+                                          src="/img/albert.jpg"
                                           alt="..."
                                           class="avatar-img rounded-circle" />
                                   </div>
                                   <span class="profile-username">
                                       <span class="op-7">Hi,</span>
-                                      <span class="fw-bold">Albert</span>
+                                      <span class="fw-bold"><?= session()->get('username'); ?></span>
                                   </span>
                               </a>
                               <ul class="dropdown-menu dropdown-user animated fadeIn">
@@ -262,13 +182,13 @@
                                           <div class="user-box">
                                               <div class="avatar-lg">
                                                   <img
-                                                      src="assets/img/profile.jpg"
+                                                      src="/img/albert.jpg"
                                                       alt="image profile"
                                                       class="avatar-img rounded" />
                                               </div>
                                               <div class="u-text">
-                                                  <h4>Hizrian</h4>
-                                                  <p class="text-muted">hello@example.com</p>
+                                                  <h4><?= session()->get('username'); ?></h4>
+                                                  <p class="text-muted"><?= session()->get('email'); ?></p>
                                                   <a
                                                       href="profile.html"
                                                       class="btn btn-xs btn-secondary btn-sm">View Profile</a>
@@ -279,7 +199,7 @@
                                           <div class="dropdown-divider"></div>
                                           <a class="dropdown-item" href="#">Account Setting</a>
                                           <div class="dropdown-divider"></div>
-                                          <a class="dropdown-item" href="#">Logout</a>
+                                          <a class="dropdown-item" href="<?= base_url('/logout') ?>">Logout</a>
                                       </li>
                                   </div>
                               </ul>
