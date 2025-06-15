@@ -18,7 +18,7 @@
                 <h6><b>Todays Income</b></h6>
                 <p class="text-muted">All Customs Value</p>
               </div>
-              <h4 class="text-info fw-bold"><?= getPendapatanHariIni() ?></h4>
+              <h5 class="text-info fw-bold"><?= getPendapatanHariIni() ?></h5>
             </div>
             <div class="progress progress-sm">
               <div
@@ -44,7 +44,7 @@
                 <h6><b>Total Revenue</b></h6>
                 <p class="text-muted">All Customs Value</p>
               </div>
-              <h4 class="text-success fw-bold"><?= getPendapatan() ?></h4>
+              <h5 class="text-success fw-bold"><?= getPendapatan() ?></h5>
             </div>
             <div class="progress progress-sm">
               <div
@@ -72,7 +72,6 @@
               </div>
               <h4 class="text-danger fw-bold"><?= getFreshOrdersHariIni() ?></h4>
             </div>
-
             <div class="progress progress-sm">
               <div
                 class="progress-bar bg-danger"
