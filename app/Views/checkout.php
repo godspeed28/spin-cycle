@@ -69,8 +69,8 @@
                                 <hr>
                             <?php endif; ?>
                             <p class="text-start">
-                                <?= $iconPakaian[$namaPakaian]; ?>
-                                <?= str_replace('_', ' ', esc($namaPakaian)) ?>
+                                <img class="rounded-3" src="<?= base_url('uploads/' . $iconPakaian[$namaPakaian]) ?>" width="50">
+                                &nbsp; <?= str_replace('_', ' ', esc($namaPakaian)) ?>
                             </p>
                         </div>
                         <div class="container">

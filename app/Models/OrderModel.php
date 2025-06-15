@@ -19,6 +19,7 @@ class OrderModel extends Model
         'jasa_express',
         'total_berat',
         'total_harga',
-        'metode_pembayaran'
+        'metode_pembayaran',
+        'paid'
     ];
 }

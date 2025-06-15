@@ -69,3 +69,23 @@ setInterval(updateClock, 1000);
 
 // Panggil pertama kali saat halaman dimuat
 updateClock();
+
+// custom nav-toggler
+const toggler = document.querySelector('.toggler');
+  const bsCollapse = document.getElementById('navbarNav');
+
+  // Toggle class when clicked
+  toggler.addEventListener('click', function () {
+    toggler.classList.toggle('open');
+  });
+
+  // Optional: remove 'open' class when menu collapses
+  const collapseElement = new bootstrap.Collapse(bsCollapse, { toggle: false });
+
+  bsCollapse.addEventListener('hidden.bs.collapse', () => {
+    toggler.classList.remove('open');
+  });
+
+  bsCollapse.addEventListener('shown.bs.collapse', () => {
+    toggler.classList.add('open');
+  });

@@ -22,5 +22,33 @@ $routes->get('/Login/logout', [\App\Controllers\Login::class, 'logout']);
 $routes->get('/Wash', [\App\Controllers\Wash::class, 'index']);
 $routes->post('/Wash/checkout', [\App\Controllers\Wash::class, 'checkout']);
 $routes->get('/OrderController', [\App\Controllers\OrderController::class, 'index']);
+$routes->get('/test-download', [\App\Controllers\OrderController::class, 'generatePdf']);
 $routes->post('checkout/proses', [\App\Controllers\Checkout::class, 'proses']);
 $routes->get('checkout/success', [\App\Controllers\Checkout::class, 'success']);
+$routes->post('kirim-email', [\App\Controllers\EmailController::class, 'kirim']);
+
+// admin
+$routes->get('dashboard', [\App\Controllers\DashboardController::class, 'index']);
+$routes->get('users', [\App\Controllers\UsersController::class, 'index']);
+$routes->get('services', [\App\Controllers\ServicesController::class, 'index']);
+$routes->get('clothes', [\App\Controllers\ClothesController::class, 'index']);
+$routes->get('order', [\App\Controllers\OrderAdminController::class, 'index']);
+$routes->get('report', [\App\Controllers\ReportController::class, 'index']);
+
+// crud users
+$routes->post('users/save', [\App\Controllers\UsersController::class, 'save']);
+$routes->post('users/update/(:num)', [\App\Controllers\UsersController::class, 'update/$1']);
+$routes->post('users/delete/(:num)', [\App\Controllers\UsersController::class, 'delete/$1']);
+
+// crud services
+$routes->post('services/save', [\App\Controllers\ServicesController::class, 'save']);
+$routes->post('services/update/(:num)', [\App\Controllers\ServicesController::class, 'update/$1']);
+$routes->post('services/delete/(:num)', [\App\Controllers\ServicesController::class, 'delete/$1']);
+
+// crud clothes
+$routes->post('clothes/save', [\App\Controllers\ClothesController::class, 'save']);
+$routes->post('clothes/update/(:num)', [\App\Controllers\ClothesController::class, 'update/$1']);
+$routes->post('clothes/delete/(:num)', [\App\Controllers\ClothesController::class, 'delete/$1']);
+
+// API dailySales
+$routes->get('chart/sales', [\App\Controllers\ChartController::class, 'salesData']);

@@ -16,7 +16,14 @@ class Checkout extends BaseController
             return 'SC' . $timestamp . $random;
         }
         $userId = session()->get('user_id');
-        $session = session();
+
+        // cek metode pembayaran
+        if ($this->request->getPost('metode_pembayaran') == 'COD') {
+            $paid = 0;
+        } else {
+            $paid = 1;
+        }
+
         $data = [
             'no_resi' => generateResi(),
             'user_id' => $userId,
@@ -31,16 +38,11 @@ class Checkout extends BaseController
             'total_harga' => $this->request->getPost('total_harga'),
             'jenis_pakaian' => $this->request->getPost('jenis_pakaian'), // bisa JSON
             'metode_pembayaran' => $this->request->getPost('metode_pembayaran'),
+            'paid' => $paid,
             'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
 
         ];
 
-        // cek metode pembayaran
-        if ($data['metode_pembayaran'] == 'COD') {
-            $paid = 0;
-        } else {
-            $paid = 1;
-        }
 
         // Simpan ke database via model
         $orderModel = new \App\Models\OrderModel();
@@ -73,8 +75,7 @@ class Checkout extends BaseController
 
         $statusModel->insert([
             'order_id' => $orderId,
-            'status' => 'Diproses',
-            'paid' => $paid
+            'status' => 'Diproses'
         ]);
 
         return redirect()->to('/checkout/success')->with('message', 'Pesanan berhasil dibuat!');

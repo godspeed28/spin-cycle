@@ -32,12 +32,28 @@ class Login extends BaseController
             ->first();
 
         if ($data) {
+            if ($data['role'] == 'admin') {
+                $pass = $data['password'];
+                if (password_verify($password, $pass)) {
+                    $session->set([
+                        'user_id' => $data['id'],
+                        'no_telp' => $data['no_telp'],
+                        'username' => $data['username'],
+                        'role' => $data['role'],
+                        'logged_in_admin' => true
+                    ]);
+                    return redirect()->to('/dashboard');
+                } else {
+                    return redirect()->back()->with('error', 'Password salah');
+                }
+            }
             $pass = $data['password'];
             if (password_verify($password, $pass)) {
                 $session->set([
                     'user_id' => $data['id'],
                     'no_telp' => $data['no_telp'],
                     'username' => $data['username'],
+                    'role' => $data['role'],
                     'logged_in' => true
                 ]);
                 return redirect()->to('/');

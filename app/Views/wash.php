@@ -68,9 +68,9 @@
                 <div class="row mb-0">
                     <div class="col-md-6 text-start">
                         <label class="form-label">Pilih Jenis Pakaian</label>
-                        <select multiple class=" custom-border form-select rounded-0" id="jenisPakaian">
+                        <select size="5" class=" custom-border form-select rounded-0" id="jenisPakaian">
                             <?php foreach ($pakaian as $item): ?>
-                                <option value="<?= $item['nama'] ?>"><?= $item['nama'] ?>. Berat : <?= $item['berat'] ?> Kg</option>
+                                <option style="width: auto;" value="<?= $item['nama'] ?>"><?= $item['nama'] ?>. Berat : <?= $item['berat'] ?> Kg</option>
                             <?php endforeach; ?>
                         </select>
                         <?php foreach ($pakaian as $item): ?>
@@ -80,6 +80,7 @@
                                     name="<?= $item['nama'] ?>" data-weight="<?= $item['berat'] ?>" value="0" min="0">
                             </div>
                         <?php endforeach; ?>
+                        <div id="output" class="mt-3"></div>
                         <div class="mb-3 mt-3">
                             <label class="form-label" style="text-align: left !important; display:block;"></label>
                             <textarea class="custom-border rounded-0 form-control  <?= (isset($validation) && $validation->hasError('alamat')) ? 'is-invalid' : ''; ?>" placeholder="Alamat penjemputan" name="alamat" rows="3"><?= old('alamat') ?></textarea>
@@ -276,6 +277,7 @@
 
     function hitungBerat() {
         let total = 0;
+
         inputs.forEach(input => {
             const jumlah = parseFloat(input.value) || 0;
             const berat = parseFloat(input.dataset.weight) || 0;
@@ -289,6 +291,30 @@
     });
 
     hitungBerat();
+
+    function tampilkanDetailPakaian() {
+        const output = document.getElementById('output');
+        output.innerHTML = ''; // kosongkan isi sebelumnya
+
+        inputs.forEach(input => {
+            const jumlah = parseFloat(input.value) || 0;
+            const berat = parseFloat(input.dataset.weight) || 0;
+
+            if (jumlah > 0) {
+                const nama = input.name;
+                const totalBerat = jumlah * berat;
+
+                output.innerHTML += `${nama} ${jumlah} x ${berat} kg) = <strong>${totalBerat.toFixed(2)} kg</strong></p>
+                <hr>`;
+            }
+        });
+    }
+
+    inputs.forEach(input => {
+        input.addEventListener('input', tampilkanDetailPakaian);
+    });
+
+    tampilkanDetailPakaian(); // jalankan saat halaman pertama kali load
 </script>
 
 <?= $this->endSection(); ?>

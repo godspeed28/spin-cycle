@@ -9,8 +9,8 @@ class PakaianModel extends Model
     protected $table      = 'pakaian';
     protected $primaryKey = 'id';
 
-    protected $allowedFields = ['nama', 'berat'];
+    protected $allowedFields = ['nama', 'berat', 'foto'];
 
     // Jika ingin hasil dalam array, aktifkan ini:
-    protected $returnType     = 'array';
+    protected $returnType = 'array';
 }

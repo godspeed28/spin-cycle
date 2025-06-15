@@ -27,9 +27,11 @@
             <circle cx="150" cy="70" r="5" fill="#3498db" />
 
         </svg><span class="fw-bold text-info"> Spin <span class="text-dark">Cycle</span> </span></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    <button class="navbar-toggler toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="toggler-icon line1"></span>
+        <span class="toggler-icon line2"></span>
+        <span class="toggler-icon line3"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">

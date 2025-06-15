@@ -53,6 +53,12 @@ class Wash extends BaseController
             $harga_per_kg[$row['nama']] = (int)$row['harga_per_kg'];
         }
 
+        // Ubah jadi array asosiatif
+        $pakaianIcon = [];
+        foreach ($dataPakaianModel as $row) {
+            $pakaianIcon[str_replace(' ', '_', $row['nama'])] = $row['foto'];
+        }
+
         if (!session()->get('logged_in')) {
             return redirect()->to('/Wash/')->with('error', 'Silakan login terlebih dahulu.');
         }
@@ -96,23 +102,23 @@ class Wash extends BaseController
         $jasa_express = $this->request->getPost('expressService') ?? 0;
         $jasa_express = is_numeric($jasa_express) ? (int) $jasa_express : 0;
 
-        $pakaianIcon = [
-            'Kaos' => '👕',
-            'Kemeja' => '👔',
-            'Celana_Jeans' => '👖',
-            'Celana_Biasa' => '🩳',
-            'Jaket_Tipis' => '🧥',
-            'Jaket_Tebal' => '🧥❄️',
-            'Handuk_Kecil' => '🧻',
-            'Handuk_Besar' => '🛁',
-            'Sprei_Single' => '🛏️',
-            'Sprei_King' => '🛌',
-            'Selimut_Tipis' => '🧣',
-            'Selimut_Tebal' => '🛌🧤',
-            'Gorden_Tipis' => '🪟',
-            'Gorden_Tebal' => '🪟🧵',
-            'Baju_Anak-anak' => '🧒👕'
-        ];
+        // $pakaianIcon = [
+        //     'Kaos' => '👕',
+        //     'Kemeja' => '👔',
+        //     'Celana_Jeans' => '👖',
+        //     'Celana_Biasa' => '🩳',
+        //     'Jaket_Tipis' => '🧥',
+        //     'Jaket_Tebal' => '🧥❄️',
+        //     'Handuk_Kecil' => '🧻',
+        //     'Handuk_Besar' => '🛁',
+        //     'Sprei_Single' => '🛏️',
+        //     'Sprei_King' => '🛌',
+        //     'Selimut_Tipis' => '🧣',
+        //     'Selimut_Tebal' => '🛌🧤',
+        //     'Gorden_Tipis' => '🪟',
+        //     'Gorden_Tebal' => '🪟🧵',
+        //     'Baju_Anak-anak' => '🧒👕'
+        // ];
 
         // Tangkap hanya pakaian yang jumlahnya > 0
         $jenisPakaianTerpilih = [];

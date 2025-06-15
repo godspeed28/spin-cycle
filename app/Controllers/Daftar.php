@@ -18,7 +18,6 @@ class Daftar extends BaseController
     }
     public function auth()
     {
-        $session = session();
         $model = new UserModel();
 
         $username = $this->request->getPost('username');

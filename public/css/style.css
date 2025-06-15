@@ -390,5 +390,26 @@ li {
                         }
                     }
 
+/* Styling for burger icon lines */
+    .toggler-icon {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #000;
+      margin: 5px auto;
+      transition: all 0.3s ease;
+    }
 
+    /* Transform into "X" */
+    .toggler.open .line1 {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .toggler.open .line2 {
+      opacity: 0;
+    }
+
+    .toggler.open .line3 {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
   

@@ -6,6 +6,16 @@
     .custom-border {
         border: 1px solid black;
     }
+
+    .button {
+        background-color: transparent;
+        border: none;
+    }
+
+    .button:hover {
+        color: blue;
+        transition: color 0.3s ease-in-out;
+    }
 </style>
 
 <div class="text-start d-flex flex-column bg-page">
@@ -28,6 +38,7 @@
             <?php if (empty($orders)): ?>
                 <div class="alert alert-info">Belum ada pesanan.</div>
             <?php else: ?>
+                <p class="text-start"><a class="btn btn-primary rounded-0" href="/test-download"> 📄 Cetak Invoice </a></p>
                 <div class="rounded-0 accordion" id="ordersAccordion">
                     <?php foreach ($orders as $index => $order): ?>
                         <?php foreach ($orderStatuses[$order['id']] as $status): ?>
@@ -72,7 +83,7 @@
                                         <p><strong>Catatan:</strong> <?= esc($order['catatan']) ?></p>
                                         <hr>
                                         <div x-data="{ open: false }">
-                                            <button @click="open = !open" class="btn mb-3"><u><b>Order details</u></b></button>
+                                            <button @click="open = !open" class="button mb-3"><u><b>Order details</u></b></button>
                                             <div x-show="open" class="table-responsive">
                                                 <table class="table">
                                                     <thead class="table-transparent">
