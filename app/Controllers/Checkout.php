@@ -90,11 +90,14 @@ class Checkout extends BaseController
             // 'notification_url' => base_url('checkout/callback'),
         ];
 
+        $apiKey = env('MIDTRANS_API_KEY_CLIENT');
+
         $snapToken = Snap::getSnapToken($params);
 
         return view('checkout_midtrans', [
             'snapToken' => $snapToken,
-            'dataOrder' => $data
+            'dataOrder' => $data,
+            'apiKey' => $apiKey
         ]);
     }
 

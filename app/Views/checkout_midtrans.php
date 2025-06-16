@@ -10,7 +10,7 @@
 
 <body>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-Lo0O5vZV_Q8OMjyk"></script>
+    <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key=<?= $apiKey ?>></script>
     <script>
         snap.pay("<?= $snapToken ?>", {
             onSuccess: function(result) {

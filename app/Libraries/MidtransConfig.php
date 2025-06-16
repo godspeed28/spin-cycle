@@ -8,7 +8,7 @@ class MidtransConfig
 {
     public static function config()
     {
-        Config::$serverKey = 'SB-Mid-server-MWK2d9ypOvdM28-dqTwSV-VD';
+        Config::$serverKey = env('MIDTRANS_API_KEY_SERVER');
         Config::$isProduction = false; // true untuk production
         Config::$isSanitized = true;
         Config::$is3ds = true;
