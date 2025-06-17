@@ -267,24 +267,26 @@ var world_map = new jsVectorMap({
 
 //Chart
 
-var ctx = document.getElementById('statisticsChart').getContext('2d');
-
+fetch('/chart/sales')
+  .then(response => response.json())
+  .then(result => { 
+	  var ctx = document.getElementById('statisticsChart').getContext('2d');
 var statisticsChart = new Chart(ctx, {
 	type: 'line',
 	data: {
-		labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+		labels:result.labels,
 		datasets: [ {
-			// label: "Subscribers",
-			// borderColor: '#f3545d',
-			// pointBackgroundColor: 'rgba(243, 84, 93, 0.6)',
-			// pointRadius: 0,
-			// backgroundColor: 'rgba(243, 84, 93, 0.4)',
-			// legendColor: '#f3545d',
-			// fill: true,
-			// borderWidth: 2,
-			// data: [154, 184, 175, 203, 210, 231, 240, 278, 252, 312, 320, 374]
+			label: "Revenue",
+			borderColor: '#f3545d',
+			pointBackgroundColor: 'rgba(243, 84, 93, 0.6)',
+			pointRadius: 0,
+			backgroundColor: 'rgba(243, 84, 93, 0.4)',
+			legendColor: '#f3545d',
+			fill: true,
+			borderWidth: 2,
+			data: result.data
 		}, {
-			label: "New Users",
+			label: "Orders",
 			borderColor: '#fdaf4b',
 			pointBackgroundColor: 'rgba(253, 175, 75, 0.6)',
 			pointRadius: 0,
@@ -292,9 +294,9 @@ var statisticsChart = new Chart(ctx, {
 			legendColor: '#fdaf4b',
 			fill: true,
 			borderWidth: 2,
-			data: [256, 230, 245, 287, 240, 250, 230, 295, 331, 431, 456, 521]
+			data:result.dataOrders
 		}, {
-			label: "Active Users",
+			label: "Completed Laundry",
 			borderColor: '#177dff',
 			pointBackgroundColor: 'rgba(23, 125, 255, 0.6)',
 			pointRadius: 0,
@@ -302,7 +304,7 @@ var statisticsChart = new Chart(ctx, {
 			legendColor: '#177dff',
 			fill: true,
 			borderWidth: 2,
-			data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 900]
+			data:result.dataLaundry
 		}]
 	},
 	options : {
@@ -361,7 +363,6 @@ var statisticsChart = new Chart(ctx, {
 		}  
 	}
 });
-
 var myLegendContainer = document.getElementById("myChartLegend");
 
 // generate HTML legend
@@ -372,6 +373,7 @@ var legendItems = myLegendContainer.getElementsByTagName('li');
 for (var i = 0; i < legendItems.length; i += 1) {
 	legendItems[i].addEventListener("click", legendClickCallback, false);
 }
+  });
 
 fetch('/chart/sales')
   .then(response => response.json())

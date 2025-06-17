@@ -4,9 +4,18 @@ namespace App\Controllers;
 
 use App\Libraries\MidtransConfig;
 use Midtrans\Snap;
+use \App\Models\OrderModel;
+use App\Models\OrderItemsModel;
 
 class Checkout extends BaseController
 {
+    protected $orderModel;
+    protected $orderItemModel;
+    public function __construct()
+    {
+        $this->orderModel = new OrderModel();
+        $this->orderItemModel = new OrderItemsModel();
+    }
     // ⬇️ Pindahkan generateResi() ke method private
     private function generateResi()
     {
@@ -41,7 +50,7 @@ class Checkout extends BaseController
             'total_harga' => $this->request->getPost('total_harga'),
             'jenis_pakaian' => json_encode($this->request->getPost('jenis_pakaian')),
             'metode_pembayaran' => $metode,
-            'paid' => ($metode != 'COD') ? 1 : 0,
+            'paid' => ($metode != 'COD') ? 0 : 0,
             'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
         ];
 
@@ -50,14 +59,11 @@ class Checkout extends BaseController
         $beratSatuan = $this->request->getPost('berat_satuan');
         $subtotal = $this->request->getPost('subtotal');
 
-        $orderModel = new \App\Models\OrderModel();
-        $orderItemModel = new \App\Models\OrderItemsModel();
-
-        $orderModel->insert($data);
-        $orderId = $orderModel->getInsertID();
+        $this->orderModel->insert($data);
+        $orderId = $this->orderModel->getInsertID();
 
         for ($i = 0; $i < count($namaPakaian); $i++) {
-            $orderItemModel->insert([
+            $this->orderItemModel->insert([
                 'order_id' => $orderId,
                 'nama_pakaian' => $namaPakaian[$i],
                 'jumlah' => $jumlah[$i],
@@ -74,6 +80,9 @@ class Checkout extends BaseController
         // Midtrans Payment
         MidtransConfig::config();
 
+        $userModel = new \App\Models\UserModel();
+        $user = $userModel->find(session()->get('user_id'));
+
         $params = [
             'transaction_details' => [
                 'order_id' => $noResi,
@@ -81,13 +90,12 @@ class Checkout extends BaseController
             ],
             'customer_details' => [
                 'first_name' => $data['nama'],
-                'email' => 'email@example.com', // Ganti dengan data dari database jika ada
-                'phone' => '08123456789'
+                'email' => $user['email'], // Ganti dengan data dari database jika ada
+                'phone' => $user['no_telp']
             ],
             'callbacks' => [
                 'finish' => base_url('/')
             ]
-            // 'notification_url' => base_url('checkout/callback'),
         ];
 
         $apiKey = env('MIDTRANS_API_KEY_CLIENT');
@@ -108,38 +116,29 @@ class Checkout extends BaseController
 
     // tidak berfungsi
 
-    // public function callback()
-    // {
-    //     MidtransConfig::config();
+    public function callback()
+    {
+        MidtransConfig::config();
 
-    //     $json_result = file_get_contents('php://input');
-    //     $result = json_decode($json_result);
+        $json_result = file_get_contents('php://input');
+        $result = json_decode($json_result);
 
-    //     // dd($result);
+        // dd($result);
 
-    //     // ⬇️ Tambahkan log untuk debug
-    //     log_message('error', 'Callback Raw Input: ' . $json_result);
-    //     // log_message('error', 'Tes log manual dari callback');
-    //     log_message('error', 'Callback Midtrans (decoded): ' . json_encode($result));
+        // ⬇️ Tambahkan log untuk debug
+        log_message('error', 'Callback Raw Input: ' . $json_result);
+        // log_message('error', 'Tes log manual dari callback');
+        log_message('error', 'Callback Midtrans (decoded): ' . json_encode($result));
 
-    //     if (isset($result->transaction_status) && $result->transaction_status == 'settlement') {
-    //         $noResi = $result->order_id;
+        if (isset($result->transaction_status) && $result->transaction_status == 'settlement') {
+            $noResi = $result->order_id;
 
-    //         $orderModel = new \App\Models\OrderModel();
-    //         $statusModel = new \App\Models\OrderStatusModel();
+            $order = $this->orderModel->where('no_resi', $noResi)->first();
 
-    //         $order = $orderModel->where('no_resi', $noResi)->first();
-
-    //         if ($order) {
-    //             $orderModel->update($order['id'], ['paid' => 1]);
-
-    //             $statusModel->insert([
-    //                 'order_id' => $order['id'],
-    //                 'status' => 'Diproses'
-    //             ]);
-    //         }
-    //     }
-
-    //     return $this->response->setStatusCode(200);
-    // }
+            if ($order) {
+                $this->orderModel->update($order['id'], ['paid' => 1]);
+            }
+        }
+        return $this->response->setStatusCode(200);
+    }
 }

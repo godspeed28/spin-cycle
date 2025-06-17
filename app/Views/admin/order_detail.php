@@ -26,24 +26,30 @@
                         <td><?= esc($order['alamat']) ?></td>
                     </tr>
                     <tr>
-                        <th>Tanggal</th>
-                        <td><?= esc($order['tanggal']) ?></td>
-                    </tr>
-                    <tr>
-                        <th>Waktu</th>
-                        <td><?= esc($order['waktu']) ?></td>
+                        <th>Tanggal dan Waktu Pickup</th>
+                        <td><?= ubahTanggalWaktu($order['tanggal'], $order['waktu']) ?></td>
                     </tr>
                     <tr>
                         <th>Jenis Layanan</th>
-                        <td><?= esc($order['jenis_layanan']) ?> <?= $order['jasa_express'] ? '(Express)' : '' ?></td>
+                        <td><?= esc($order['jenis_layanan']) ?><?= $order['jasa_express'] ? ' (Express)' : '' ?>, <?= ubahRp($hargaLayanan->harga_per_kg) ?></td>
+                    </tr>
+                    <tr>
+                        <th>Qty</th>
+                        <td>
+                            <?php foreach ($items as $index => $item) : ?>
+                                <?= remove_underscore($item['nama_pakaian']) . ' ' . $item['jumlah'] . 'pcs' ?><?php if ($index < count($items) - 1) : ?>,<?php else : ?>.<?php endif; ?>
+                            <?php endforeach; ?>
+                        </td>
                     </tr>
                     <tr>
                         <th>Total Berat</th>
-                        <td><?= esc($order['total_berat']) ?> kg</td>
+                        <td><?= esc($order['total_berat']) ?> kg
+                            (<?php foreach ($items as $index => $item) : ?><?= remove_underscore($item['nama_pakaian']) . ' ' . $item['total_berat'] . 'kg' ?><?php if ($index < count($items) - 1) : ?>, <?php endif; ?><?php endforeach; ?>)
+                        </td>
                     </tr>
                     <tr>
                         <th>Total Harga</th>
-                        <td>Rp<?= number_format($order['total_harga'], 0, ',', '.') ?></td>
+                        <td><?= ubahRp($order['total_harga']) ?></td>
                     </tr>
                     <tr>
                         <th>Metode Pembayaran</th>

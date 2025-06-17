@@ -189,15 +189,15 @@
                                               <div class="u-text">
                                                   <h4><?= session()->get('username'); ?></h4>
                                                   <p class="text-muted"><?= session()->get('email'); ?></p>
-                                                  <a
-                                                      href="profile.html"
-                                                      class="btn btn-xs btn-secondary btn-sm">View Profile</a>
+                                                  <button
+                                                      type="button" data-bs-toggle="modal" data-bs-target="#profileModal"
+                                                      class="btn btn-xs btn-secondary btn-sm">View Profile</button>
                                               </div>
                                           </div>
                                       </li>
                                       <li>
                                           <div class="dropdown-divider"></div>
-                                          <a class="dropdown-item" href="#">Account Setting</a>
+                                          <a class="dropdown-item" href="<?= base_url('profil/detail') ?>">Account Setting</a>
                                           <div class="dropdown-divider"></div>
                                           <a class="dropdown-item" href="<?= base_url('/logout') ?>">Logout</a>
                                       </li>
@@ -208,4 +208,44 @@
                   </div>
               </nav>
               <!-- End Navbar -->
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="profileModalLabel">Profil</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+
+                      <div class="modal-body">
+                          <?php if (session()->has('username')): ?>
+                              <div class="d-flex align-items-center">
+                                  <!-- Foto Profil -->
+                                  <div class="me-3 text-center">
+                                      <img src="/img/albert.jpg" alt="Foto Profil Pengguna" class="rounded-circle mb-3" width="100" height="100">
+                                  </div>
+
+                                  <!-- Data Profil -->
+                                  <div class="ps-3 border-start">
+                                      <p><strong>Username:</strong> <?= session()->get('username') ?></p>
+                                      <hr>
+                                      <p><strong>No. Telepon:</strong> <?= session()->get('no_telp') ?></p>
+                                      <hr>
+                                      <p><strong>Email:</strong> <?= session()->get('email') ?></p>
+                                  </div>
+                              </div>
+                          <?php else: ?>
+                              <p class="text-danger">Data pengguna tidak tersedia. Silakan login terlebih dahulu.</p>
+                          <?php endif; ?>
+                      </div>
+
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                      </div>
+
+                  </div>
+              </div>
           </div>

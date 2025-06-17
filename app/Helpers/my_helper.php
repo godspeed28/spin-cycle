@@ -7,8 +7,16 @@ use App\Models\UserModel;
 function ubahRp($nilai)
 {
 
-    return 'Rp ' . number_format($nilai ?? 0, 0, ',', '.');
+    return 'Rp' . number_format($nilai ?? 0, 0, ',', '.');
 }
+
+if (!function_exists('remove_underscore')) {
+    function remove_underscore(string $text, string $replaceWith = ' '): string
+    {
+        return str_replace('_', $replaceWith, $text);
+    }
+}
+
 
 function getPendapatanHariIni()
 {
@@ -128,4 +136,9 @@ function getEnumValues(string $table, string $column): array
     }
 
     return [];
+}
+
+function ubahTanggalWaktu($tanggal, $waktu)
+{
+    return date('d M Y, H:i', strtotime($tanggal . ' ' . $waktu));
 }

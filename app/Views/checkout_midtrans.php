@@ -29,6 +29,8 @@
                     title: 'Pembayaran Pending',
                     text: 'Silakan selesaikan pembayaran Anda untuk melanjutkan.',
                     confirmButtonText: 'OK'
+                }).then(() => {
+                    window.location.href = "/";
                 });
             },
             onError: function(result) {
@@ -37,6 +39,8 @@
                     title: 'Pembayaran Gagal',
                     text: 'Terjadi kesalahan saat memproses pembayaran.',
                     confirmButtonText: 'Coba Lagi'
+                }).then(() => {
+                    window.location.href = "/";
                 });
             },
             onClose: function() {
@@ -45,6 +49,8 @@
                     title: 'Jendela Ditutup',
                     text: 'Kamu menutup jendela pembayaran sebelum menyelesaikannya.',
                     confirmButtonText: 'OK'
+                }).then(() => {
+                    window.location.href = "/";
                 });
             }
         });

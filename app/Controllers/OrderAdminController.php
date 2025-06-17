@@ -3,14 +3,20 @@
 namespace App\Controllers;
 
 use App\Models\OrderModel;
+use App\Models\LayananModel;
+use App\Models\OrderItemsModel;
 
 class OrderAdminController extends BaseController
 {
     protected $orderModel;
+    protected $layananModel;
+    protected $itemModel;
 
     public function __construct()
     {
         $this->orderModel = new OrderModel();
+        $this->layananModel = new LayananModel();
+        $this->itemModel = new OrderItemsModel();
     }
 
     public function index()
@@ -31,14 +37,20 @@ class OrderAdminController extends BaseController
 
     public function detail($id)
     {
+        helper('my');
         $order = $this->orderModel->find($id);
+        $items = $this->itemModel->where('order_id', $id)->findAll();
+        $orderJenisLayanan = $order['jenis_layanan'];
+        $layanan = $this->layananModel->select('harga_per_kg')->where('nama', $orderJenisLayanan)->get()->getRow();
         if (!$order) {
             return redirect()->to('order')->with('error', 'Pesanan tidak ditemukan');
         }
 
         return view('admin/order_detail', [
             'title' => 'Detail Pesanan',
-            'order' => $order
+            'order' => $order,
+            'hargaLayanan' => $layanan,
+            'items' => $items
         ]);
     }
 

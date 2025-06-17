@@ -1,8 +1,8 @@
 <div class="d-md-flex d-none border-bottom border-1 pr-3">
     <p class="mt-3 ps-3 mb-2 text-secondary" style="margin-right:50px;">50136 Kota Semarang, Semarang Tengah.</p>
     <p class="mt-3 mb-2 text-secondary" style="margin-right:50px;">Mon-Fri 08:00 AM - 05:00 PM</p>
-    <p class="mt-3 mb-2 text-secondary" style="margin-right:100px;">info@spincycle.com</p>
-    <p class="mt-3 mb-2" style="margin-right:50px; margin-left:200px"><i class="bi bi-telephone-fill text-info" style="font-size: 0.85rem; "></i> <b><a href="https://wa.me/<?= $phone ?>" class="underline-hover text-decoration-none text-dark" target="_blank"><?= $tel ?></a>
+    <p class="mt-3 mb-2 text-secondary" style="margin-right:50px;">info@spincycle.com</p>
+    <p class="mt-3 mb-2" style="margin-right:50px; margin-left:100px"><i class="bi bi-telephone-fill text-info" style="font-size: 0.85rem; "></i> <b><a href="https://wa.me/<?= $phone ?>" class="underline-hover text-decoration-none text-dark" target="_blank"><?= $tel ?></a>
         </b></p>
     <a href="https://facebook.com" class="text-dark me-3 mt-3 mb-2"><i class="hover-info bi bi-facebook"></i></a>
     <a href="https://instagram.com" class="text-dark me-3 mt-3 mb-2"><i class="hover-info bi bi-instagram"></i></a>

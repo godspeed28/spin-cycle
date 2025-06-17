@@ -26,7 +26,6 @@ $routes->get('/OrderController', [\App\Controllers\OrderController::class, 'inde
 $routes->get('/test-download', [\App\Controllers\OrderController::class, 'generatePdf']);
 $routes->post('checkout/proses', [\App\Controllers\Checkout::class, 'proses']);
 $routes->get('checkout/success', [\App\Controllers\Checkout::class, 'success']);
-$routes->post('/checkout/callback', [\App\Controllers\Checkout::class, 'callback']);
 
 $routes->post('kirim-email', [\App\Controllers\EmailController::class, 'kirim']);
 
@@ -56,5 +55,13 @@ $routes->post('clothes/delete/(:num)', [\App\Controllers\ClothesController::clas
 // API dailySales
 $routes->get('chart/sales', [\App\Controllers\ChartController::class, 'salesData']);
 
+// order manage
 $routes->get('admin/orders/detail/(:num)', [\App\Controllers\OrderAdminController::class, 'detail/$1']);
 $routes->post('order/update/(:num)', [\App\Controllers\OrderAdminController::class, 'update/$1']);
+
+// profil detail & update
+$routes->get('profil/detail', [\App\Controllers\ProfilController::class, 'detail']);
+$routes->post('profil/update', [\App\Controllers\ProfilController::class, 'update']);
+
+// callback
+$routes->post('/checkout/callback', [\App\Controllers\Checkout::class, 'callback']);

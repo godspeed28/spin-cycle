@@ -7,6 +7,11 @@
       class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
       <div>
         <h3 class="fw-bold mb-3"><?= $title ?></h3>
+        <h6 class="op-7 mb-2">Pantau pesanan dan pelanggan Anda</h6>
+      </div>
+      <div class="ms-md-auto py-2 py-md-0">
+        <a href="<?= base_url('order') ?>" class="btn btn-label-info btn-round me-2">Manage Order</a>
+        <a href="<?= base_url('users') ?>" class="btn btn-primary btn-round">Add Customer</a>
       </div>
     </div>
     <div class="row row-card-no-pd">
@@ -127,7 +132,7 @@
         <div class="card card-round">
           <div class="card-header">
             <div class="card-head-row">
-              <div class="card-title">User Statistics</div>
+              <div class="card-title">Order Statistics</div>
               <div class="card-tools">
                 <a
                   href="#"
@@ -160,31 +165,20 @@
             <div class="card-head-row">
               <div class="card-title">Daily Sales</div>
               <div class="card-tools">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-sm btn-label-light dropdown-toggle"
-                    type="button"
-                    id="dropdownMenuButton"
-                    data-bs-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false">
-                    Export
-                  </button>
-                  <div
-                    class="dropdown-menu"
-                    aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </div>
+                <button
+                  class="btn btn-sm btn-label-light"
+                  type="button">
+                  Export
+                </button>
               </div>
             </div>
-            <div class="card-category">March 25 - April 02</div>
+            <div class="card-category">
+              <?= $tglStartFormatted . ' - ' . $tglEndFormatted; ?>
+            </div>
           </div>
           <div class="card-body pb-0">
             <div class="mb-4 mt-2">
-              <h1>$4,578.58</h1>
+              <h1><?= ubahRp($pendapatanPerMinggu) ?></h1>
             </div>
             <div class="pull-in">
               <canvas id="dailySalesChart"></canvas>
@@ -210,112 +204,30 @@
           <div class="card-body">
             <div class="card-head-row card-tools-still-right">
               <div class="card-title">New Customers</div>
-              <div class="card-tools">
-              </div>
             </div>
+            <hr class="text-secondary">
             <div class="card-list py-4">
-              <div class="item-list">
-                <div class="avatar">
-                  <img
-                    src="assets/img/jm_denis.jpg"
-                    alt="..."
-                    class="avatar-img rounded-circle" />
-                </div>
-                <div class="info-user ms-3">
-                  <div class="username">Jimmy Denis</div>
-                  <div class="status">Graphic Designer</div>
-                </div>
-                <button class="btn btn-icon btn-link op-8 me-1">
-                  <i class="far fa-envelope"></i>
-                </button>
-                <button class="btn btn-icon btn-link btn-danger op-8">
-                  <i class="fas fa-ban"></i>
-                </button>
-              </div>
-              <div class="item-list">
-                <div class="avatar">
-                  <span
-                    class="avatar-title rounded-circle border border-white">CF</span>
-                </div>
-                <div class="info-user ms-3">
-                  <div class="username">Chandra Felix</div>
-                  <div class="status">Sales Promotion</div>
-                </div>
-                <button class="btn btn-icon btn-link op-8 me-1">
-                  <i class="far fa-envelope"></i>
-                </button>
-                <button class="btn btn-icon btn-link btn-danger op-8">
-                  <i class="fas fa-ban"></i>
-                </button>
-              </div>
-              <div class="item-list">
-                <div class="avatar">
-                  <img
-                    src="assets/img/talha.jpg"
-                    alt="..."
-                    class="avatar-img rounded-circle" />
-                </div>
-                <div class="info-user ms-3">
-                  <div class="username">Talha</div>
-                  <div class="status">Front End Designer</div>
-                </div>
-                <button class="btn btn-icon btn-link op-8 me-1">
-                  <i class="far fa-envelope"></i>
-                </button>
-                <button class="btn btn-icon btn-link btn-danger op-8">
-                  <i class="fas fa-ban"></i>
-                </button>
-              </div>
-              <div class="item-list">
-                <div class="avatar">
-                  <img
-                    src="assets/img/chadengle.jpg"
-                    alt="..."
-                    class="avatar-img rounded-circle" />
-                </div>
-                <div class="info-user ms-3">
-                  <div class="username">Chad</div>
-                  <div class="status">CEO Zeleaf</div>
-                </div>
-                <button class="btn btn-icon btn-link op-8 me-1">
-                  <i class="far fa-envelope"></i>
-                </button>
-                <button class="btn btn-icon btn-link btn-danger op-8">
-                  <i class="fas fa-ban"></i>
-                </button>
-              </div>
-              <div class="item-list">
-                <div class="avatar">
-                  <span
-                    class="avatar-title rounded-circle border border-white bg-primary">H</span>
-                </div>
-                <div class="info-user ms-3">
-                  <div class="username">Albert</div>
-                  <div class="status">Web Designer</div>
-                </div>
-                <button class="btn btn-icon btn-link op-8 me-1">
-                  <i class="far fa-envelope"></i>
-                </button>
-                <button class="btn btn-icon btn-link btn-danger op-8">
-                  <i class="fas fa-ban"></i>
-                </button>
-              </div>
-              <div class="item-list">
-                <div class="avatar">
-                  <span
-                    class="avatar-title rounded-circle border border-white bg-secondary">F</span>
-                </div>
-                <div class="info-user ms-3">
-                  <div class="username">Farrah</div>
-                  <div class="status">Marketing</div>
-                </div>
-                <button class="btn btn-icon btn-link op-8 me-1">
-                  <i class="far fa-envelope"></i>
-                </button>
-                <button class="btn btn-icon btn-link btn-danger op-8">
-                  <i class="fas fa-ban"></i>
-                </button>
-              </div>
+              <?php if (empty($users)) :  ?>
+                <p class="text-muted text-center">Tidak ada customer baru</p>
+              <?php endif;  ?>
+              <?php $i = 0 ?>
+              <?php foreach ($users as $user) : ?>
+                <?php $i++ ?>
+                <?php if ($i <= 6) : ?>
+                  <div class="item-list">
+                    <div class="avatar">
+                      <img
+                        src="assets/img/jm_denis.jpg"
+                        alt="..."
+                        class="avatar-img rounded-circle" />
+                    </div>
+                    <div class="info-user ms-3">
+                      <div class="username"><?= $user['username'] ?></div>
+                      <div class="status"><?= $user['email'] ?></div>
+                    </div>
+                  </div>
+                <?php endif; ?>
+              <?php endforeach; ?>
             </div>
           </div>
         </div>
@@ -325,26 +237,6 @@
           <div class="card-header">
             <div class="card-head-row card-tools-still-right">
               <div class="card-title">Transaction History</div>
-              <div class="card-tools">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-icon btn-clean me-0"
-                    type="button"
-                    id="dropdownMenuButton"
-                    data-bs-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false">
-                    <i class="fas fa-ellipsis-h"></i>
-                  </button>
-                  <div
-                    class="dropdown-menu"
-                    aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <div class="card-body p-0">
@@ -360,106 +252,31 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">
-                      <button
-                        class="btn btn-icon btn-round btn-success btn-sm me-2">
-                        <i class="fa fa-check"></i>
-                      </button>
-                      Payment from #10231
-                    </th>
-                    <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                    <td class="text-end">$250.00</td>
-                    <td class="text-end">
-                      <span class="badge badge-success">Completed</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <button
-                        class="btn btn-icon btn-round btn-success btn-sm me-2">
-                        <i class="fa fa-check"></i>
-                      </button>
-                      Payment from #10231
-                    </th>
-                    <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                    <td class="text-end">$250.00</td>
-                    <td class="text-end">
-                      <span class="badge badge-success">Completed</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <button
-                        class="btn btn-icon btn-round btn-success btn-sm me-2">
-                        <i class="fa fa-check"></i>
-                      </button>
-                      Payment from #10231
-                    </th>
-                    <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                    <td class="text-end">$250.00</td>
-                    <td class="text-end">
-                      <span class="badge badge-success">Completed</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <button
-                        class="btn btn-icon btn-round btn-success btn-sm me-2">
-                        <i class="fa fa-check"></i>
-                      </button>
-                      Payment from #10231
-                    </th>
-                    <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                    <td class="text-end">$250.00</td>
-                    <td class="text-end">
-                      <span class="badge badge-success">Completed</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <button
-                        class="btn btn-icon btn-round btn-success btn-sm me-2">
-                        <i class="fa fa-check"></i>
-                      </button>
-                      Payment from #10231
-                    </th>
-                    <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                    <td class="text-end">$250.00</td>
-                    <td class="text-end">
-                      <span class="badge badge-success">Completed</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <button
-                        class="btn btn-icon btn-round btn-success btn-sm me-2">
-                        <i class="fa fa-check"></i>
-                      </button>
-                      Payment from #10231
-                    </th>
-                    <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                    <td class="text-end">$250.00</td>
-                    <td class="text-end">
-                      <span class="badge badge-success">Completed</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <button
-                        class="btn btn-icon btn-round btn-success btn-sm me-2">
-                        <i class="fa fa-check"></i>
-                      </button>
-                      Payment from #10231
-                    </th>
-                    <td class="text-end">Mar 19, 2020, 2.45pm</td>
-                    <td class="text-end">$250.00</td>
-                    <td class="text-end">
-                      <span class="badge badge-success">Completed</span>
-                    </td>
-                  </tr>
+                  <?php $i = 0 ?>
+                  <?php foreach ($orders as $order) : ?>
+                    <?php $i++ ?>
+                    <?php if ($i <= 7) : ?>
+                      <tr>
+                        <th scope="row">
+                          <button
+                            class="btn btn-icon btn-round btn-success btn-sm me-2">
+                            <i class="fa fa-check"></i>
+                          </button>
+                          <?= $order['no_resi'] ?>
+                        </th>
+                        <td class="text-end"><?= ubahTanggalWaktu($order['tanggal'], $order['waktu']) ?></td>
+                        <td class="text-end"><?= ubahRp($order['total_harga']) ?></td>
+                        <td class="text-end">
+                          <span class="badge badge-success"><?= $order['paid'] ? 'Sudah Bayar' : 'Belum Bayar' ?></span>
+                        </td>
+                      </tr>
+                    <?php endif; ?>
+                  <?php endforeach; ?>
                 </tbody>
               </table>
+              <?php if (empty($orders)) :  ?>
+                <p class="mt-2 text-muted text-center">Belum ada transaksi hari ini</p>
+              <?php endif;  ?>
             </div>
           </div>
         </div>
