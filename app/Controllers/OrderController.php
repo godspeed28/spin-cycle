@@ -50,10 +50,6 @@ class OrderController extends BaseController
         $userId = session()->get('user_id');
         $noHp = session()->get('no_telp');
 
-        // if (!$userId) {
-        //     return redirect()->to('/Login');
-        // }
-
         $orderModel = new OrderModel();
         $orderItemModel = new OrderItemsModel();
 

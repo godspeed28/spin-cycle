@@ -167,13 +167,13 @@
                                   aria-expanded="false">
                                   <div class="avatar-sm">
                                       <img
-                                          src="/img/albert.jpg"
+                                          src="<?= base_url('uploads/foto/' . getFoto()) ?>"
                                           alt="..."
                                           class="avatar-img rounded-circle" />
                                   </div>
                                   <span class="profile-username">
                                       <span class="op-7">Hi,</span>
-                                      <span class="fw-bold"><?= session()->get('username'); ?></span>
+                                      <span class="fw-bold"><?= getUsername(); ?></span>
                                   </span>
                               </a>
                               <ul class="dropdown-menu dropdown-user animated fadeIn">
@@ -182,13 +182,13 @@
                                           <div class="user-box">
                                               <div class="avatar-lg">
                                                   <img
-                                                      src="/img/albert.jpg"
+                                                      src="<?= base_url('uploads/foto/' . getFoto()) ?>"
                                                       alt="image profile"
                                                       class="avatar-img rounded" />
                                               </div>
                                               <div class="u-text">
-                                                  <h4><?= session()->get('username'); ?></h4>
-                                                  <p class="text-muted"><?= session()->get('email'); ?></p>
+                                                  <h4><?= getUsername(); ?></h4>
+                                                  <p class="text-muted"><?= getEmail(); ?></p>
                                                   <button
                                                       type="button" data-bs-toggle="modal" data-bs-target="#profileModal"
                                                       class="btn btn-xs btn-secondary btn-sm">View Profile</button>
@@ -221,25 +221,21 @@
                       </div>
 
                       <div class="modal-body">
-                          <?php if (session()->has('username')): ?>
-                              <div class="d-flex align-items-center">
-                                  <!-- Foto Profil -->
-                                  <div class="me-3 text-center">
-                                      <img src="/img/albert.jpg" alt="Foto Profil Pengguna" class="rounded-circle mb-3" width="100" height="100">
-                                  </div>
-
-                                  <!-- Data Profil -->
-                                  <div class="ps-3 border-start">
-                                      <p><strong>Username:</strong> <?= session()->get('username') ?></p>
-                                      <hr>
-                                      <p><strong>No. Telepon:</strong> <?= session()->get('no_telp') ?></p>
-                                      <hr>
-                                      <p><strong>Email:</strong> <?= session()->get('email') ?></p>
-                                  </div>
+                          <div class="d-flex align-items-center">
+                              <!-- Foto Profil -->
+                              <div class="me-3 text-center">
+                                  <img src="<?= base_url('uploads/foto/' . getFoto()) ?>" alt="Foto Profil Pengguna" class="rounded-circle mb-3" width="100" height="100">
                               </div>
-                          <?php else: ?>
-                              <p class="text-danger">Data pengguna tidak tersedia. Silakan login terlebih dahulu.</p>
-                          <?php endif; ?>
+
+                              <!-- Data Profil -->
+                              <div class="ps-3 border-start">
+                                  <p><strong>Username:</strong> <?= getUsername() ?></p>
+                                  <hr>
+                                  <p><strong>No. Telepon:</strong> <?= getTelepon() ?></p>
+                                  <hr>
+                                  <p><strong>Email:</strong> <?= getEmail() ?></p>
+                              </div>
+                          </div>
                       </div>
 
                       <div class="modal-footer">

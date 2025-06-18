@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\OrderModel;
+use App\Models\UserModel;
 
 class ChartController extends BaseController
 {
@@ -54,7 +55,7 @@ class ChartController extends BaseController
         //     ['bulan' => 9, 'total' => 12000],
         // ];
 
-        // // raw data
+        // raw data
         // $data2 = [
         //     ['bulan' => 1, 'jumlah_order' => 50],
         //     ['bulan' => 2, 'jumlah_order' => 60],
@@ -65,6 +66,19 @@ class ChartController extends BaseController
         //     ['bulan' => 7, 'jumlah_order' => 27],
         //     ['bulan' => 8, 'jumlah_order' => 15],
         //     ['bulan' => 9, 'jumlah_order' => 120],
+        // ];
+
+        // raw data
+        // $data3 = [
+        //     ['bulan' => 1, 'complete_laundry' => 100],
+        //     ['bulan' => 2, 'complete_laundry' => 10],
+        //     ['bulan' => 3, 'complete_laundry' => 220],
+        //     ['bulan' => 4, 'complete_laundry' => 399],
+        //     ['bulan' => 5, 'complete_laundry' => 290],
+        //     ['bulan' => 6, 'complete_laundry' => 300],
+        //     ['bulan' => 7, 'complete_laundry' => 66],
+        //     ['bulan' => 8, 'complete_laundry' => 12],
+        //     ['bulan' => 9, 'complete_laundry' => 120],
         // ];
 
         $bulanMap = [
@@ -101,5 +115,26 @@ class ChartController extends BaseController
             'dataOrders' => $valuesOrders,
             'dataLaundry' => $valuesLaundry
         ]);
+    }
+
+    public function userData()
+    {
+        $userModel = new UserModel();
+        $data = [];
+
+        for ($i = 6; $i >= 0; $i--) {
+            $timeStart = date('Y-m-d H:i:s', strtotime("-" . ($i + 1) * 5 . " minutes"));
+            $timeEnd = date('Y-m-d H:i:s', strtotime("-" . $i * 5 . " minutes"));
+
+            $count = $userModel
+                ->where('last_activity >=', $timeStart)
+                ->where('last_activity <', $timeEnd)
+                ->where('role', 'customer')
+                ->countAllResults();
+
+            $data[] = $count;
+        }
+
+        return $this->response->setJSON($data);
     }
 }

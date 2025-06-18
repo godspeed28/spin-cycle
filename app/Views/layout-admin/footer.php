@@ -14,8 +14,7 @@
                </ul>
            </nav>
            <div class="text-info">
-               &copy; 2024, dibuat dengan <i class="fa fa-heart text-danger"></i> oleh
-               <strong><span style="color: #007bff;">Spin</span><span style="color: #000;">Cycle</span></strong>
+               &copy; 2024, dibuat dengan oleh <strong><span style="color: #007bff;">Spin</span><span style="color: #000;">Cycle</span></strong>
            </div>
            <div class="text-info">
                Didistribusikan untuk kemudahan pengelolaan laundry modern.

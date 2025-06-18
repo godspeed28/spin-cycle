@@ -18,6 +18,7 @@ class ClothesController extends BaseController
         if (!session()->get('logged_in_admin')) {
             return redirect()->back();
         }
+        helper('my');
         $result = $this->pakaianModel->findAll();
         $data = [
             'title' => 'Clothes',

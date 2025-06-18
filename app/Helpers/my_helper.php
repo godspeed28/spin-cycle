@@ -2,7 +2,6 @@
 
 use App\Models\OrderModel;
 use App\Models\UserModel;
-// use App\Models\OrderStatusModel;
 
 function ubahRp($nilai)
 {
@@ -10,13 +9,10 @@ function ubahRp($nilai)
     return 'Rp' . number_format($nilai ?? 0, 0, ',', '.');
 }
 
-if (!function_exists('remove_underscore')) {
-    function remove_underscore(string $text, string $replaceWith = ' '): string
-    {
-        return str_replace('_', $replaceWith, $text);
-    }
+function remove_underscore(string $text, string $replaceWith = ' '): string
+{
+    return str_replace('_', $replaceWith, $text);
 }
-
 
 function getPendapatanHariIni()
 {
@@ -74,48 +70,43 @@ function getPersenPendapatan($target = 1000000)
     return max(0, min(100, round($persen))); // batasi dari 0–100
 }
 
-if (!function_exists('getFreshOrdersHariIni')) {
-    function getFreshOrdersHariIni()
-    {
-        $orderModel = new OrderModel();
+function getFreshOrdersHariIni()
+{
+    $orderModel = new OrderModel();
 
-        return $orderModel
-            ->where('DATE(created_at)', date('Y-m-d'))
-            ->where('paid', 0) // anggap fresh order = belum dibayar
-            ->countAllResults();
-    }
+    return $orderModel
+        ->where('status', 'Menunggu konfirmasi') // anggap fresh order = belum dibayar
+        ->countAllResults();
 }
 
-if (!function_exists('getPersenFreshOrdersHariIni')) {
-    function getPersenFreshOrdersHariIni($target = 30)
-    {
-        $jumlah = getFreshOrdersHariIni();
-        $persen = $target > 0 ? ($jumlah / $target) * 100 : 0;
+function getPersenFreshOrdersHariIni($target = 1000000)
+{
+    $orderModel = new OrderModel();
+    $pendapatan = $orderModel
+        ->selectSum('total_harga', 'pendapatan')
+        ->where('status', 'Menunggu konfirmasi')
+        ->first();
 
-        return max(0, min(100, round($persen))); // nilai 0–100
-    }
+    $total = (int) ($pendapatan['pendapatan'] ?? 0); // antisipasi null
+    $persen = $target > 0 ? ($total / $target) * 100 : 0;
+    return max(0, min(100, round($persen))); // nilai 0–100
 }
 
+function getNewUsersToday()
+{
+    $userModel = new UserModel();
 
-if (!function_exists('getNewUsersToday')) {
-    function getNewUsersToday()
-    {
-        $userModel = new UserModel();
-
-        return $userModel
-            ->where('DATE(created_at)', date('Y-m-d'))
-            ->countAllResults(); // ✅ hitung jumlah user hari ini
-    }
+    return $userModel
+        ->where('DATE(created_at)', date('Y-m-d'))
+        ->countAllResults(); // ✅ hitung jumlah user hari ini
 }
 
-if (!function_exists('getPersenNewUsersToday')) {
-    function getPersenNewUsersToday($target = 50)
-    {
-        $jumlah = getNewUsersToday();
-        $persen = $target > 0 ? ($jumlah / $target) * 100 : 0;
+function getPersenNewUsersToday($target = 50)
+{
+    $jumlah = getNewUsersToday();
+    $persen = $target > 0 ? ($jumlah / $target) * 100 : 0;
 
-        return max(0, min(100, round($persen))); // hasil 0–100
-    }
+    return max(0, min(100, round($persen))); // hasil 0–100
 }
 
 function getEnumValues(string $table, string $column): array
@@ -141,4 +132,61 @@ function getEnumValues(string $table, string $column): array
 function ubahTanggalWaktu($tanggal, $waktu)
 {
     return date('d M Y, H:i', strtotime($tanggal . ' ' . $waktu));
+}
+
+function getOnlineUsers()
+{
+    $userModel = new \App\Models\UserModel();
+
+    return $userModel
+        ->where('last_activity >=', date('Y-m-d H:i:s', strtotime('-5 minutes')))
+        ->where('role', 'customer')
+        ->countAllResults();
+}
+
+function getPersenOnlineUsers()
+{
+    $userModel = new UserModel();
+
+    $current = getOnlineUsers();
+    $target = count($userModel->where('role', 'customer')->findAll());
+    $persen = $target > 0 ? ($current / $target) * 100 : 0;
+
+    return round($persen, 2);
+}
+
+function getUsername()
+{
+    $userModel = new UserModel();
+    $user = $userModel->select('username')
+        ->where('id', session()->get('user_id'))
+        ->first();
+    return $user ? $user['username'] : null;
+}
+
+function getEmail()
+{
+    $userModel = new UserModel();
+    $user = $userModel->select('email')
+        ->where('id', session()->get('user_id'))
+        ->first();
+    return $user ? $user['email'] : null;
+}
+
+function getTelepon()
+{
+    $userModel = new UserModel();
+    $user = $userModel->select('no_telp')
+        ->where('id', session()->get('user_id'))
+        ->first();
+    return $user ? $user['no_telp'] : null;
+}
+
+function getFoto()
+{
+    $userModel = new UserModel();
+    $user = $userModel->select('foto')
+        ->where('id', session()->get('user_id'))
+        ->first();
+    return $user ? $user['foto'] : null;
 }

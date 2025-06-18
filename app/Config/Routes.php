@@ -24,6 +24,8 @@ $routes->get('/Wash', [\App\Controllers\Wash::class, 'index']);
 $routes->post('/Wash/checkout', [\App\Controllers\Wash::class, 'checkout']);
 $routes->get('/OrderController', [\App\Controllers\OrderController::class, 'index']);
 $routes->get('/test-download', [\App\Controllers\OrderController::class, 'generatePdf']);
+$routes->get('/generate-pdf', [\App\Controllers\ReportController::class, 'generatePdf']);
+$routes->get('/generate-excel', [\App\Controllers\ReportController::class, 'exportExcel']);
 $routes->post('checkout/proses', [\App\Controllers\Checkout::class, 'proses']);
 $routes->get('checkout/success', [\App\Controllers\Checkout::class, 'success']);
 
@@ -52,8 +54,9 @@ $routes->post('clothes/save', [\App\Controllers\ClothesController::class, 'save'
 $routes->post('clothes/update/(:num)', [\App\Controllers\ClothesController::class, 'update/$1']);
 $routes->post('clothes/delete/(:num)', [\App\Controllers\ClothesController::class, 'delete/$1']);
 
-// API dailySales
+// API chart
 $routes->get('chart/sales', [\App\Controllers\ChartController::class, 'salesData']);
+$routes->get('chart/user', [\App\Controllers\ChartController::class, 'userData']);
 
 // order manage
 $routes->get('admin/orders/detail/(:num)', [\App\Controllers\OrderAdminController::class, 'detail/$1']);

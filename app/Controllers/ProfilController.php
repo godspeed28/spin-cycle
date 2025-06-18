@@ -29,23 +29,41 @@ class ProfilController extends BaseController
 
     public function update()
     {
-        // Ambil ID user dari session
         $userId = session()->get('user_id');
         if (!$userId) {
             return redirect()->back()->with('error', 'User tidak ditemukan.');
         }
 
-        // Data dasar
+        // Ambil data input
         $data = [
             'username' => $this->request->getPost('username'),
             'email'    => $this->request->getPost('email'),
             'no_telp'  => $this->request->getPost('no_telp')
         ];
 
-        // Jika password diisi, hash dan masukkan ke data
+        // Cek dan hash password jika diisi
         $password = $this->request->getPost('password');
         if (!empty($password)) {
             $data['password'] = password_hash($password, PASSWORD_DEFAULT);
+        }
+
+        // Logika Upload Foto
+        $foto = $this->request->getFile('foto');
+        if ($foto && $foto->isValid() && !$foto->hasMoved()) {
+            // Buat nama file unik
+            $newName = $foto->getRandomName();
+
+            // Pindahkan ke folder upload
+            $foto->move(ROOTPATH . 'public/uploads/foto/', $newName);
+
+            // Hapus foto lama jika ada
+            $user = $this->userModel->find($userId);
+            if ($user && !empty($user['foto']) && file_exists(ROOTPATH . 'public/uploads/foto/' . $user['foto'])) {
+                unlink(ROOTPATH . 'public/uploads/foto/' . $user['foto']);
+            }
+
+            // Simpan nama file ke data
+            $data['foto'] = $newName;
         }
 
         // Update data user

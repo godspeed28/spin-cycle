@@ -29,6 +29,7 @@ class OrderModel extends Model
         $builder = $this->db->table('orders');
         $builder->select("DATE(created_at) as tanggal, SUM(total_harga) as total");
         $builder->where('created_at >=', date('Y-m-d', strtotime('-6 days')));
+        $builder->where('paid', 1);
         $builder->groupBy('DATE(created_at)');
         $query = $builder->get();
         $result = $query->getResultArray();

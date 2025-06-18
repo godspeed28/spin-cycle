@@ -266,7 +266,6 @@ var world_map = new jsVectorMap({
 });
 
 //Chart
-
 fetch('/chart/sales')
   .then(response => response.json())
   .then(result => { 
@@ -276,15 +275,15 @@ var statisticsChart = new Chart(ctx, {
 	data: {
 		labels:result.labels,
 		datasets: [ {
-			label: "Revenue",
-			borderColor: '#f3545d',
-			pointBackgroundColor: 'rgba(243, 84, 93, 0.6)',
-			pointRadius: 0,
-			backgroundColor: 'rgba(243, 84, 93, 0.4)',
-			legendColor: '#f3545d',
-			fill: true,
-			borderWidth: 2,
-			data: result.data
+			// label: "Revenue",
+			// borderColor: '#f3545d',
+			// pointBackgroundColor: 'rgba(243, 84, 93, 0.6)',
+			// pointRadius: 0,
+			// backgroundColor: 'rgba(243, 84, 93, 0.4)',
+			// legendColor: '#f3545d',
+			// fill: true,
+			// borderWidth: 2,
+			// data: result.data
 		}, {
 			label: "Orders",
 			borderColor: '#fdaf4b',

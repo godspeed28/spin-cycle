@@ -65,9 +65,15 @@ class OrderAdminController extends BaseController
         $status = $this->request->getPost('status');
         $paid = $this->request->getPost('paid');
 
+        // dd($paid);
+
         // Optional validation
         if ($status === null || $paid === null) {
             return redirect()->back()->with('error', 'Input tidak valid.');
+        }
+
+        if ($status == 'Selesai') {
+            $paid = '1';
         }
 
         $this->orderModel->update($id, [

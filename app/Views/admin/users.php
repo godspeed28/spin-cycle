@@ -87,27 +87,29 @@
                             </thead>
                             <tbody>
                                 <?php foreach ($users as $user) : ?>
-                                    <tr>
-                                        <td><?= esc($user['username']) ?></td>
-                                        <td><?= esc($user['email']) ?></td>
-                                        <td><?= esc($user['no_telp']) ?></td>
-                                        <td><?= esc($user['role']) ?></td>
-                                        <td>
-                                            <div class="form-button-action">
-                                                <!-- Edit -->
-                                                <button type="button" class="btn btn-link btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editModal<?= $user['id'] ?>" title="Edit">
-                                                    <i class="fa fa-edit"></i>
-                                                </button>
-                                                <!-- Delete -->
-                                                <form id="deleteForm-<?= $user['id'] ?>" action="<?= base_url('/users/delete/' . $user['id']) ?>" method="post" class="d-inline">
-                                                    <?= csrf_field(); ?>
-                                                    <button type="button" class="btn btn-link btn-danger btn-sm" title="Hapus" onclick="confirmDelete(<?= $user['id'] ?>)">
-                                                        <i class="fa fa-times"></i>
+                                    <?php if ($user['username'] != getUsername()) : ?>
+                                        <tr>
+                                            <td><?= esc($user['username']) ?></td>
+                                            <td><?= esc($user['email']) ?></td>
+                                            <td><?= esc($user['no_telp']) ?></td>
+                                            <td><?= esc($user['role']) ?></td>
+                                            <td>
+                                                <div class="form-button-action">
+                                                    <!-- Edit -->
+                                                    <button type="button" class="btn btn-link btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editModal<?= $user['id'] ?>" title="Edit">
+                                                        <i class="fa fa-edit"></i>
                                                     </button>
-                                                </form>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                                    <!-- Delete -->
+                                                    <form id="deleteForm-<?= $user['id'] ?>" action="<?= base_url('/users/delete/' . $user['id']) ?>" method="post" class="d-inline">
+                                                        <?= csrf_field(); ?>
+                                                        <button type="button" class="btn btn-link btn-danger btn-sm" title="Hapus" onclick="confirmDelete(<?= $user['id'] ?>)">
+                                                            <i class="fa fa-times"></i>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    <?php endif; ?>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>

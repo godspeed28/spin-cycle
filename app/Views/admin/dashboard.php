@@ -62,7 +62,7 @@
             </div>
             <div class="d-flex justify-content-between mt-2">
               <p class="text-muted mb-0">Change</p>
-              <p class="text-muted mb-0"><?= getPersenPendapatan() ?></p>
+              <p class="text-muted mb-0"><?= getPersenPendapatan() ?>%</p>
             </div>
           </div>
         </div>
@@ -135,14 +135,14 @@
               <div class="card-title">Order Statistics</div>
               <div class="card-tools">
                 <a
-                  href="#"
+                  onclick="downloadPDF('statisticsChart')"
                   class="btn btn-label-success btn-round btn-sm me-2">
                   <span class="btn-label">
                     <i class="fa fa-pencil"></i>
                   </span>
-                  Export
+                  Export PDF
                 </a>
-                <a href="#" class="btn btn-label-info btn-round btn-sm">
+                <a onclick="printChart('statisticsChart')" class="btn btn-label-info btn-round btn-sm">
                   <span class="btn-label">
                     <i class="fa fa-print"></i>
                   </span>
@@ -165,11 +165,14 @@
             <div class="card-head-row">
               <div class="card-title">Daily Sales</div>
               <div class="card-tools">
-                <button
+                <a onclick="downloadDailySalesChartPDF()"
                   class="btn btn-sm btn-label-light"
                   type="button">
-                  Export
-                </button>
+                  <span class="btn-label">
+                    <i class="fa fa-pencil"></i>
+                  </span>
+                  Export PDF
+                </a>
               </div>
             </div>
             <div class="card-category">
@@ -187,8 +190,8 @@
         </div>
         <div class="card card-round">
           <div class="card-body pb-0">
-            <div class="h1 fw-bold float-end text-primary">+5%</div>
-            <h2 class="mb-2">17</h2>
+            <div class="h1 fw-bold float-end text-primary"><?php if (getPersenOnlineUsers() != 0) : ?>+<?= getPersenOnlineUsers() ?>%<?php endif; ?></div>
+            <h2 class="mb-2"><?= getOnlineUsers() ?></h2>
             <p class="text-muted">Users online</p>
             <div class="pull-in sparkline-fix">
               <div id="lineChart"></div>
@@ -287,15 +290,37 @@
 
 <script src="/assets/js/core/jquery-3.7.1.min.js"></script>
 <script src="assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
 <script>
-  $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
-    type: "line",
-    height: "70",
-    width: "100%",
-    lineWidth: "2",
-    lineColor: "#177dff",
-    fillColor: "rgba(23, 125, 255, 0.14)",
-  });
+  function updateSparkline() {
+    $.ajax({
+      url: '/chart/user', // Ganti dengan route kamu
+      method: 'GET',
+      success: function(data) {
+        $("#lineChart").sparkline(data, {
+          label: 'hai',
+          type: "line",
+          height: "70",
+          width: "100%",
+          lineWidth: "2",
+          lineColor: "#177dff",
+          fillColor: "rgba(23, 125, 255, 0.14)",
+        });
+      },
+      error: function() {
+        console.log("Gagal mengambil data online users");
+      }
+    });
+  }
+
+  // Jalankan saat pertama kali
+  updateSparkline();
+
+  // Update otomatis setiap 1 menit (opsional)
+  setInterval(updateSparkline, 60000);
 
   $("#lineChart2").sparkline([99, 125, 122, 105, 110, 124, 115], {
     type: "line",
@@ -314,6 +339,88 @@
     lineColor: "#ffa534",
     fillColor: "rgba(255, 165, 52, .14)",
   });
+
+  async function downloadPDF(canvasId) {
+    const canvas = document.getElementById(canvasId);
+    if (!canvas) {
+      alert('Canvas tidak ditemukan.');
+      return;
+    }
+
+    const image = await html2canvas(canvas);
+
+    const imgData = image.toDataURL('image/png');
+    const pdf = new jspdf.jsPDF();
+    const imgProps = pdf.getImageProperties(imgData);
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+    pdf.save('chart.pdf');
+  }
+
+  function downloadDailySalesChartPDF() {
+    const canvas = document.getElementById('dailySalesChart');
+
+    if (!canvas) {
+      alert('Canvas tidak ditemukan!');
+      return;
+    }
+
+    const imgData = canvas.toDataURL('image/png');
+    const pdf = new jspdf.jsPDF();
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+
+    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+    pdf.save('daily-sales.pdf');
+  }
+
+
+
+  function printChart(canvasId) {
+    const canvas = document.getElementById(canvasId);
+    if (!canvas) {
+      alert('Canvas tidak ditemukan.');
+      return;
+    }
+
+    const dataUrl = canvas.toDataURL(); // ambil gambar dari canvas
+
+    // Buat window baru untuk print
+    const windowContent = `
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Print Chart</title>
+    <style>
+      body { text-align: center; margin: 0; padding: 0; }
+      img { max-width: 100%; height: auto; margin-top: 20px; }
+    </style>
+  </head>
+  <body>
+    <img src="${dataUrl}" />
+    <script>
+      window.onload = function() {
+        window.print();
+        window.onafterprint = function () {
+          window.close();
+        };
+      };
+    <\/script>
+  </body>
+  </html>
+  `;
+
+    const printWindow = window.open('', '_blank');
+    if (!printWindow) {
+      alert("Popup diblokir! Harap izinkan popup untuk mencetak grafik.");
+      return;
+    }
+    printWindow.document.open();
+    printWindow.document.write(windowContent);
+    printWindow.document.close();
+  }
 </script>
 
 <?= $this->endSection(); ?>
