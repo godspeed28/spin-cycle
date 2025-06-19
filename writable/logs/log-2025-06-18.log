@@ -1,0 +1,405 @@
+CRITICAL - 2025-06-18 15:12:34 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Filters\ActivityLogger.php(17): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\Filters\Filters.php(241): App\Filters\ActivityLogger->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 15:12:39 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: users]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Filters\ActivityLogger.php(17): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\Filters\Filters.php(241): App\Filters\ActivityLogger->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('users', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 15:12:40 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Filters\ActivityLogger.php(17): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\Filters\Filters.php(241): App\Filters\ActivityLogger->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 15:12:58 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: users]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Filters\ActivityLogger.php(17): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\Filters\Filters.php(241): App\Filters\ActivityLogger->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('users', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 15:12:59 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: report]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Filters\ActivityLogger.php(17): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\Filters\Filters.php(241): App\Filters\ActivityLogger->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('report', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 15:13:07 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: report]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Filters\ActivityLogger.php(17): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\Filters\Filters.php(241): App\Filters\ActivityLogger->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('report', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 15:13:09 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: users]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Filters\ActivityLogger.php(17): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\Filters\Filters.php(241): App\Filters\ActivityLogger->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('users', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 15:13:10 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: report]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Filters\ActivityLogger.php(17): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\Filters\Filters.php(241): App\Filters\ActivityLogger->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('report', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 15:13:10 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: order]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Filters\ActivityLogger.php(17): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\Filters\Filters.php(241): App\Filters\ActivityLogger->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('order', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 15:13:10 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: admin/orders/detail/5]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Filters\ActivityLogger.php(17): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\Filters\Filters.php(241): App\Filters\ActivityLogger->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('admin/orders/detail/5', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 15:13:10 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: order]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Filters\ActivityLogger.php(17): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\Filters\Filters.php(241): App\Filters\ActivityLogger->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('order', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 15:13:11 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: clothes]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Filters\ActivityLogger.php(17): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\Filters\Filters.php(241): App\Filters\ActivityLogger->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('clothes', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 15:13:12 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: services]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Filters\ActivityLogger.php(17): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\Filters\Filters.php(241): App\Filters\ActivityLogger->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('services', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 15:13:12 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: users]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Filters\ActivityLogger.php(17): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\Filters\Filters.php(241): App\Filters\ActivityLogger->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('users', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 15:13:12 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: services]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Filters\ActivityLogger.php(17): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\Filters\Filters.php(241): App\Filters\ActivityLogger->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('services', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 15:13:18 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: Login/]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Filters\ActivityLogger.php(17): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\Filters\Filters.php(241): App\Filters\ActivityLogger->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('Login/', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 15:14:40 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: Login/]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Filters\ActivityLogger.php(17): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\Filters\Filters.php(241): App\Filters\ActivityLogger->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('Login/', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 15:15:35 --> ErrorException: Array to string conversion
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\dashboard.php on line 191.
+ 1 APPPATH\Views\admin\dashboard.php(191): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\dashboard.php', 191)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(65): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 15:32:30 --> ParseError: syntax error, unexpected token "}", expecting ";"
+[Method: GET, Route: dashboard]
+in APPPATH\Helpers\my_helper.php on line 155.
+ 1 APPPATH\Controllers\DashboardController.php(12): helper([...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 16:32:45 --> ErrorException: Undefined array key "complete_laundry"
+[Method: GET, Route: chart/sales]
+in APPPATH\Controllers\ChartController.php on line 108.
+ 1 APPPATH\Controllers\ChartController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "complete_laundry"', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Controllers\\ChartController.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ChartController->salesData()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 16:32:46 --> ErrorException: Undefined array key "complete_laundry"
+[Method: GET, Route: chart/sales]
+in APPPATH\Controllers\ChartController.php on line 108.
+ 1 APPPATH\Controllers\ChartController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "complete_laundry"', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Controllers\\ChartController.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ChartController->salesData()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 16:58:50 --> Error: Call to undefined function getUsername()
+[Method: GET, Route: clothes]
+in APPPATH\Views\layout-admin\sidebar.php on line 176.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('layout-admin/sidebar', null, true)
+ 4 APPPATH\Views\layout-admin\template.php(41): CodeIgniter\View\View->include('layout-admin/sidebar')
+ 5 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\layout-admin\\template.php')
+ 6 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout-admin/template', [], true)
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/clothes', [], true)
+ 9 APPPATH\Controllers\ClothesController.php(26): view('admin/clothes', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClothesController->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClothesController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 16:59:22 --> ErrorException: Array to string conversion
+[Method: GET, Route: clothes]
+in APPPATH\Views\layout-admin\sidebar.php on line 176.
+ 1 APPPATH\Views\layout-admin\sidebar.php(176): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\layout-admin\\sidebar.php', 176)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\layout-admin\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('layout-admin/sidebar', null, true)
+ 5 APPPATH\Views\layout-admin\template.php(41): CodeIgniter\View\View->include('layout-admin/sidebar')
+ 6 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\layout-admin\\template.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout-admin/template', [], true)
+ 9 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/clothes', [], true)
+10 APPPATH\Controllers\ClothesController.php(27): view('admin/clothes', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClothesController->index()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClothesController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 16:59:23 --> ErrorException: Array to string conversion
+[Method: GET, Route: clothes]
+in APPPATH\Views\layout-admin\sidebar.php on line 176.
+ 1 APPPATH\Views\layout-admin\sidebar.php(176): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\layout-admin\\sidebar.php', 176)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\layout-admin\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('layout-admin/sidebar', null, true)
+ 5 APPPATH\Views\layout-admin\template.php(41): CodeIgniter\View\View->include('layout-admin/sidebar')
+ 6 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\layout-admin\\template.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout-admin/template', [], true)
+ 9 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/clothes', [], true)
+10 APPPATH\Controllers\ClothesController.php(27): view('admin/clothes', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClothesController->index()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClothesController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 16:59:23 --> ErrorException: Array to string conversion
+[Method: GET, Route: clothes]
+in APPPATH\Views\layout-admin\sidebar.php on line 176.
+ 1 APPPATH\Views\layout-admin\sidebar.php(176): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\layout-admin\\sidebar.php', 176)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\layout-admin\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('layout-admin/sidebar', null, true)
+ 5 APPPATH\Views\layout-admin\template.php(41): CodeIgniter\View\View->include('layout-admin/sidebar')
+ 6 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\layout-admin\\template.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout-admin/template', [], true)
+ 9 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/clothes', [], true)
+10 APPPATH\Controllers\ClothesController.php(27): view('admin/clothes', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClothesController->index()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClothesController))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 20:32:12 --> TypeError: Unsupported operand types: int / array
+[Method: GET, Route: dashboard]
+in APPPATH\Helpers\my_helper.php on line 90.
+ 1 APPPATH\Views\admin\dashboard.php(84): getPersenFreshOrdersHariIni()
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\DashboardController.php(65): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 21:18:54 --> ErrorException: Undefined variable $orders
+[Method: GET, Route: report]
+in APPPATH\Views\admin\report.php on line 46.
+ 1 APPPATH\Views\admin\report.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $orders', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\report.php', 46)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\report.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/report', [], true)
+ 5 APPPATH\Controllers\ReportController.php(16): view('admin/report', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-18 22:21:28 --> Error: Call to undefined function App\Controllers\remove_underscore()
+[Method: GET, Route: generate-excel]
+in APPPATH\Controllers\ReportController.php on line 117.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportController->exportExcel()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')

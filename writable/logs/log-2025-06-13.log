@@ -1,0 +1,1305 @@
+DEBUG - 2025-06-13 07:16:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-13 07:16:27 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'spincycle', 3306, '', 0)
+#1 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\Project\Spin Cycle\app\Controllers\Pages.php(18): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Pages->index()
+#7 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#8 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Project\Spin Cycle\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#4 C:\xampp\htdocs\Project\Spin Cycle\app\Controllers\Pages.php(18): CodeIgniter\Model->countAllResults()
+#5 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Pages->index()
+#6 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\Project\Spin Cycle\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-06-13 07:16:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `orders`
+WHERE `user_id` IS NULL', [], false)
+ 3 SYSTEMPATH\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 4 APPPATH\Controllers\Pages.php(18): CodeIgniter\Model->countAllResults()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+DEBUG - 2025-06-13 07:16:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:16:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:17:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:17:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:18:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:18:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:18:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:23:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:23:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:23:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:23:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:23:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:23:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:23:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:25:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:27:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:28:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:28:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:52:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-13 07:52:52 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'spincycle', 3306, '', 0)
+#1 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\Project\Spin Cycle\app\Controllers\Pages.php(18): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Pages->index()
+#7 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#8 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Project\Spin Cycle\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#4 C:\xampp\htdocs\Project\Spin Cycle\app\Controllers\Pages.php(18): CodeIgniter\Model->countAllResults()
+#5 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Pages->index()
+#6 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\Project\Spin Cycle\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-06-13 07:52:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `orders`
+WHERE `user_id` = :user_id:', [...], false)
+ 3 SYSTEMPATH\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 4 APPPATH\Controllers\Pages.php(18): CodeIgniter\Model->countAllResults()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+DEBUG - 2025-06-13 07:53:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 07:53:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-13 07:53:31 --> ErrorException: Undefined array key "19f82e8a8eaad99a12374e6169dc26ae'http://www.w3.org/2000/svg' viewbox='0 0 16 16' fill='none' stroke='%23212529' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5l8 11l14 5'/%3e%3c/svg%3e"
+[Method: GET, Route: test-download]
+in VENDORPATH\dompdf\dompdf\src\Css\Stylesheet.php on line 1473.
+ 1 VENDORPATH\dompdf\dompdf\src\Css\Stylesheet.php(1473): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "19f82e8a8eaad99a12374e6169dc26ae\'http://www.w3.org/2000/svg\' viewbox=\'0 0 16 16\' fill=\'none\' stroke=\'%23212529\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpath d=\'m2 5l8 11l14 5\'/%3e%3c/svg%3e"', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\vendor\\dompdf\\dompdf\\src\\Css\\Stylesheet.php', 1473)
+ 2 VENDORPATH\dompdf\dompdf\src\Css\Style.php(2212): Dompdf\Css\Stylesheet->resolve_url('url("blob://19f82e8a8eaad99a12374e6169dc26ae\'http://www.w3.org/2000/svg\' viewbox=\'0 0 16 16\' fill=\'none\' stroke=\'%23212529\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpath d=\'m2 5l8 11l14 5\'/%3e%3c/svg%3e")', true)
+ 3 VENDORPATH\dompdf\dompdf\src\Css\Style.php(1904): Dompdf\Css\Style->_get_background_image('url("blob://19f82e8a8eaad99a12374e6169dc26ae\'http://www.w3.org/2000/svg\' viewbox=\'0 0 16 16\' fill=\'none\' stroke=\'%23212529\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpath d=\'m2 5l8 11l14 5\'/%3e%3c/svg%3e")')
+ 4 VENDORPATH\dompdf\dompdf\src\Renderer\AbstractRenderer.php(68): Dompdf\Css\Style->__get('background_image')
+ 5 VENDORPATH\dompdf\dompdf\src\Renderer\Inline.php(57): Dompdf\Renderer\AbstractRenderer->_render_background(Object(Dompdf\FrameDecorator\Inline), [...])
+ 6 VENDORPATH\dompdf\dompdf\src\Renderer.php(305): Dompdf\Renderer\Inline->render(Object(Dompdf\FrameDecorator\Inline))
+ 7 VENDORPATH\dompdf\dompdf\src\Renderer.php(117): Dompdf\Renderer->_render_frame('inline', Object(Dompdf\FrameDecorator\Inline))
+ 8 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Inline))
+ 9 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+10 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+11 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+12 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+13 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+14 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+15 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+16 VENDORPATH\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+17 VENDORPATH\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(905): Dompdf\FrameReflower\Page->reflow(null)
+18 VENDORPATH\dompdf\dompdf\src\Dompdf.php(808): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+19 APPPATH\Libraries\PdfService.php(25): Dompdf\Dompdf->render()
+20 APPPATH\Controllers\OrderController.php(100): App\Libraries\PdfService->generate('<!-- DEBUG-VIEW START 4 APPPATH\\Views\\order.php -->
+<!-- DEBUG-VIEW START 3 APPPATH\\Views\\layout\\template.php -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Orders | Spin Cycle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
+</head>
+
+<body>
+    <!-- DEBUG-VIEW START 1 APPPATH\\Views\\layout\\navbar.php -->
+<div class="d-md-flex d-none border-bottom border-1 pr-3">
+    <p class="mt-3 ps-3 mb-2 text-secondary" style="margin-right:50px;">50136 Kota Semarang, Semarang Tengah.</p>
+    <p class="mt-3 mb-2 text-secondary" style="margin-right:50px;">Mon-Fri 08:00 AM - 05:00 PM</p>
+    <p class="mt-3 mb-2 text-secondary" style="margin-right:100px;">info@spincycle.com</p>
+    <p class="mt-3 mb-2" style="margin-right:50px; margin-left:200px"><i class="bi bi-telephone-fill text-info" style="font-size: 0.85rem; "></i> <b><a href="https://wa.me/6281236262924" class="underline-hover text-decoration-none text-dark" target="_blank">+62 812-3626-2924</a>
+        </b></p>
+    <a href="https://facebook.com" class="text-dark me-3 mt-3 mb-2"><i class="hover-info bi bi-facebook"></i></a>
+    <a href="https://instagram.com" class="text-dark me-3 mt-3 mb-2"><i class="hover-info bi bi-instagram"></i></a>
+    <a href="https://twitter.com" style="margin-right:50px;" class=" text-dark mt-3 mb-2"><i class="hover-info bi bi-twitter"></i></a>
+    <div class="clock mt-3 mb-2" id="clock">00:00:00</div>
+
+</div>
+<!-- <hr class="d-none d-md-block text-dark fw-bold"> -->
+<nav class="navbar px-3 navbar-expand-lg sticky-top" style="background-color: white;">
+    <a class="navbar-brand" href="#">
+        <svg width="50" height="50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <!-- Background Circle -->
+            <circle cx="100" cy="100" r="90" stroke="#3498db" stroke-width="10" fill="white" />
+
+            <!-- Spinning Drum Effect -->
+            <circle cx="100" cy="100" r="50" stroke="#3498db" stroke-width="8" fill="none" stroke-dasharray="30 10"
+                transform="rotate(-15,100,100)" />
+
+            <!-- Water Bubbles -->
+            <circle cx="70" cy="50" r="10" fill="#3498db" />
+            <circle cx="130" cy="40" r="7" fill="#3498db" />
+            <circle cx="150" cy="70" r="5" fill="#3498db" />
+
+        </svg><span class="fw-bold text-info"> Spin <span class="text-dark">Cycle</span> </span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item">
+                <a class="nav-link " href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="/Pages/about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="/Pages/services">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="/Pages/contact">Contact</a>
+            </li>
+
+            <div class="cart-icon d-flex align-items-center position-relative ms-md-5 me-4 mt-0" style="margin-right: 10px;">
+                <h5 class="mb-0">
+                    <a href="/OrderController"><i class="fas fs-4 fa-truck"></i></a>
+                </h5>
+                <span id="cart-quantity" class="badge bg-info position-absolute top-1 start-100 translate-middle rounded-pill">
+                    2                </span>
+            </div>
+
+
+        </ul>
+        &nbsp;
+        <br>
+        <div class="d-flex">
+            <a href="/Wash" class="bg-info p-2 text-light fw-bold text-decoration-none">Schedule a Pickup</a>
+            &nbsp;
+            &nbsp;
+            <style>
+                .authhover:hover {
+                    color: gray !important;
+                }
+
+                @media(min-width:768px) {
+                    .dropdown-menu {
+                        margin-left: -130px;
+                    }
+                }
+            </style>
+                            <div class="dropdown">
+                    <i style="margin:10px;" type="button" data-bs-toggle="dropdown" aria-expanded="false" class="dropdown-toggle fas fs-4 fa-user-cog"></i>
+                    <ul class="dropdown-menu" style=" margin-top: 10px;">
+                        <li><a class="dropdown-item" href="#">Akun Saya</a></li>
+                        <li><a class="dropdown-item" href="/OrderController/">Pesanan Saya</a></li>
+                        <li><a class="dropdown-item text-danger" href="/Login/logout">Logout</a></li>
+                    </ul>
+                </div>
+                    </div>
+    </div>
+</nav>
+<!-- DEBUG-VIEW ENDED 1 APPPATH\\Views\\layout\\navbar.php -->
+    
+<style>
+    .custom-border {
+        border: 1px solid black;
+    }
+</style>
+
+<div class="text-start d-flex flex-column bg-page">
+    <h5 class="align-self-start" style="margin-left:150px;"><a href="/" class="hover-menu text-decoration-none text-info">Home</a> / Order Status</h5>
+    <br>
+    <h1 class="align-self-start fw-bold" style="margin-left:150px;">Order Status</h1>
+</div>
+
+<hr class="text-info w-50 mx-auto">
+
+<div class="container mt-5">
+    <div class="card shadow-none border-0">
+        <div class="card-header text-white rounded-0" style="background-color:rgb(247, 242, 242);">
+            <h4><i class="fs-5 fa fa-list-alt me-2" style="color: black;"></i></h4>
+        </div>
+
+        <div class="card-body">
+            <p class="text-start fw-bold">My Order</p>
+            <hr class="text-dark">
+                            <div class="rounded-0 accordion" id="ordersAccordion">
+                                                                        <div class="rounded-0 accordion-item mb-3">
+                                                                <h2 class="accordion-header" id="heading0">
+                                    <button class="accordion-button text-info collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0" aria-expanded="false" aria-controls="collapse0">
+                                        Diproses | SC20250612171917535 | Created At :13-June-2025 12:19:17 AM                                    </button>
+                                </h2>
+                                <div id="collapse0" class="text-start accordion-collapse collapse" aria-labelledby="heading0" data-bs-parent="#ordersAccordion">
+                                    <div class="accordion-body">
+                                        <p>Thank you. Your order has been received.</p>
+                                        <hr>
+                                        <div class="d-flex">
+                                            <div style="margin: 5px 10px;" class="text-secondary">Order Number: SC20250612171917535</div>
+                                            <div style=" border-left: 2px dashed #ccc;height: 20px;margin: 10px;"></div>
+                                            <div style="margin: 5px 10px;" class="text-secondary">Date Pickup: 2025-06-14-10:18:00</div>
+                                            <div style=" border-left: 2px dashed #ccc;height: 20px;margin: 10px;"></div>
+                                            <div style="margin: 5px 10px;" class="text-secondary">Total: Rp40.000</div>
+                                            <div style=" border-left: 2px dashed #ccc;height: 20px;margin: 10px;"></div>
+                                            <div style="margin: 5px 10px;" class="text-secondary">Metode Pembayaran: COD</div>
+                                        </div>
+                                        <hr>
+                                        <div class="container">
+                                            <h5 class="text-start text-info mb-3"><i class="bi bi-geo-alt"></i> Alamat Pickup & Pengiriman</h5>
+                                            <h6 class="text-start">Albert Kolin (+62) 81246881584</h6>
+                                            <p class="text-start">
+                                                                                                Jln. Nakula Raya                                            </p>
+                                        </div>
+                                        <hr>
+                                        <p><strong>Catatan:</strong> Tidak ada catatan</p>
+                                        <hr>
+                                        <div x-data="{ open: false }">
+                                            <button @click="open = !open" class="btn mb-3"><u><b>Order details</u></b></button>
+                                            <div x-show="open" class="table-responsive">
+                                                <table class="table">
+                                                    <thead class="table-transparent">
+                                                        <tr>
+                                                            <th>Nama Pakaian</th>
+                                                            <th>Jumlah</th>
+                                                            <th>Berat Satuan (kg)</th>
+                                                            <th>Total Berat (kg)</th>
+                                                            <th>Subtotal (Rp)</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                                                                                                                                                    <tr>
+                                                                    <td>Kaos</td>
+                                                                    <td>5</td>
+                                                                    <td>0.20</td>
+                                                                    <td>1.00</td>
+                                                                    <td>Rp10.000</td>
+                                                                </tr>
+                                                                                                                                                                                                                                                <tr>
+                                                                    <td>Celana Biasa</td>
+                                                                    <td>5</td>
+                                                                    <td>0.40</td>
+                                                                    <td>2.00</td>
+                                                                    <td>Rp20.000</td>
+                                                                </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                                </tbody>
+                                                </table>
+                                                                                                    <p class="text-end text-secondary"><strong>Jasa Express:</strong> Rp10.000</p>
+                                                                                                <p class="text-end text-secondary"><strong>Jenis Layanan:</strong> Cuci Kering</p>
+                                                <p class="text-end text-secondary"><strong>Total Berat:</strong> 3.00 kg</p>
+                                                <p class="text-end text-secondary"><strong>Total Harga:</strong> <span class="text-info fw-bold fs-3">Rp40.000</p>
+                                            </div>
+                                        </div>
+                                                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                                                                            <div class="rounded-0 accordion-item mb-3">
+                                                                <h2 class="accordion-header" id="heading1">
+                                    <button class="accordion-button text-info collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                        Diproses | SC20250613072537092 | Created At :13-June-2025 02:25:37 PM                                    </button>
+                                </h2>
+                                <div id="collapse1" class="text-start accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#ordersAccordion">
+                                    <div class="accordion-body">
+                                        <p>Thank you. Your order has been received.</p>
+                                        <hr>
+                                        <div class="d-flex">
+                                            <div style="margin: 5px 10px;" class="text-secondary">Order Number: SC20250613072537092</div>
+                                            <div style=" border-left: 2px dashed #ccc;height: 20px;margin: 10px;"></div>
+                                            <div style="margin: 5px 10px;" class="text-secondary">Date Pickup: 2025-06-14-10:24:00</div>
+                                            <div style=" border-left: 2px dashed #ccc;height: 20px;margin: 10px;"></div>
+                                            <div style="margin: 5px 10px;" class="text-secondary">Total: Rp11.000</div>
+                                            <div style=" border-left: 2px dashed #ccc;height: 20px;margin: 10px;"></div>
+                                            <div style="margin: 5px 10px;" class="text-secondary">Metode Pembayaran: COD</div>
+                                        </div>
+                                        <hr>
+                                        <div class="container">
+                                            <h5 class="text-start text-info mb-3"><i class="bi bi-geo-alt"></i> Alamat Pickup & Pengiriman</h5>
+                                            <h6 class="text-start">Jafo (+62) 81246881584</h6>
+                                            <p class="text-start">
+                                                                                                GATAZ AREA                                            </p>
+                                        </div>
+                                        <hr>
+                                        <p><strong>Catatan:</strong> Dinggen</p>
+                                        <hr>
+                                        <div x-data="{ open: false }">
+                                            <button @click="open = !open" class="btn mb-3"><u><b>Order details</u></b></button>
+                                            <div x-show="open" class="table-responsive">
+                                                <table class="table">
+                                                    <thead class="table-transparent">
+                                                        <tr>
+                                                            <th>Nama Pakaian</th>
+                                                            <th>Jumlah</th>
+                                                            <th>Berat Satuan (kg)</th>
+                                                            <th>Total Berat (kg)</th>
+                                                            <th>Subtotal (Rp)</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                                                                                                                                                                                                                                                                                                                                                                                            <tr>
+                                                                    <td>Kaos</td>
+                                                                    <td>5</td>
+                                                                    <td>0.20</td>
+                                                                    <td>1.00</td>
+                                                                    <td>Rp5.000</td>
+                                                                </tr>
+                                                                                                                                                                                                                                                <tr>
+                                                                    <td>Celana Biasa</td>
+                                                                    <td>3</td>
+                                                                    <td>0.40</td>
+                                                                    <td>1.20</td>
+                                                                    <td>Rp6.000</td>
+                                                                </tr>
+                                                                                                                                                                        </tbody>
+                                                </table>
+                                                                                                <p class="text-end text-secondary"><strong>Jenis Layanan:</strong> Setrika Saja</p>
+                                                <p class="text-end text-secondary"><strong>Total Berat:</strong> 2.20 kg</p>
+                                                <p class="text-end text-secondary"><strong>Total Harga:</strong> <span class="text-info fw-bold fs-3">Rp11.000</p>
+                                            </div>
+                                        </div>
+                                                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                                        </div>
+                    </div>
+    </div>
+</div>
+    <!-- DEBUG-VIEW START 2 APPPATH\\Views\\layout\\footer.php -->
+<button id="scrollTopBtn" class="btn btn-info shadow">
+    <i class="bi bi-arrow-up"></i>
+</button>
+<div class="container">
+    <footer class="m-3 b-top bg-transparent text-dark py-4">
+        <div class="container text-center">
+            <p class="mb-1">&copy; 2025 <b class="text-info">Spin <span class="text-dark">Cycle</span></b>. All Rights Reserved.</p>
+
+            <!-- Contact Info -->
+            <p class="mb-1">
+                <a href="mailto:info@spincycle.com" class="text-info text-decoration-none">info@spincycle.com</a> |
+                <a href="tel:+62123456789" class="text-info text-decoration-none">+62 812-3626-2924</a>
+            </p>
+
+            <!-- Privacy & Terms -->
+            <p class="mb-0">
+                <a href="/Pages/privacy" class="text-info text-decoration-none">Privacy Policy</a> |
+                <a href="/Pages/terms" class="text-info text-decoration-none">Terms of Service</a>
+            </p>
+
+            <!-- Social Media -->
+            <div class="mt-2">
+                <a href="https://facebook.com" class="text-dark me-3"><i class="bi bi-facebook"></i></a>
+                <a href="https://instagram.com" class="text-dark me-3"><i class="bi bi-instagram"></i></a>
+                <a href="https://twitter.com" class="text-dark"><i class="bi bi-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+</div>
+<!-- DEBUG-VIEW ENDED 2 APPPATH\\Views\\layout\\footer.php -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
+<!-- DEBUG-VIEW ENDED 3 APPPATH\\Views\\layout\\template.php -->
+
+<!-- DEBUG-VIEW ENDED 4 APPPATH\\Views\\order.php -->
+', 'contoh.pdf')
+21 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->generatePdf()
+22 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+23 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+24 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+25 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+26 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+27 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-13 07:53:46 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 501223424 bytes)
+【Previous Exception】
+ErrorException
+Undefined array key "19f82e8a8eaad99a12374e6169dc26ae'http://www.w3.org/2000/svg' viewbox='0 0 16 16' fill='none' stroke='%23212529' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5l8 11l14 5'/%3e%3c/svg%3e"
+#0 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Css\Stylesheet.php(1473): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 1473)
+#1 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Css\Style.php(2212): Dompdf\Css\Stylesheet->resolve_url('url("blob://19f...', true)
+#2 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Css\Style.php(1904): Dompdf\Css\Style->_get_background_image('url("blob://19f...')
+#3 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer\AbstractRenderer.php(68): Dompdf\Css\Style->__get('background_imag...')
+#4 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer\Inline.php(57): Dompdf\Renderer\AbstractRenderer->_render_background(Object(Dompdf\FrameDecorator\Inline), Array)
+#5 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(305): Dompdf\Renderer\Inline->render(Object(Dompdf\FrameDecorator\Inline))
+#6 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(117): Dompdf\Renderer->_render_frame('inline', Object(Dompdf\FrameDecorator\Inline))
+#7 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Inline))
+#8 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#9 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#10 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#11 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#12 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#13 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#14 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#15 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#16 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(905): Dompdf\FrameReflower\Page->reflow(NULL)
+#17 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Dompdf.php(808): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+#18 C:\xampp\htdocs\Project\Spin Cycle\app\Libraries\PdfService.php(25): Dompdf\Dompdf->render()
+#19 C:\xampp\htdocs\Project\Spin Cycle\app\Controllers\OrderController.php(100): App\Libraries\PdfService->generate('<!-- DEBUG-VIEW...', 'contoh.pdf')
+#20 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\OrderController->generatePdf()
+#21 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#22 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#23 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#24 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#25 C:\xampp\htdocs\Project\Spin Cycle\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#26 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#27 {main}
+[Method: GET, Route: test-download]
+in APPPATH\Views\errors\html\error_exception.php on line 131.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-06-13 07:56:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-13 07:56:50 --> ErrorException: Undefined array key "19f82e8a8eaad99a12374e6169dc26ae'http://www.w3.org/2000/svg' viewbox='0 0 16 16' fill='none' stroke='%23212529' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5l8 11l14 5'/%3e%3c/svg%3e"
+[Method: GET, Route: test-download]
+in VENDORPATH\dompdf\dompdf\src\Css\Stylesheet.php on line 1473.
+ 1 VENDORPATH\dompdf\dompdf\src\Css\Stylesheet.php(1473): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "19f82e8a8eaad99a12374e6169dc26ae\'http://www.w3.org/2000/svg\' viewbox=\'0 0 16 16\' fill=\'none\' stroke=\'%23212529\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpath d=\'m2 5l8 11l14 5\'/%3e%3c/svg%3e"', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\vendor\\dompdf\\dompdf\\src\\Css\\Stylesheet.php', 1473)
+ 2 VENDORPATH\dompdf\dompdf\src\Css\Style.php(2212): Dompdf\Css\Stylesheet->resolve_url('url("blob://19f82e8a8eaad99a12374e6169dc26ae\'http://www.w3.org/2000/svg\' viewbox=\'0 0 16 16\' fill=\'none\' stroke=\'%23212529\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpath d=\'m2 5l8 11l14 5\'/%3e%3c/svg%3e")', true)
+ 3 VENDORPATH\dompdf\dompdf\src\Css\Style.php(1904): Dompdf\Css\Style->_get_background_image('url("blob://19f82e8a8eaad99a12374e6169dc26ae\'http://www.w3.org/2000/svg\' viewbox=\'0 0 16 16\' fill=\'none\' stroke=\'%23212529\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpath d=\'m2 5l8 11l14 5\'/%3e%3c/svg%3e")')
+ 4 VENDORPATH\dompdf\dompdf\src\Renderer\AbstractRenderer.php(68): Dompdf\Css\Style->__get('background_image')
+ 5 VENDORPATH\dompdf\dompdf\src\Renderer\Inline.php(57): Dompdf\Renderer\AbstractRenderer->_render_background(Object(Dompdf\FrameDecorator\Inline), [...])
+ 6 VENDORPATH\dompdf\dompdf\src\Renderer.php(305): Dompdf\Renderer\Inline->render(Object(Dompdf\FrameDecorator\Inline))
+ 7 VENDORPATH\dompdf\dompdf\src\Renderer.php(117): Dompdf\Renderer->_render_frame('inline', Object(Dompdf\FrameDecorator\Inline))
+ 8 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Inline))
+ 9 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+10 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+11 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+12 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+13 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+14 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+15 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+16 VENDORPATH\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+17 VENDORPATH\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(905): Dompdf\FrameReflower\Page->reflow(null)
+18 VENDORPATH\dompdf\dompdf\src\Dompdf.php(808): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+19 APPPATH\Libraries\PdfService.php(33): Dompdf\Dompdf->render()
+20 APPPATH\Controllers\OrderController.php(100): App\Libraries\PdfService->generate('<!-- DEBUG-VIEW START 4 APPPATH\\Views\\order.php -->
+<!-- DEBUG-VIEW START 3 APPPATH\\Views\\layout\\template.php -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Orders | Spin Cycle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
+</head>
+
+<body>
+    <!-- DEBUG-VIEW START 1 APPPATH\\Views\\layout\\navbar.php -->
+<div class="d-md-flex d-none border-bottom border-1 pr-3">
+    <p class="mt-3 ps-3 mb-2 text-secondary" style="margin-right:50px;">50136 Kota Semarang, Semarang Tengah.</p>
+    <p class="mt-3 mb-2 text-secondary" style="margin-right:50px;">Mon-Fri 08:00 AM - 05:00 PM</p>
+    <p class="mt-3 mb-2 text-secondary" style="margin-right:100px;">info@spincycle.com</p>
+    <p class="mt-3 mb-2" style="margin-right:50px; margin-left:200px"><i class="bi bi-telephone-fill text-info" style="font-size: 0.85rem; "></i> <b><a href="https://wa.me/6281236262924" class="underline-hover text-decoration-none text-dark" target="_blank">+62 812-3626-2924</a>
+        </b></p>
+    <a href="https://facebook.com" class="text-dark me-3 mt-3 mb-2"><i class="hover-info bi bi-facebook"></i></a>
+    <a href="https://instagram.com" class="text-dark me-3 mt-3 mb-2"><i class="hover-info bi bi-instagram"></i></a>
+    <a href="https://twitter.com" style="margin-right:50px;" class=" text-dark mt-3 mb-2"><i class="hover-info bi bi-twitter"></i></a>
+    <div class="clock mt-3 mb-2" id="clock">00:00:00</div>
+
+</div>
+<!-- <hr class="d-none d-md-block text-dark fw-bold"> -->
+<nav class="navbar px-3 navbar-expand-lg sticky-top" style="background-color: white;">
+    <a class="navbar-brand" href="#">
+        <svg width="50" height="50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <!-- Background Circle -->
+            <circle cx="100" cy="100" r="90" stroke="#3498db" stroke-width="10" fill="white" />
+
+            <!-- Spinning Drum Effect -->
+            <circle cx="100" cy="100" r="50" stroke="#3498db" stroke-width="8" fill="none" stroke-dasharray="30 10"
+                transform="rotate(-15,100,100)" />
+
+            <!-- Water Bubbles -->
+            <circle cx="70" cy="50" r="10" fill="#3498db" />
+            <circle cx="130" cy="40" r="7" fill="#3498db" />
+            <circle cx="150" cy="70" r="5" fill="#3498db" />
+
+        </svg><span class="fw-bold text-info"> Spin <span class="text-dark">Cycle</span> </span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item">
+                <a class="nav-link " href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="/Pages/about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="/Pages/services">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="/Pages/contact">Contact</a>
+            </li>
+
+            <div class="cart-icon d-flex align-items-center position-relative ms-md-5 me-4 mt-0" style="margin-right: 10px;">
+                <h5 class="mb-0">
+                    <a href="/OrderController"><i class="fas fs-4 fa-truck"></i></a>
+                </h5>
+                <span id="cart-quantity" class="badge bg-info position-absolute top-1 start-100 translate-middle rounded-pill">
+                    2                </span>
+            </div>
+
+
+        </ul>
+        &nbsp;
+        <br>
+        <div class="d-flex">
+            <a href="/Wash" class="bg-info p-2 text-light fw-bold text-decoration-none">Schedule a Pickup</a>
+            &nbsp;
+            &nbsp;
+            <style>
+                .authhover:hover {
+                    color: gray !important;
+                }
+
+                @media(min-width:768px) {
+                    .dropdown-menu {
+                        margin-left: -130px;
+                    }
+                }
+            </style>
+                            <div class="dropdown">
+                    <i style="margin:10px;" type="button" data-bs-toggle="dropdown" aria-expanded="false" class="dropdown-toggle fas fs-4 fa-user-cog"></i>
+                    <ul class="dropdown-menu" style=" margin-top: 10px;">
+                        <li><a class="dropdown-item" href="#">Akun Saya</a></li>
+                        <li><a class="dropdown-item" href="/OrderController/">Pesanan Saya</a></li>
+                        <li><a class="dropdown-item text-danger" href="/Login/logout">Logout</a></li>
+                    </ul>
+                </div>
+                    </div>
+    </div>
+</nav>
+<!-- DEBUG-VIEW ENDED 1 APPPATH\\Views\\layout\\navbar.php -->
+    
+<style>
+    .custom-border {
+        border: 1px solid black;
+    }
+</style>
+
+<div class="text-start d-flex flex-column bg-page">
+    <h5 class="align-self-start" style="margin-left:150px;"><a href="/" class="hover-menu text-decoration-none text-info">Home</a> / Order Status</h5>
+    <br>
+    <h1 class="align-self-start fw-bold" style="margin-left:150px;">Order Status</h1>
+</div>
+
+<hr class="text-info w-50 mx-auto">
+
+<div class="container mt-5">
+    <div class="card shadow-none border-0">
+        <div class="card-header text-white rounded-0" style="background-color:rgb(247, 242, 242);">
+            <h4><i class="fs-5 fa fa-list-alt me-2" style="color: black;"></i></h4>
+        </div>
+
+        <div class="card-body">
+            <p class="text-start fw-bold">My Order</p>
+            <hr class="text-dark">
+                            <div class="rounded-0 accordion" id="ordersAccordion">
+                                                                        <div class="rounded-0 accordion-item mb-3">
+                                                                <h2 class="accordion-header" id="heading0">
+                                    <button class="accordion-button text-info collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0" aria-expanded="false" aria-controls="collapse0">
+                                        Diproses | SC20250612171917535 | Created At :13-June-2025 12:19:17 AM                                    </button>
+                                </h2>
+                                <div id="collapse0" class="text-start accordion-collapse collapse" aria-labelledby="heading0" data-bs-parent="#ordersAccordion">
+                                    <div class="accordion-body">
+                                        <p>Thank you. Your order has been received.</p>
+                                        <hr>
+                                        <div class="d-flex">
+                                            <div style="margin: 5px 10px;" class="text-secondary">Order Number: SC20250612171917535</div>
+                                            <div style=" border-left: 2px dashed #ccc;height: 20px;margin: 10px;"></div>
+                                            <div style="margin: 5px 10px;" class="text-secondary">Date Pickup: 2025-06-14-10:18:00</div>
+                                            <div style=" border-left: 2px dashed #ccc;height: 20px;margin: 10px;"></div>
+                                            <div style="margin: 5px 10px;" class="text-secondary">Total: Rp40.000</div>
+                                            <div style=" border-left: 2px dashed #ccc;height: 20px;margin: 10px;"></div>
+                                            <div style="margin: 5px 10px;" class="text-secondary">Metode Pembayaran: COD</div>
+                                        </div>
+                                        <hr>
+                                        <div class="container">
+                                            <h5 class="text-start text-info mb-3"><i class="bi bi-geo-alt"></i> Alamat Pickup & Pengiriman</h5>
+                                            <h6 class="text-start">Albert Kolin (+62) 81246881584</h6>
+                                            <p class="text-start">
+                                                                                                Jln. Nakula Raya                                            </p>
+                                        </div>
+                                        <hr>
+                                        <p><strong>Catatan:</strong> Tidak ada catatan</p>
+                                        <hr>
+                                        <div x-data="{ open: false }">
+                                            <button @click="open = !open" class="btn mb-3"><u><b>Order details</u></b></button>
+                                            <div x-show="open" class="table-responsive">
+                                                <table class="table">
+                                                    <thead class="table-transparent">
+                                                        <tr>
+                                                            <th>Nama Pakaian</th>
+                                                            <th>Jumlah</th>
+                                                            <th>Berat Satuan (kg)</th>
+                                                            <th>Total Berat (kg)</th>
+                                                            <th>Subtotal (Rp)</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                                                                                                                                                    <tr>
+                                                                    <td>Kaos</td>
+                                                                    <td>5</td>
+                                                                    <td>0.20</td>
+                                                                    <td>1.00</td>
+                                                                    <td>Rp10.000</td>
+                                                                </tr>
+                                                                                                                                                                                                                                                <tr>
+                                                                    <td>Celana Biasa</td>
+                                                                    <td>5</td>
+                                                                    <td>0.40</td>
+                                                                    <td>2.00</td>
+                                                                    <td>Rp20.000</td>
+                                                                </tr>
+                                                                                                                                                                                                                                                                                                                                                                                                                </tbody>
+                                                </table>
+                                                                                                    <p class="text-end text-secondary"><strong>Jasa Express:</strong> Rp10.000</p>
+                                                                                                <p class="text-end text-secondary"><strong>Jenis Layanan:</strong> Cuci Kering</p>
+                                                <p class="text-end text-secondary"><strong>Total Berat:</strong> 3.00 kg</p>
+                                                <p class="text-end text-secondary"><strong>Total Harga:</strong> <span class="text-info fw-bold fs-3">Rp40.000</p>
+                                            </div>
+                                        </div>
+                                                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                                                                            <div class="rounded-0 accordion-item mb-3">
+                                                                <h2 class="accordion-header" id="heading1">
+                                    <button class="accordion-button text-info collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                        Diproses | SC20250613072537092 | Created At :13-June-2025 02:25:37 PM                                    </button>
+                                </h2>
+                                <div id="collapse1" class="text-start accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#ordersAccordion">
+                                    <div class="accordion-body">
+                                        <p>Thank you. Your order has been received.</p>
+                                        <hr>
+                                        <div class="d-flex">
+                                            <div style="margin: 5px 10px;" class="text-secondary">Order Number: SC20250613072537092</div>
+                                            <div style=" border-left: 2px dashed #ccc;height: 20px;margin: 10px;"></div>
+                                            <div style="margin: 5px 10px;" class="text-secondary">Date Pickup: 2025-06-14-10:24:00</div>
+                                            <div style=" border-left: 2px dashed #ccc;height: 20px;margin: 10px;"></div>
+                                            <div style="margin: 5px 10px;" class="text-secondary">Total: Rp11.000</div>
+                                            <div style=" border-left: 2px dashed #ccc;height: 20px;margin: 10px;"></div>
+                                            <div style="margin: 5px 10px;" class="text-secondary">Metode Pembayaran: COD</div>
+                                        </div>
+                                        <hr>
+                                        <div class="container">
+                                            <h5 class="text-start text-info mb-3"><i class="bi bi-geo-alt"></i> Alamat Pickup & Pengiriman</h5>
+                                            <h6 class="text-start">Jafo (+62) 81246881584</h6>
+                                            <p class="text-start">
+                                                                                                GATAZ AREA                                            </p>
+                                        </div>
+                                        <hr>
+                                        <p><strong>Catatan:</strong> Dinggen</p>
+                                        <hr>
+                                        <div x-data="{ open: false }">
+                                            <button @click="open = !open" class="btn mb-3"><u><b>Order details</u></b></button>
+                                            <div x-show="open" class="table-responsive">
+                                                <table class="table">
+                                                    <thead class="table-transparent">
+                                                        <tr>
+                                                            <th>Nama Pakaian</th>
+                                                            <th>Jumlah</th>
+                                                            <th>Berat Satuan (kg)</th>
+                                                            <th>Total Berat (kg)</th>
+                                                            <th>Subtotal (Rp)</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                                                                                                                                                                                                                                                                                                                                                                                            <tr>
+                                                                    <td>Kaos</td>
+                                                                    <td>5</td>
+                                                                    <td>0.20</td>
+                                                                    <td>1.00</td>
+                                                                    <td>Rp5.000</td>
+                                                                </tr>
+                                                                                                                                                                                                                                                <tr>
+                                                                    <td>Celana Biasa</td>
+                                                                    <td>3</td>
+                                                                    <td>0.40</td>
+                                                                    <td>1.20</td>
+                                                                    <td>Rp6.000</td>
+                                                                </tr>
+                                                                                                                                                                        </tbody>
+                                                </table>
+                                                                                                <p class="text-end text-secondary"><strong>Jenis Layanan:</strong> Setrika Saja</p>
+                                                <p class="text-end text-secondary"><strong>Total Berat:</strong> 2.20 kg</p>
+                                                <p class="text-end text-secondary"><strong>Total Harga:</strong> <span class="text-info fw-bold fs-3">Rp11.000</p>
+                                            </div>
+                                        </div>
+                                                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                                        </div>
+                    </div>
+    </div>
+</div>
+    <!-- DEBUG-VIEW START 2 APPPATH\\Views\\layout\\footer.php -->
+<button id="scrollTopBtn" class="btn btn-info shadow">
+    <i class="bi bi-arrow-up"></i>
+</button>
+<div class="container">
+    <footer class="m-3 b-top bg-transparent text-dark py-4">
+        <div class="container text-center">
+            <p class="mb-1">&copy; 2025 <b class="text-info">Spin <span class="text-dark">Cycle</span></b>. All Rights Reserved.</p>
+
+            <!-- Contact Info -->
+            <p class="mb-1">
+                <a href="mailto:info@spincycle.com" class="text-info text-decoration-none">info@spincycle.com</a> |
+                <a href="tel:+62123456789" class="text-info text-decoration-none">+62 812-3626-2924</a>
+            </p>
+
+            <!-- Privacy & Terms -->
+            <p class="mb-0">
+                <a href="/Pages/privacy" class="text-info text-decoration-none">Privacy Policy</a> |
+                <a href="/Pages/terms" class="text-info text-decoration-none">Terms of Service</a>
+            </p>
+
+            <!-- Social Media -->
+            <div class="mt-2">
+                <a href="https://facebook.com" class="text-dark me-3"><i class="bi bi-facebook"></i></a>
+                <a href="https://instagram.com" class="text-dark me-3"><i class="bi bi-instagram"></i></a>
+                <a href="https://twitter.com" class="text-dark"><i class="bi bi-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+</div>
+<!-- DEBUG-VIEW ENDED 2 APPPATH\\Views\\layout\\footer.php -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
+<!-- DEBUG-VIEW ENDED 3 APPPATH\\Views\\layout\\template.php -->
+
+<!-- DEBUG-VIEW ENDED 4 APPPATH\\Views\\order.php -->
+', 'contoh.pdf')
+21 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderController->generatePdf()
+22 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+23 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+24 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+25 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+26 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+27 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-13 07:57:04 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 503320576 bytes)
+【Previous Exception】
+ErrorException
+Undefined array key "19f82e8a8eaad99a12374e6169dc26ae'http://www.w3.org/2000/svg' viewbox='0 0 16 16' fill='none' stroke='%23212529' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5l8 11l14 5'/%3e%3c/svg%3e"
+#0 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Css\Stylesheet.php(1473): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 1473)
+#1 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Css\Style.php(2212): Dompdf\Css\Stylesheet->resolve_url('url("blob://19f...', true)
+#2 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Css\Style.php(1904): Dompdf\Css\Style->_get_background_image('url("blob://19f...')
+#3 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer\AbstractRenderer.php(68): Dompdf\Css\Style->__get('background_imag...')
+#4 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer\Inline.php(57): Dompdf\Renderer\AbstractRenderer->_render_background(Object(Dompdf\FrameDecorator\Inline), Array)
+#5 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(305): Dompdf\Renderer\Inline->render(Object(Dompdf\FrameDecorator\Inline))
+#6 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(117): Dompdf\Renderer->_render_frame('inline', Object(Dompdf\FrameDecorator\Inline))
+#7 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Inline))
+#8 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#9 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#10 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#11 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#12 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#13 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#14 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#15 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#16 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(905): Dompdf\FrameReflower\Page->reflow(NULL)
+#17 C:\xampp\htdocs\Project\Spin Cycle\vendor\dompdf\dompdf\src\Dompdf.php(808): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+#18 C:\xampp\htdocs\Project\Spin Cycle\app\Libraries\PdfService.php(33): Dompdf\Dompdf->render()
+#19 C:\xampp\htdocs\Project\Spin Cycle\app\Controllers\OrderController.php(100): App\Libraries\PdfService->generate('<!-- DEBUG-VIEW...', 'contoh.pdf')
+#20 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\OrderController->generatePdf()
+#21 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+#22 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#23 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#24 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#25 C:\xampp\htdocs\Project\Spin Cycle\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#26 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#27 {main}
+[Method: GET, Route: test-download]
+in APPPATH\Views\errors\html\error_exception.php on line 131.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-06-13 08:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 08:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 08:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:22:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:23:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:23:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:23:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:24:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:24:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:24:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:24:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:24:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:24:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:24:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:25:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:25:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:27:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:27:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:28:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:28:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:28:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:28:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:29:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:31:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:31:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:31:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:31:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:32:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:33:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:33:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:34:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:34:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:34:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:35:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:35:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:35:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:35:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:35:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:35:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:36:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:36:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:36:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 12:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 13:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 13:55:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 13:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:03:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:03:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:04:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:05:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:07:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:08:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:09:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:14:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:14:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:14:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:16:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:16:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:16:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:18:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:19:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:19:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:22:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:22:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:23:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:23:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:23:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:23:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:26:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:27:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:27:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:27:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:27:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:27:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:28:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:28:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:28:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:28:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:29:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:29:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:30:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:31:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:31:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:32:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:32:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:33:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:42:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:50:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:50:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 14:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:07:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:07:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:16:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:16:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:20:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:20:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:24:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:26:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:26:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:33:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:33:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:33:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:35:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:36:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:36:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:43:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:46:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:48:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:49:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:52:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:52:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:53:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:53:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:54:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:54:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:54:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 15:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 16:05:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 16:11:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 16:14:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 16:17:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 16:20:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 16:20:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 16:28:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 16:29:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 16:31:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 16:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 16:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 16:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 16:44:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 16:47:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 16:48:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 16:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 16:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 17:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 17:01:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 17:04:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 17:06:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 17:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 17:10:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 17:13:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 17:15:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 17:21:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-13 17:21:12 --> ErrorException: Undefined array key "express_available"
+[Method: GET, Route: Wash]
+in APPPATH\Views\wash.php on line 189.
+ 1 APPPATH\Views\wash.php(189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "express_available"', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\wash.php', 189)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\wash.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('wash', [], true)
+ 5 APPPATH\Controllers\Wash.php(32): view('wash', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Wash->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wash))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+DEBUG - 2025-06-13 17:21:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 17:24:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 17:25:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:07:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:09:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:12:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:12:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:12:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:14:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:14:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:15:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:15:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:17:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:17:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:18:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:18:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:18:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:18:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:18:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:18:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:18:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:19:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:19:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:19:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:19:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:40:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:54:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:54:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:55:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:55:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:56:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:56:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:57:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:57:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:57:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:57:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:59:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:59:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:59:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 18:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 19:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 19:05:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 19:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 19:07:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 19:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 19:08:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 19:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:16:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:18:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:19:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:21:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:22:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:22:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:24:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:24:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:25:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:26:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:27:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:28:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:31:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:32:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:35:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:35:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:35:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:36:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:37:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:42:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:44:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:44:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:55:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-13 20:55:39 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "sidebar-style-2.php"
+[Method: GET, Route: admin-sidebar-2]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sidebar-style-2.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('sidebar-style-2', [], true)
+ 3 APPPATH\Controllers\AdminController.php(13): view('sidebar-style-2')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->sidebarStyle2()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+DEBUG - 2025-06-13 20:55:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:55:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-13 20:55:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "sidebar-style-2.php"
+[Method: GET, Route: admin-sidebar-2]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sidebar-style-2.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('sidebar-style-2', [], true)
+ 3 APPPATH\Controllers\AdminController.php(13): view('sidebar-style-2')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->sidebarStyle2()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+DEBUG - 2025-06-13 20:57:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:57:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:57:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:57:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:57:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 20:58:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 21:00:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 21:00:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 21:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 21:02:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 21:06:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 21:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 21:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-13 21:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

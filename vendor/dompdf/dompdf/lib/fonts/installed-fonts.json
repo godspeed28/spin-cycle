@@ -1,0 +1,19 @@
+{
+    "font awesome 6 brands": {
+        "normal": "font_awesome_6_brands_normal_a85b0b4d76c5eec94d4b73b94b92492f"
+    },
+    "font awesome 6 free": {
+        "normal": "C:\\xampp\\htdocs\\Project\\Spin Cycle\\vendor\\dompdf\\dompdf\/lib\/fonts\/font_awesome_6_free_normal_5dbff9a44ba4b865039f2702f3d14e0b",
+        "900": "font_awesome_6_free_900_5a6089cfd772c59d12e6da222ee946ae"
+    },
+    "font awesome 5 brands": {
+        "normal": "font_awesome_5_brands_normal_a85b0b4d76c5eec94d4b73b94b92492f"
+    },
+    "font awesome 5 free": {
+        "900": "C:\\xampp\\htdocs\\Project\\Spin Cycle\\vendor\\dompdf\\dompdf\/lib\/fonts\/font_awesome_5_free_900_5a6089cfd772c59d12e6da222ee946ae",
+        "normal": "font_awesome_5_free_normal_5dbff9a44ba4b865039f2702f3d14e0b"
+    },
+    "fontawesome": {
+        "normal": "fontawesome_normal_e92f12b7646acac54a85fdf4539da707"
+    }
+}

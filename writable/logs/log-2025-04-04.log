@@ -1,0 +1,26 @@
+CRITICAL - 2025-04-04 07:49:18 --> Error: Class "Locale" not found
+[Method: GET, Route: /]
+in SYSTEMPATH\CodeIgniter.php on line 189.
+ 1 SYSTEMPATH\Boot.php(321): CodeIgniter\CodeIgniter->initialize()
+ 2 SYSTEMPATH\Boot.php(101): CodeIgniter\Boot::initializeCodeIgniter()
+ 3 ROOTPATH\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+CRITICAL - 2025-04-04 07:49:18 --> ErrorException: Uncaught Error: Class "Locale" not found in C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\I18n\TimeTrait.php:76
+Stack trace:
+#0 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\I18n\TimeTrait.php(117): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\HTTP\ResponseTrait.php(398): CodeIgniter\I18n\Time::now()
+#2 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\HTTP\ResponseTrait.php(376): CodeIgniter\HTTP\Response->sendHeaders()
+#3 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Debug\ExceptionHandler.php(85): CodeIgniter\HTTP\Response->send()
+#4 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Debug\Exceptions.php(162): CodeIgniter\Debug\ExceptionHandler->handle(Object(Error), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(Error))
+#6 {main}
+  thrown
+【Previous Exception】
+Error
+Class "Locale" not found
+#0 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(321): CodeIgniter\CodeIgniter->initialize()
+#1 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(101): CodeIgniter\Boot::initializeCodeIgniter()
+#2 C:\xampp\htdocs\Project\Spin Cycle\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#3 {main}
+[Method: GET, Route: /]
+in SYSTEMPATH\I18n\TimeTrait.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

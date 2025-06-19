@@ -267,7 +267,7 @@
                           </button>
                           <?= $order['no_resi'] ?>
                         </th>
-                        <td class="text-end"><?= ubahTanggalWaktu($order['tanggal'], $order['waktu']) ?></td>
+                        <td class="text-end"><?= $order['created_at'] ?></td>
                         <td class="text-end"><?= ubahRp($order['total_harga']) ?></td>
                         <td class="text-end">
                           <span class="badge badge-success"><?= $order['paid'] ? 'Sudah Bayar' : 'Belum Bayar' ?></span>

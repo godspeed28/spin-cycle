@@ -1,0 +1,227 @@
+CRITICAL - 2025-03-08 22:34:26 --> ErrorException: Undefined variable $base_url
+[Method: GET, Route: Pages]
+in APPPATH\Views\layout\header.php on line 26.
+ 1 APPPATH\Views\layout\header.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base_url', 'C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\app\\Views\\layout\\header.php', 26)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\app\\Views\\layout\\header.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layout/header', [], true)
+ 5 APPPATH\Controllers\Pages.php(9): view('layout/header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\public\\index.php')
+CRITICAL - 2025-03-08 22:34:33 --> ErrorException: Undefined variable $base_url
+[Method: GET, Route: Pages]
+in APPPATH\Views\layout\header.php on line 26.
+ 1 APPPATH\Views\layout\header.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base_url', 'C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\app\\Views\\layout\\header.php', 26)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\app\\Views\\layout\\header.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layout/header', [], true)
+ 5 APPPATH\Controllers\Pages.php(9): view('layout/header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\public\\index.php')
+CRITICAL - 2025-03-08 22:34:36 --> ErrorException: Undefined variable $base_url
+[Method: GET, Route: Pages/about]
+in APPPATH\Views\layout\header.php on line 26.
+ 1 APPPATH\Views\layout\header.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base_url', 'C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\app\\Views\\layout\\header.php', 26)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\app\\Views\\layout\\header.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layout/header', [], true)
+ 5 APPPATH\Controllers\Pages.php(15): view('layout/header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->about()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\public\\index.php')
+CRITICAL - 2025-03-08 22:34:57 --> ErrorException: Undefined variable $base_url
+[Method: GET, Route: Pages/about]
+in APPPATH\Views\layout\header.php on line 26.
+ 1 APPPATH\Views\layout\header.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base_url', 'C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\app\\Views\\layout\\header.php', 26)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\app\\Views\\layout\\header.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layout/header', [], true)
+ 5 APPPATH\Controllers\Pages.php(15): view('layout/header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->about()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\public\\index.php')
+CRITICAL - 2025-03-08 22:34:59 --> ErrorException: Undefined variable $base_url
+[Method: GET, Route: Pages/about]
+in APPPATH\Views\layout\header.php on line 26.
+ 1 APPPATH\Views\layout\header.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base_url', 'C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\app\\Views\\layout\\header.php', 26)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\app\\Views\\layout\\header.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layout/header', [], true)
+ 5 APPPATH\Controllers\Pages.php(15): view('layout/header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->about()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\public\\index.php')
+CRITICAL - 2025-03-08 22:40:07 --> ErrorException: Undefined variable $title
+[Method: GET, Route: Pages/about]
+in APPPATH\Views\layout\header.php on line 7.
+ 1 APPPATH\Views\layout\header.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\app\\Views\\layout\\header.php', 7)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\app\\Views\\layout\\header.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layout/header', [], true)
+ 5 APPPATH\Controllers\Pages.php(19): view('layout/header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->about()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\public\\index.php')
+CRITICAL - 2025-03-08 22:41:22 --> ErrorException: Undefined variable $title
+[Method: GET, Route: Pages/about]
+in APPPATH\Views\layout\header.php on line 7.
+ 1 APPPATH\Views\layout\header.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\app\\Views\\layout\\header.php', 7)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\app\\Views\\layout\\header.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layout/header', [], true)
+ 5 APPPATH\Controllers\Pages.php(22): view('layout/header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->about()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CodeIgniter-4\\Views - 4\\public\\index.php')
+CRITICAL - 2025-03-08 23:15:21 --> ParseError: Invalid numeric literal
+[Method: GET, Route: Pages/contact]
+in APPPATH\Controllers\Pages.php on line 27.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\xampp\\htdocs\\CodeIgniter-4\\View Layouts - 5\\vendor\\composer/../../app\\Controllers\\Pages.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\Pages')
+ 3 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Pages', true)
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CodeIgniter-4\\View Layouts - 5\\public\\index.php')
+CRITICAL - 2025-03-08 23:15:23 --> ParseError: Invalid numeric literal
+[Method: GET, Route: Pages/contact]
+in APPPATH\Controllers\Pages.php on line 27.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\xampp\\htdocs\\CodeIgniter-4\\View Layouts - 5\\vendor\\composer/../../app\\Controllers\\Pages.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\Pages')
+ 3 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Pages', true)
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CodeIgniter-4\\View Layouts - 5\\public\\index.php')
+CRITICAL - 2025-03-08 23:16:01 --> ParseError: Invalid numeric literal
+[Method: GET, Route: Pages/contact]
+in APPPATH\Controllers\Pages.php on line 27.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\xampp\\htdocs\\CodeIgniter-4\\View Layouts - 5\\vendor\\composer/../../app\\Controllers\\Pages.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\Pages')
+ 3 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Pages', true)
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CodeIgniter-4\\View Layouts - 5\\public\\index.php')
+CRITICAL - 2025-03-08 23:18:49 --> ParseError: Invalid numeric literal
+[Method: GET, Route: Pages/contact]
+in APPPATH\Controllers\Pages.php on line 28.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\xampp\\htdocs\\CodeIgniter-4\\View Layouts - 5\\vendor\\composer/../../app\\Controllers\\Pages.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\Pages')
+ 3 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Pages', true)
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CodeIgniter-4\\View Layouts - 5\\public\\index.php')
+CRITICAL - 2025-03-08 23:19:46 --> ParseError: Invalid numeric literal
+[Method: GET, Route: Pages/contact]
+in APPPATH\Controllers\Pages.php on line 28.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\xampp\\htdocs\\CodeIgniter-4\\View Layouts - 5\\vendor\\composer/../../app\\Controllers\\Pages.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\Pages')
+ 3 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Pages', true)
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CodeIgniter-4\\View Layouts - 5\\public\\index.php')
+CRITICAL - 2025-03-08 23:19:48 --> ParseError: Invalid numeric literal
+[Method: GET, Route: Pages/contact]
+in APPPATH\Controllers\Pages.php on line 28.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\xampp\\htdocs\\CodeIgniter-4\\View Layouts - 5\\vendor\\composer/../../app\\Controllers\\Pages.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\Pages')
+ 3 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Pages', true)
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CodeIgniter-4\\View Layouts - 5\\public\\index.php')
+CRITICAL - 2025-03-08 23:19:51 --> ParseError: Invalid numeric literal
+[Method: GET, Route: Pages/contact]
+in APPPATH\Controllers\Pages.php on line 28.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\xampp\\htdocs\\CodeIgniter-4\\View Layouts - 5\\vendor\\composer/../../app\\Controllers\\Pages.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\Pages')
+ 3 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Pages', true)
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CodeIgniter-4\\View Layouts - 5\\public\\index.php')
+CRITICAL - 2025-03-08 23:19:57 --> ParseError: Invalid numeric literal
+[Method: GET, Route: Pages/contact]
+in APPPATH\Controllers\Pages.php on line 28.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\xampp\\htdocs\\CodeIgniter-4\\View Layouts - 5\\vendor\\composer/../../app\\Controllers\\Pages.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\Pages')
+ 3 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Pages', true)
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CodeIgniter-4\\View Layouts - 5\\public\\index.php')
+CRITICAL - 2025-03-08 23:20:51 --> ParseError: Invalid numeric literal
+[Method: GET, Route: Pages/contact]
+in APPPATH\Controllers\Pages.php on line 28.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\xampp\\htdocs\\CodeIgniter-4\\View Layouts - 5\\vendor\\composer/../../app\\Controllers\\Pages.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\Pages')
+ 3 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Pages', true)
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CodeIgniter-4\\View Layouts - 5\\public\\index.php')
+CRITICAL - 2025-03-08 23:22:26 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: Pages/contact]
+in APPPATH\Views\pages\contact.php on line 9.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages/contact', [], true)
+ 4 APPPATH\Controllers\Pages.php(32): view('pages/contact', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->contact()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\CodeIgniter-4\\View Layouts - 5\\public\\index.php')

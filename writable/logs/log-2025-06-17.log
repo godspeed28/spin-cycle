@@ -1,0 +1,172 @@
+ERROR - 2025-06-17 09:08:34 --> Callback Raw Input: {"transaction_type":"off-us","transaction_time":"2025-06-17 16:08:33","transaction_status":"pending","transaction_id":"5205e186-4fdd-48a9-bdcb-2378af3759de","status_message":"midtrans payment notification","status_code":"201","signature_key":"f16702d4775d6e5db86065b92bea6ac917178b65c3fa2150bc30ec1bacdd43be0a71dc1526d6fd4733fe349646534a38d6f4edaf57b826635b7fe05a902e3960","payment_type":"qris","order_id":"SC202506170908110AE","merchant_id":"G932654042","gross_amount":"16000.00","fraud_status":"accept","expiry_time":"2025-06-17 16:23:33","currency":"IDR"}
+ERROR - 2025-06-17 09:08:34 --> Callback Midtrans (decoded): {"transaction_type":"off-us","transaction_time":"2025-06-17 16:08:33","transaction_status":"pending","transaction_id":"5205e186-4fdd-48a9-bdcb-2378af3759de","status_message":"midtrans payment notification","status_code":"201","signature_key":"f16702d4775d6e5db86065b92bea6ac917178b65c3fa2150bc30ec1bacdd43be0a71dc1526d6fd4733fe349646534a38d6f4edaf57b826635b7fe05a902e3960","payment_type":"qris","order_id":"SC202506170908110AE","merchant_id":"G932654042","gross_amount":"16000.00","fraud_status":"accept","expiry_time":"2025-06-17 16:23:33","currency":"IDR"}
+ERROR - 2025-06-17 09:09:53 --> Callback Raw Input: {"transaction_type":"on-us","transaction_time":"2025-06-17 16:08:33","transaction_status":"settlement","transaction_id":"5205e186-4fdd-48a9-bdcb-2378af3759de","status_message":"midtrans payment notification","status_code":"200","signature_key":"c95638948fba00f9b9f57dd59c7609cccc3006ce746d1b7ac865ed5bf394a17f7db40b7b9188183bb5147f6436743a420415bfebed56ebc98cbdd5eb59b3d474","settlement_time":"2025-06-17 16:09:50","payment_type":"qris","order_id":"SC202506170908110AE","merchant_id":"G932654042","issuer":"gopay","gross_amount":"16000.00","fraud_status":"accept","expiry_time":"2025-06-17 16:23:33","currency":"IDR","acquirer":"gopay"}
+ERROR - 2025-06-17 09:09:53 --> Callback Midtrans (decoded): {"transaction_type":"on-us","transaction_time":"2025-06-17 16:08:33","transaction_status":"settlement","transaction_id":"5205e186-4fdd-48a9-bdcb-2378af3759de","status_message":"midtrans payment notification","status_code":"200","signature_key":"c95638948fba00f9b9f57dd59c7609cccc3006ce746d1b7ac865ed5bf394a17f7db40b7b9188183bb5147f6436743a420415bfebed56ebc98cbdd5eb59b3d474","settlement_time":"2025-06-17 16:09:50","payment_type":"qris","order_id":"SC202506170908110AE","merchant_id":"G932654042","issuer":"gopay","gross_amount":"16000.00","fraud_status":"accept","expiry_time":"2025-06-17 16:23:33","currency":"IDR","acquirer":"gopay"}
+CRITICAL - 2025-06-17 18:54:04 --> ErrorException: Undefined array key "nama_pakaian"
+[Method: GET, Route: admin/orders/detail/4]
+in APPPATH\Views\admin\order_detail.php on line 38.
+ 1 APPPATH\Views\admin\order_detail.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_pakaian"', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/order_detail', [], true)
+ 5 APPPATH\Controllers\OrderAdminController.php(49): view('admin/order_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('4', '4')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-17 18:54:31 --> ErrorException: Array to string conversion
+[Method: GET, Route: admin/orders/detail/4]
+in APPPATH\Views\admin\order_detail.php on line 38.
+ 1 APPPATH\Views\admin\order_detail.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/order_detail', [], true)
+ 5 APPPATH\Controllers\OrderAdminController.php(49): view('admin/order_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('4', '4')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-17 18:58:45 --> ParseError: syntax error, unexpected variable "$item", expecting "," or ";"
+[Method: GET, Route: admin/orders/detail/4]
+in APPPATH\Views\admin\order_detail.php on line 39.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/order_detail', [], true)
+ 3 APPPATH\Controllers\OrderAdminController.php(49): view('admin/order_detail', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('4', '4')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-17 19:04:17 --> TypeError: implode(): Argument #2 ($array) must be of type ?array, string given
+[Method: GET, Route: admin/orders/detail/4]
+in APPPATH\Views\admin\order_detail.php on line 39.
+ 1 APPPATH\Views\admin\order_detail.php(39): implode(', ', 'Kaos')
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/order_detail', [], true)
+ 5 APPPATH\Controllers\OrderAdminController.php(49): view('admin/order_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('4', '4')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-17 19:59:44 --> ErrorException: Undefined variable $data2
+[Method: GET, Route: chart/sales]
+in APPPATH\Controllers\ChartController.php on line 84.
+ 1 APPPATH\Controllers\ChartController.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data2', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Controllers\\ChartController.php', 84)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ChartController->salesData()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-17 19:59:45 --> ErrorException: Undefined variable $data2
+[Method: GET, Route: chart/sales]
+in APPPATH\Controllers\ChartController.php on line 84.
+ 1 APPPATH\Controllers\ChartController.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data2', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Controllers\\ChartController.php', 84)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ChartController->salesData()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-17 20:07:26 --> ErrorException: Undefined array key "total"
+[Method: GET, Route: chart/sales]
+in APPPATH\Controllers\ChartController.php on line 83.
+ 1 APPPATH\Controllers\ChartController.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "total"', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Controllers\\ChartController.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ChartController->salesData()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-17 20:07:26 --> ErrorException: Undefined array key "total"
+[Method: GET, Route: chart/sales]
+in APPPATH\Controllers\ChartController.php on line 83.
+ 1 APPPATH\Controllers\ChartController.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "total"', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Controllers\\ChartController.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ChartController->salesData()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-17 20:08:01 --> ErrorException: Undefined array key "total"
+[Method: GET, Route: chart/sales]
+in APPPATH\Controllers\ChartController.php on line 83.
+ 1 APPPATH\Controllers\ChartController.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "total"', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Controllers\\ChartController.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ChartController->salesData()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-17 20:08:02 --> ErrorException: Undefined array key "total"
+[Method: GET, Route: chart/sales]
+in APPPATH\Controllers\ChartController.php on line 83.
+ 1 APPPATH\Controllers\ChartController.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "total"', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Controllers\\ChartController.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ChartController->salesData()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-17 20:52:08 --> ErrorException: Undefined array key "jumlah_order"
+[Method: GET, Route: chart/sales]
+in APPPATH\Controllers\ChartController.php on line 91.
+ 1 APPPATH\Controllers\ChartController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jumlah_order"', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Controllers\\ChartController.php', 91)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ChartController->salesData()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-17 20:52:09 --> ErrorException: Undefined array key "jumlah_order"
+[Method: GET, Route: chart/sales]
+in APPPATH\Controllers\ChartController.php on line 91.
+ 1 APPPATH\Controllers\ChartController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jumlah_order"', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Controllers\\ChartController.php', 91)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ChartController->salesData()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-17 20:52:18 --> ErrorException: Undefined array key "jumlah_order"
+[Method: GET, Route: chart/sales]
+in APPPATH\Controllers\ChartController.php on line 91.
+ 1 APPPATH\Controllers\ChartController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jumlah_order"', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Controllers\\ChartController.php', 91)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ChartController->salesData()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-17 20:52:19 --> ErrorException: Undefined array key "jumlah_order"
+[Method: GET, Route: chart/sales]
+in APPPATH\Controllers\ChartController.php on line 91.
+ 1 APPPATH\Controllers\ChartController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jumlah_order"', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Controllers\\ChartController.php', 91)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ChartController->salesData()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChartController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')

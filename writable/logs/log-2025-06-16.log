@@ -1,0 +1,456 @@
+ERROR - 2025-06-16 07:04:18 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'spincycle', 3306, '', 0)
+#1 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\Project\Spin Cycle\app\Controllers\Pages.php(21): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Pages->index()
+#7 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#8 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Project\Spin Cycle\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#4 C:\xampp\htdocs\Project\Spin Cycle\app\Controllers\Pages.php(21): CodeIgniter\Model->countAllResults()
+#5 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Pages->index()
+#6 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\Project\Spin Cycle\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-06-16 07:04:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `orders`
+WHERE `user_id` IS NULL', [], false)
+ 3 SYSTEMPATH\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 4 APPPATH\Controllers\Pages.php(21): CodeIgniter\Model->countAllResults()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-16 08:35:43 --> ErrorException: Undefined variable $validation
+[Method: GET, Route: profil/detail/1]
+in APPPATH\Views\admin\setting_profil.php on line 33.
+ 1 APPPATH\Views\admin\setting_profil.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\setting_profil.php', 33)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\setting_profil.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/setting_profil', [], true)
+ 5 APPPATH\Controllers\ProfilController.php(27): view('admin/setting_profil', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfilController->detail('1', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfilController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-16 08:39:07 --> ErrorException: Undefined variable $validation
+[Method: GET, Route: profil/detail/1]
+in APPPATH\Views\admin\setting_profil.php on line 33.
+ 1 APPPATH\Views\admin\setting_profil.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\setting_profil.php', 33)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\setting_profil.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/setting_profil', [], true)
+ 5 APPPATH\Controllers\ProfilController.php(27): view('admin/setting_profil', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfilController->detail('1', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfilController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-16 08:41:31 --> ErrorException: Undefined array key "phone"
+[Method: GET, Route: profil/detail/1]
+in APPPATH\Views\admin\setting_profil.php on line 47.
+ 1 APPPATH\Views\admin\setting_profil.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "phone"', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\setting_profil.php', 47)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\setting_profil.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/setting_profil', [], true)
+ 5 APPPATH\Controllers\ProfilController.php(28): view('admin/setting_profil', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProfilController->detail('1', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfilController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-16 10:39:14 --> Error: Call to undefined function ubahTanggalWaktu()
+[Method: GET, Route: admin/orders/detail/3]
+in APPPATH\Views\admin\order_detail.php on line 30.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/order_detail', [], true)
+ 4 APPPATH\Controllers\OrderAdminController.php(39): view('admin/order_detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('3', '3')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+ERROR - 2025-06-16 10:53:16 --> mysqli_sql_exception: Unknown column 'user_di' in 'where clause' in C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jenis_l...', 0)
+#1 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jenis_l...')
+#2 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jenis_l...')
+#3 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jenis_l...', Array, false)
+#4 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Model.php(928): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Project\Spin Cycle\app\Controllers\OrderAdminController.php(39): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('2', '2')
+#7 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+#8 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Project\Spin Cycle\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\Project\Spin Cycle\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-06-16 10:53:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'user_di' in 'where clause'
+[Method: GET, Route: admin/orders/detail/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jenis_layanan`
+FROM `orders`
+WHERE `user_di` = :user_di:', [...], false)
+ 2 SYSTEMPATH\Model.php(928): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\OrderAdminController.php(39): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('2', '2')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-16 10:53:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'user_di' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jenis_layanan`
+FROM `orders`
+WHERE `user_di` = \'2\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jenis_layanan`
+FROM `orders`
+WHERE `user_di` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jenis_layanan`
+FROM `orders`
+WHERE `user_di` = :user_di:', [...], false)
+ 4 SYSTEMPATH\Model.php(928): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\OrderAdminController.php(39): CodeIgniter\Model->__call('get', [])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('2', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-16 10:53:16 --> [Caused by] mysqli_sql_exception: Unknown column 'user_di' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jenis_layanan`
+FROM `orders`
+WHERE `user_di` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jenis_layanan`
+FROM `orders`
+WHERE `user_di` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jenis_layanan`
+FROM `orders`
+WHERE `user_di` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jenis_layanan`
+FROM `orders`
+WHERE `user_di` = :user_di:', [...], false)
+ 5 SYSTEMPATH\Model.php(928): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\OrderAdminController.php(39): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('2', '2')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-16 10:53:32 --> Error: Object of class stdClass could not be converted to string
+[Method: GET, Route: admin/orders/detail/2]
+in SYSTEMPATH\Database\Query.php on line 337.
+ 1 SYSTEMPATH\Database\Query.php(337): strtr('SELECT `harga_per_kg`
+FROM `layanan`
+WHERE `nama` = :nama:', [...])
+ 2 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('SELECT `harga_per_kg`
+FROM `layanan`
+WHERE `nama` = :nama:', [...])
+ 3 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `harga_per_kg`
+FROM `layanan`
+WHERE `nama` = :nama:', [...], false)
+ 6 SYSTEMPATH\Model.php(928): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\OrderAdminController.php(40): CodeIgniter\Model->__call('get', [])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('2', '2')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-16 10:53:39 --> Error: Object of class stdClass could not be converted to string
+[Method: GET, Route: admin/orders/detail/2]
+in SYSTEMPATH\Database\Query.php on line 337.
+ 1 SYSTEMPATH\Database\Query.php(337): strtr('SELECT `harga_per_kg`
+FROM `layanan`
+WHERE `nama` = :nama:', [...])
+ 2 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('SELECT `harga_per_kg`
+FROM `layanan`
+WHERE `nama` = :nama:', [...])
+ 3 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `harga_per_kg`
+FROM `layanan`
+WHERE `nama` = :nama:', [...], false)
+ 6 SYSTEMPATH\Model.php(928): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\OrderAdminController.php(40): CodeIgniter\Model->__call('get', [])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('2', '2')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-16 10:57:17 --> TypeError: number_format(): Argument #1 ($num) must be of type float, stdClass given
+[Method: GET, Route: admin/orders/detail/1]
+in APPPATH\Helpers\my_helper.php on line 10.
+ 1 APPPATH\Helpers\my_helper.php(10): number_format(Object(stdClass), 0, ',', '.')
+ 2 APPPATH\Views\admin\order_detail.php(34): ubahRp(Object(stdClass))
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/order_detail', [], true)
+ 6 APPPATH\Controllers\OrderAdminController.php(55): view('admin/order_detail', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('1', '1')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-16 10:57:34 --> TypeError: number_format(): Argument #1 ($num) must be of type float, stdClass given
+[Method: GET, Route: admin/orders/detail/1]
+in APPPATH\Helpers\my_helper.php on line 10.
+ 1 APPPATH\Helpers\my_helper.php(10): number_format(Object(stdClass), 0, ',', '.')
+ 2 APPPATH\Views\admin\order_detail.php(34): ubahRp(Object(stdClass))
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/order_detail', [], true)
+ 6 APPPATH\Controllers\OrderAdminController.php(55): view('admin/order_detail', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('1', '1')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-16 10:57:46 --> TypeError: number_format(): Argument #1 ($num) must be of type float, stdClass given
+[Method: GET, Route: admin/orders/detail/1]
+in APPPATH\Helpers\my_helper.php on line 10.
+ 1 APPPATH\Helpers\my_helper.php(10): number_format(Object(stdClass), 0, ',', '.')
+ 2 APPPATH\Views\admin\order_detail.php(34): ubahRp(Object(stdClass))
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/order_detail', [], true)
+ 6 APPPATH\Controllers\OrderAdminController.php(54): view('admin/order_detail', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('1', '1')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-16 10:59:20 --> ErrorException: Attempt to read property "harga_per_kg" on null
+[Method: GET, Route: admin/orders/detail/1]
+in APPPATH\Views\admin\order_detail.php on line 34.
+ 1 APPPATH\Views\admin\order_detail.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "harga_per_kg" on null', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php', 34)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/order_detail', [], true)
+ 5 APPPATH\Controllers\OrderAdminController.php(45): view('admin/order_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('1', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-16 10:59:43 --> ErrorException: Undefined variable $layanan
+[Method: GET, Route: admin/orders/detail/1]
+in APPPATH\Views\admin\order_detail.php on line 34.
+ 1 APPPATH\Views\admin\order_detail.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $layanan', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php', 34)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/order_detail', [], true)
+ 5 APPPATH\Controllers\OrderAdminController.php(45): view('admin/order_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('1', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-16 11:00:32 --> ErrorException: Undefined variable $layanan
+[Method: GET, Route: admin/orders/detail/1]
+in APPPATH\Views\admin\order_detail.php on line 34.
+ 1 APPPATH\Views\admin\order_detail.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $layanan', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php', 34)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/order_detail', [], true)
+ 5 APPPATH\Controllers\OrderAdminController.php(54): view('admin/order_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('1', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-16 11:00:32 --> ErrorException: Undefined variable $layanan
+[Method: GET, Route: admin/orders/detail/1]
+in APPPATH\Views\admin\order_detail.php on line 34.
+ 1 APPPATH\Views\admin\order_detail.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $layanan', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php', 34)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/order_detail', [], true)
+ 5 APPPATH\Controllers\OrderAdminController.php(54): view('admin/order_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('1', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-16 11:00:33 --> ErrorException: Undefined variable $layanan
+[Method: GET, Route: admin/orders/detail/1]
+in APPPATH\Views\admin\order_detail.php on line 34.
+ 1 APPPATH\Views\admin\order_detail.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $layanan', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php', 34)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/order_detail', [], true)
+ 5 APPPATH\Controllers\OrderAdminController.php(54): view('admin/order_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('1', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+CRITICAL - 2025-06-16 11:03:38 --> ErrorException: Attempt to read property "harga_per_kg" on null
+[Method: GET, Route: admin/orders/detail/1]
+in APPPATH\Views\admin\order_detail.php on line 34.
+ 1 APPPATH\Views\admin\order_detail.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "harga_per_kg" on null', 'C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php', 34)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Project\\Spin Cycle\\app\\Views\\admin\\order_detail.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/order_detail', [], true)
+ 5 APPPATH\Controllers\OrderAdminController.php(45): view('admin/order_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OrderAdminController->detail('1', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+ERROR - 2025-06-16 20:51:01 --> Callback Raw Input: {"va_numbers":[{"va_number":"540424485825255393","bank":"bri"}],"transaction_time":"2025-06-17 03:51:00","transaction_status":"pending","transaction_id":"51417813-408d-4694-b958-90aa66f7705f","status_message":"midtrans payment notification","status_code":"201","signature_key":"754ab7df12a5d66da86b845b47a9b8f4c28a54ba95958358944963d55e5e8fad1a83a87637eceac7154fae2a9c5a43402ac60149e245a53d4773234741cb50aa","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC20250616205051F5A","merchant_id":"G932654042","gross_amount":"20000.00","fraud_status":"accept","expiry_time":"2025-06-18 03:50:59","currency":"IDR"}
+ERROR - 2025-06-16 20:51:01 --> Callback Midtrans (decoded): {"va_numbers":[{"va_number":"540424485825255393","bank":"bri"}],"transaction_time":"2025-06-17 03:51:00","transaction_status":"pending","transaction_id":"51417813-408d-4694-b958-90aa66f7705f","status_message":"midtrans payment notification","status_code":"201","signature_key":"754ab7df12a5d66da86b845b47a9b8f4c28a54ba95958358944963d55e5e8fad1a83a87637eceac7154fae2a9c5a43402ac60149e245a53d4773234741cb50aa","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC20250616205051F5A","merchant_id":"G932654042","gross_amount":"20000.00","fraud_status":"accept","expiry_time":"2025-06-18 03:50:59","currency":"IDR"}
+ERROR - 2025-06-16 20:51:21 --> Callback Raw Input: {"va_numbers":[{"va_number":"540424485825255393","bank":"bri"}],"transaction_time":"2025-06-17 03:51:00","transaction_status":"settlement","transaction_id":"51417813-408d-4694-b958-90aa66f7705f","status_message":"midtrans payment notification","status_code":"200","signature_key":"2b2ea50febfe7a245b4abbadfb6d546ebd47ac6b933c042053fc4114259d28d53b00adc912b8db9c9867375c55940888bf27cf1d19c2b4eb697bcc6c89c4804c","settlement_time":"2025-06-17 03:51:20","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC20250616205051F5A","merchant_id":"G932654042","gross_amount":"20000.00","fraud_status":"accept","expiry_time":"2025-06-18 03:50:59","currency":"IDR"}
+ERROR - 2025-06-16 20:51:21 --> Callback Midtrans (decoded): {"va_numbers":[{"va_number":"540424485825255393","bank":"bri"}],"transaction_time":"2025-06-17 03:51:00","transaction_status":"settlement","transaction_id":"51417813-408d-4694-b958-90aa66f7705f","status_message":"midtrans payment notification","status_code":"200","signature_key":"2b2ea50febfe7a245b4abbadfb6d546ebd47ac6b933c042053fc4114259d28d53b00adc912b8db9c9867375c55940888bf27cf1d19c2b4eb697bcc6c89c4804c","settlement_time":"2025-06-17 03:51:20","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC20250616205051F5A","merchant_id":"G932654042","gross_amount":"20000.00","fraud_status":"accept","expiry_time":"2025-06-18 03:50:59","currency":"IDR"}
+CRITICAL - 2025-06-16 21:20:19 --> Error: Call to a member function insert() on null
+[Method: POST, Route: checkout/proses]
+in APPPATH\Controllers\Checkout.php on line 62.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Checkout->proses()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+ERROR - 2025-06-16 21:22:48 --> Callback Raw Input: {"va_numbers":[{"va_number":"540422721942020267","bank":"bri"}],"transaction_time":"2025-06-17 04:22:47","transaction_status":"pending","transaction_id":"f3e9d65d-d274-4ae4-a510-c5fb63a11cc6","status_message":"midtrans payment notification","status_code":"201","signature_key":"692552cf40c9802d6990959789f309f98e6e53c446e4c9643d554f61297acbeef9a72ba0fe71034cd887625c9f3e309ec92fa044d0d453722dad09dfaac81189","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC20250616212150F99","merchant_id":"G932654042","gross_amount":"25000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:22:47","currency":"IDR"}
+ERROR - 2025-06-16 21:22:48 --> Callback Midtrans (decoded): {"va_numbers":[{"va_number":"540422721942020267","bank":"bri"}],"transaction_time":"2025-06-17 04:22:47","transaction_status":"pending","transaction_id":"f3e9d65d-d274-4ae4-a510-c5fb63a11cc6","status_message":"midtrans payment notification","status_code":"201","signature_key":"692552cf40c9802d6990959789f309f98e6e53c446e4c9643d554f61297acbeef9a72ba0fe71034cd887625c9f3e309ec92fa044d0d453722dad09dfaac81189","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC20250616212150F99","merchant_id":"G932654042","gross_amount":"25000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:22:47","currency":"IDR"}
+ERROR - 2025-06-16 21:28:39 --> Callback Raw Input: {"va_numbers":[{"va_number":"540421110852486398","bank":"bri"}],"transaction_time":"2025-06-17 04:28:38","transaction_status":"pending","transaction_id":"aa3722c7-194d-437b-8262-cc19855ac6e0","status_message":"midtrans payment notification","status_code":"201","signature_key":"fe61b81637bcaf55a70576a110bdc84009b06aa1f8d6a2d9f7c66d18b3f22ae3f7e210bf87ace8b77a3f5d588a5f03a150971ea05cbfcec272300614b11b6a1d","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC202506162124309FF","merchant_id":"G932654042","gross_amount":"25000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:28:38","currency":"IDR"}
+ERROR - 2025-06-16 21:28:39 --> Callback Midtrans (decoded): {"va_numbers":[{"va_number":"540421110852486398","bank":"bri"}],"transaction_time":"2025-06-17 04:28:38","transaction_status":"pending","transaction_id":"aa3722c7-194d-437b-8262-cc19855ac6e0","status_message":"midtrans payment notification","status_code":"201","signature_key":"fe61b81637bcaf55a70576a110bdc84009b06aa1f8d6a2d9f7c66d18b3f22ae3f7e210bf87ace8b77a3f5d588a5f03a150971ea05cbfcec272300614b11b6a1d","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC202506162124309FF","merchant_id":"G932654042","gross_amount":"25000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:28:38","currency":"IDR"}
+ERROR - 2025-06-16 21:35:30 --> Callback Raw Input: {"va_numbers":[{"va_number":"540420377811292926","bank":"bri"}],"transaction_time":"2025-06-17 04:35:29","transaction_status":"pending","transaction_id":"02a5449d-d991-4132-b996-1a48693aa9bd","status_message":"midtrans payment notification","status_code":"201","signature_key":"782bf3c88cc654b0cc865dc1b21b075f05d918290e05a93c1b82c52deeea5cd1b1118f5160c0d488d0f46b05af195264a7c606ce0d42328fe669efdda903114b","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC202506162134356D1","merchant_id":"G932654042","gross_amount":"23000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:35:28","currency":"IDR"}
+ERROR - 2025-06-16 21:35:30 --> Callback Midtrans (decoded): {"va_numbers":[{"va_number":"540420377811292926","bank":"bri"}],"transaction_time":"2025-06-17 04:35:29","transaction_status":"pending","transaction_id":"02a5449d-d991-4132-b996-1a48693aa9bd","status_message":"midtrans payment notification","status_code":"201","signature_key":"782bf3c88cc654b0cc865dc1b21b075f05d918290e05a93c1b82c52deeea5cd1b1118f5160c0d488d0f46b05af195264a7c606ce0d42328fe669efdda903114b","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC202506162134356D1","merchant_id":"G932654042","gross_amount":"23000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:35:28","currency":"IDR"}
+ERROR - 2025-06-16 21:35:44 --> Callback Raw Input: {"va_numbers":[{"va_number":"540420377811292926","bank":"bri"}],"transaction_time":"2025-06-17 04:35:29","transaction_status":"settlement","transaction_id":"02a5449d-d991-4132-b996-1a48693aa9bd","status_message":"midtrans payment notification","status_code":"200","signature_key":"6ca8b88da5baae94e8641f4fd54930d821ec930de9b7c0fcd50274cd7037b1e4c7639caa60b388f4c212677969e00ce04f82dd2e78d08c48facebc04d75e2adc","settlement_time":"2025-06-17 04:35:44","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC202506162134356D1","merchant_id":"G932654042","gross_amount":"23000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:35:28","currency":"IDR"}
+ERROR - 2025-06-16 21:35:44 --> Callback Midtrans (decoded): {"va_numbers":[{"va_number":"540420377811292926","bank":"bri"}],"transaction_time":"2025-06-17 04:35:29","transaction_status":"settlement","transaction_id":"02a5449d-d991-4132-b996-1a48693aa9bd","status_message":"midtrans payment notification","status_code":"200","signature_key":"6ca8b88da5baae94e8641f4fd54930d821ec930de9b7c0fcd50274cd7037b1e4c7639caa60b388f4c212677969e00ce04f82dd2e78d08c48facebc04d75e2adc","settlement_time":"2025-06-17 04:35:44","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC202506162134356D1","merchant_id":"G932654042","gross_amount":"23000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:35:28","currency":"IDR"}
+CRITICAL - 2025-06-16 21:35:45 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: checkout/callback]
+in SYSTEMPATH\BaseModel.php on line 1830.
+ 1 SYSTEMPATH\BaseModel.php(1830): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\BaseModel.php(805): CodeIgniter\BaseModel->transformDataToArray(null, 'insert')
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert(null, true)
+ 4 APPPATH\Controllers\Checkout.php(142): CodeIgniter\Model->insert(null)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Checkout->callback()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+ERROR - 2025-06-16 21:36:21 --> Callback Raw Input: {"va_numbers":[{"va_number":"540420377811292926","bank":"bri"}],"transaction_time":"2025-06-17 04:35:29","transaction_status":"settlement","transaction_id":"02a5449d-d991-4132-b996-1a48693aa9bd","status_message":"midtrans payment notification","status_code":"200","signature_key":"6ca8b88da5baae94e8641f4fd54930d821ec930de9b7c0fcd50274cd7037b1e4c7639caa60b388f4c212677969e00ce04f82dd2e78d08c48facebc04d75e2adc","settlement_time":"2025-06-17 04:35:44","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC202506162134356D1","merchant_id":"G932654042","gross_amount":"23000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:35:28","currency":"IDR"}
+ERROR - 2025-06-16 21:36:21 --> Callback Midtrans (decoded): {"va_numbers":[{"va_number":"540420377811292926","bank":"bri"}],"transaction_time":"2025-06-17 04:35:29","transaction_status":"settlement","transaction_id":"02a5449d-d991-4132-b996-1a48693aa9bd","status_message":"midtrans payment notification","status_code":"200","signature_key":"6ca8b88da5baae94e8641f4fd54930d821ec930de9b7c0fcd50274cd7037b1e4c7639caa60b388f4c212677969e00ce04f82dd2e78d08c48facebc04d75e2adc","settlement_time":"2025-06-17 04:35:44","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC202506162134356D1","merchant_id":"G932654042","gross_amount":"23000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:35:28","currency":"IDR"}
+CRITICAL - 2025-06-16 21:36:21 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: checkout/callback]
+in SYSTEMPATH\BaseModel.php on line 1830.
+ 1 SYSTEMPATH\BaseModel.php(1830): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\BaseModel.php(805): CodeIgniter\BaseModel->transformDataToArray(null, 'insert')
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert(null, true)
+ 4 APPPATH\Controllers\Checkout.php(142): CodeIgniter\Model->insert(null)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Checkout->callback()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+ERROR - 2025-06-16 21:38:26 --> Callback Raw Input: {"va_numbers":[{"va_number":"540426042634856836","bank":"bri"}],"transaction_time":"2025-06-17 04:38:25","transaction_status":"pending","transaction_id":"c3fcb8a1-5b7b-4ef9-a96a-366964fc7ceb","status_message":"midtrans payment notification","status_code":"201","signature_key":"f5b99f1370ee873e5f8cbbcbd21ff3555268309d2e2c4cf4e68f410b91e8c8aa2b8ee051115a93a5386be256331deebd0df8feaf2a77fa47f7935de6df3de4b1","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC202506162138093BF","merchant_id":"G932654042","gross_amount":"29000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:38:25","currency":"IDR"}
+ERROR - 2025-06-16 21:38:26 --> Callback Midtrans (decoded): {"va_numbers":[{"va_number":"540426042634856836","bank":"bri"}],"transaction_time":"2025-06-17 04:38:25","transaction_status":"pending","transaction_id":"c3fcb8a1-5b7b-4ef9-a96a-366964fc7ceb","status_message":"midtrans payment notification","status_code":"201","signature_key":"f5b99f1370ee873e5f8cbbcbd21ff3555268309d2e2c4cf4e68f410b91e8c8aa2b8ee051115a93a5386be256331deebd0df8feaf2a77fa47f7935de6df3de4b1","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC202506162138093BF","merchant_id":"G932654042","gross_amount":"29000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:38:25","currency":"IDR"}
+ERROR - 2025-06-16 21:38:36 --> Callback Raw Input: {"va_numbers":[{"va_number":"540426042634856836","bank":"bri"}],"transaction_time":"2025-06-17 04:38:25","transaction_status":"settlement","transaction_id":"c3fcb8a1-5b7b-4ef9-a96a-366964fc7ceb","status_message":"midtrans payment notification","status_code":"200","signature_key":"69fa436522a101af7a1e8b538da5cb4ae846b963b30f93e06cc0a3c0ae7d83f860157d443ac3b6a0847fca88861024436d7c7a53104825f987bfc120b8640ef5","settlement_time":"2025-06-17 04:38:35","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC202506162138093BF","merchant_id":"G932654042","gross_amount":"29000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:38:25","currency":"IDR"}
+ERROR - 2025-06-16 21:38:36 --> Callback Midtrans (decoded): {"va_numbers":[{"va_number":"540426042634856836","bank":"bri"}],"transaction_time":"2025-06-17 04:38:25","transaction_status":"settlement","transaction_id":"c3fcb8a1-5b7b-4ef9-a96a-366964fc7ceb","status_message":"midtrans payment notification","status_code":"200","signature_key":"69fa436522a101af7a1e8b538da5cb4ae846b963b30f93e06cc0a3c0ae7d83f860157d443ac3b6a0847fca88861024436d7c7a53104825f987bfc120b8640ef5","settlement_time":"2025-06-17 04:38:35","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC202506162138093BF","merchant_id":"G932654042","gross_amount":"29000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:38:25","currency":"IDR"}
+CRITICAL - 2025-06-16 21:38:36 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: checkout/callback]
+in SYSTEMPATH\BaseModel.php on line 1830.
+ 1 SYSTEMPATH\BaseModel.php(1830): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\BaseModel.php(805): CodeIgniter\BaseModel->transformDataToArray(null, 'insert')
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert(null, true)
+ 4 APPPATH\Controllers\Checkout.php(142): CodeIgniter\Model->insert(null)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Checkout->callback()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+ERROR - 2025-06-16 21:39:13 --> Callback Raw Input: {"va_numbers":[{"va_number":"540426042634856836","bank":"bri"}],"transaction_time":"2025-06-17 04:38:25","transaction_status":"settlement","transaction_id":"c3fcb8a1-5b7b-4ef9-a96a-366964fc7ceb","status_message":"midtrans payment notification","status_code":"200","signature_key":"69fa436522a101af7a1e8b538da5cb4ae846b963b30f93e06cc0a3c0ae7d83f860157d443ac3b6a0847fca88861024436d7c7a53104825f987bfc120b8640ef5","settlement_time":"2025-06-17 04:38:35","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC202506162138093BF","merchant_id":"G932654042","gross_amount":"29000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:38:25","currency":"IDR"}
+ERROR - 2025-06-16 21:39:13 --> Callback Midtrans (decoded): {"va_numbers":[{"va_number":"540426042634856836","bank":"bri"}],"transaction_time":"2025-06-17 04:38:25","transaction_status":"settlement","transaction_id":"c3fcb8a1-5b7b-4ef9-a96a-366964fc7ceb","status_message":"midtrans payment notification","status_code":"200","signature_key":"69fa436522a101af7a1e8b538da5cb4ae846b963b30f93e06cc0a3c0ae7d83f860157d443ac3b6a0847fca88861024436d7c7a53104825f987bfc120b8640ef5","settlement_time":"2025-06-17 04:38:35","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC202506162138093BF","merchant_id":"G932654042","gross_amount":"29000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:38:25","currency":"IDR"}
+CRITICAL - 2025-06-16 21:39:13 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: checkout/callback]
+in SYSTEMPATH\BaseModel.php on line 1830.
+ 1 SYSTEMPATH\BaseModel.php(1830): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\BaseModel.php(805): CodeIgniter\BaseModel->transformDataToArray(null, 'insert')
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert(null, true)
+ 4 APPPATH\Controllers\Checkout.php(142): CodeIgniter\Model->insert(null)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Checkout->callback()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Project\\Spin Cycle\\public\\index.php')
+ERROR - 2025-06-16 21:43:37 --> Callback Raw Input: {"va_numbers":[{"va_number":"540429137795265785","bank":"bri"}],"transaction_time":"2025-06-17 04:43:36","transaction_status":"pending","transaction_id":"2e453712-0446-4f11-8f5c-fd3ae88944aa","status_message":"midtrans payment notification","status_code":"201","signature_key":"43271ef2ff4f6879db5895dadc396e872d40be26e979a7373622a17946e2126056f25c10d36a9519187c9942c83d5e734f64a7af2aef66f5ec8fb27ddcb55ed0","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC2025061621422831F","merchant_id":"G932654042","gross_amount":"40000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:43:36","currency":"IDR"}
+ERROR - 2025-06-16 21:43:37 --> Callback Midtrans (decoded): {"va_numbers":[{"va_number":"540429137795265785","bank":"bri"}],"transaction_time":"2025-06-17 04:43:36","transaction_status":"pending","transaction_id":"2e453712-0446-4f11-8f5c-fd3ae88944aa","status_message":"midtrans payment notification","status_code":"201","signature_key":"43271ef2ff4f6879db5895dadc396e872d40be26e979a7373622a17946e2126056f25c10d36a9519187c9942c83d5e734f64a7af2aef66f5ec8fb27ddcb55ed0","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC2025061621422831F","merchant_id":"G932654042","gross_amount":"40000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:43:36","currency":"IDR"}
+ERROR - 2025-06-16 21:43:53 --> Callback Raw Input: {"va_numbers":[{"va_number":"540429137795265785","bank":"bri"}],"transaction_time":"2025-06-17 04:43:36","transaction_status":"settlement","transaction_id":"2e453712-0446-4f11-8f5c-fd3ae88944aa","status_message":"midtrans payment notification","status_code":"200","signature_key":"cae1aa3322c8026b68ecd68ccc41d368864d79671565543354758bdb519dbe14eff67c4f225cddb46940eded19273229d27d617592846f6623d78bbf263cd19b","settlement_time":"2025-06-17 04:43:52","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC2025061621422831F","merchant_id":"G932654042","gross_amount":"40000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:43:36","currency":"IDR"}
+ERROR - 2025-06-16 21:43:53 --> Callback Midtrans (decoded): {"va_numbers":[{"va_number":"540429137795265785","bank":"bri"}],"transaction_time":"2025-06-17 04:43:36","transaction_status":"settlement","transaction_id":"2e453712-0446-4f11-8f5c-fd3ae88944aa","status_message":"midtrans payment notification","status_code":"200","signature_key":"cae1aa3322c8026b68ecd68ccc41d368864d79671565543354758bdb519dbe14eff67c4f225cddb46940eded19273229d27d617592846f6623d78bbf263cd19b","settlement_time":"2025-06-17 04:43:52","payment_type":"bank_transfer","payment_amounts":[],"order_id":"SC2025061621422831F","merchant_id":"G932654042","gross_amount":"40000.00","fraud_status":"accept","expiry_time":"2025-06-18 04:43:36","currency":"IDR"}
