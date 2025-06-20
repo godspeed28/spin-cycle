@@ -5,18 +5,21 @@ namespace App\Controllers;
 use App\Models\OrderModel;
 use App\Models\LayananModel;
 use App\Models\OrderItemsModel;
+use App\Models\UserModel;
 
 class OrderAdminController extends BaseController
 {
     protected $orderModel;
     protected $layananModel;
     protected $itemModel;
+    protected $userModel;
 
     public function __construct()
     {
         $this->orderModel = new OrderModel();
         $this->layananModel = new LayananModel();
         $this->itemModel = new OrderItemsModel();
+        $this->userModel = new UserModel();
     }
 
     public function index()
@@ -41,6 +44,9 @@ class OrderAdminController extends BaseController
         $order = $this->orderModel->find($id);
         $items = $this->itemModel->where('order_id', $id)->findAll();
         $orderJenisLayanan = $order['jenis_layanan'];
+
+        $user = $this->userModel->find($order['user_id']);
+
         $layanan = $this->layananModel->select('harga_per_kg')->where('nama', $orderJenisLayanan)->get()->getRow();
         if (!$order) {
             return redirect()->to('order')->with('error', 'Pesanan tidak ditemukan');
@@ -50,7 +56,8 @@ class OrderAdminController extends BaseController
             'title' => 'Detail Pesanan',
             'order' => $order,
             'hargaLayanan' => $layanan,
-            'items' => $items
+            'items' => $items,
+            'user' => $user
         ]);
     }
 

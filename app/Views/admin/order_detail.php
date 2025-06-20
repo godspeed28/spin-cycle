@@ -22,6 +22,14 @@
                         <td><?= esc($order['nama']) ?></td>
                     </tr>
                     <tr>
+                        <th>Email</th>
+                        <td><?= esc($user['email']) ?></td>
+                    </tr>
+                    <tr>
+                        <th>No Tel</th>
+                        <td><?= esc($user['no_telp']) ?></td>
+                    </tr>
+                    <tr>
                         <th>Alamat</th>
                         <td><?= esc($order['alamat']) ?></td>
                     </tr>
