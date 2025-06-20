@@ -46,6 +46,9 @@
                 <a class="nav-link <?= (uri_string() == 'Pages/services') ? 'active-nav' : '' ?>" href="/Pages/services">Services</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link <?= (uri_string() == 'Pages/prices') ? 'active-nav' : '' ?>" href="/Pages/prices">Prices</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link <?= (uri_string() == 'Pages/contact') ? 'active-nav' : '' ?>" href="/Pages/contact">Contact</a>
             </li>
 

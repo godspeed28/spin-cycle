@@ -9,6 +9,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', [\App\Controllers\Pages::class, 'index']);
 $routes->get('/Pages/about', [\App\Controllers\Pages::class, 'about']);
 $routes->get('/Pages/services', [\App\Controllers\Pages::class, 'services']);
+$routes->get('/Pages/prices', [\App\Controllers\Pages::class, 'prices']);
 $routes->get('/Pages/contact', [\App\Controllers\Pages::class, 'contact']);
 $routes->get('/washfold', [\App\Controllers\ServicesItemController::class, 'washfold']);
 $routes->get('/expresslaundry', [\App\Controllers\ServicesItemController::class, 'expresslaundry']);
