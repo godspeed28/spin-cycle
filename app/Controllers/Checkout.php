@@ -51,7 +51,7 @@ class Checkout extends BaseController
             'jenis_pakaian' => json_encode($this->request->getPost('jenis_pakaian')),
             'metode_pembayaran' => $metode,
             'paid' => ($metode != 'COD') ? 0 : 0,
-            'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
+            'count' => model('OrderModel')->where('status !=', 'selesai')->where('user_id', $userId)->countAllResults()
         ];
 
         $namaPakaian = $this->request->getPost('nama_pakaian');

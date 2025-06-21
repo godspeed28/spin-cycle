@@ -14,6 +14,28 @@ function remove_underscore(string $text, string $replaceWith = ' '): string
     return str_replace('_', $replaceWith, $text);
 }
 
+function maskEmail($email)
+{
+    $parts = explode("@", $email);
+    $name = $parts[0];
+    $domain = $parts[1];
+
+    // Ambil 2 huruf pertama, sisanya diganti bintang
+    $maskedName = substr($name, 0, 2) . str_repeat("*", max(0, strlen($name) - 2));
+
+    return $maskedName . "@" . $domain;
+}
+
+function maskPhone($phone)
+{
+    $len = strlen($phone);
+    if ($len <= 2) {
+        return $phone; // terlalu pendek, tampilkan saja
+    }
+    return str_repeat("*", $len - 2) . substr($phone, -2);
+}
+
+
 function getPendapatanHariIni()
 {
     $orderModel = new OrderModel();

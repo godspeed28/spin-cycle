@@ -83,7 +83,7 @@
                         <div id="output" class="mt-3"></div>
                         <div class="mb-3 mt-3">
                             <label class="form-label" style="text-align: left !important; display:block;"></label>
-                            <textarea class="custom-border rounded-0 form-control  <?= (isset($validation) && $validation->hasError('alamat')) ? 'is-invalid' : ''; ?>" placeholder="Alamat penjemputan" name="alamat" rows="3"><?= old('alamat') ?></textarea>
+                            <textarea class="custom-border rounded-0 form-control  <?= (isset($validation) && $validation->hasError('alamat')) ? 'is-invalid' : ''; ?>" placeholder="Alamat penjemputan" name="alamat" rows="3"><?= old('alamat', $user['alamat'] ?? '') ?></textarea>
                             <div class="invalid-feedback">
                                 <?php if (isset($validation)): ?>
                                     <?= $validation->getError('alamat'); ?>

@@ -91,7 +91,7 @@
                 <div class="dropdown">
                     <i style="margin:10px;" type="button" data-bs-toggle="dropdown" aria-expanded="false" class="dropdown-toggle fas fs-4 fa-user-cog"></i>
                     <ul class="dropdown-menu" style=" margin-top: 10px;">
-                        <li><a class="dropdown-item" href="#">Akun Saya</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('profil-customer') ?>">Akun Saya</a></li>
                         <li><a class="dropdown-item" href="/OrderController/">Pesanan Saya</a></li>
                         <li><a class="dropdown-item text-danger" href="/Login/logout">Logout</a></li>
                     </ul>

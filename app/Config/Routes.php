@@ -29,6 +29,11 @@ $routes->get('/generate-pdf', [\App\Controllers\ReportController::class, 'genera
 $routes->get('/generate-excel', [\App\Controllers\ReportController::class, 'exportExcel']);
 $routes->post('checkout/proses', [\App\Controllers\Checkout::class, 'proses']);
 $routes->get('checkout/success', [\App\Controllers\Checkout::class, 'success']);
+$routes->get('profil-customer', [\App\Controllers\ProfilCustomerController::class, 'index']);
+$routes->post('profil-customer/update', [\App\Controllers\ProfilCustomerController::class, 'update']);
+$routes->get('verify', [\App\Controllers\ProfilCustomerController::class, 'verify']);
+$routes->post('check', [\App\Controllers\ProfilCustomerController::class, 'check']);
+$routes->post('changePass', [\App\Controllers\ProfilCustomerController::class, 'changePass']);
 
 $routes->post('kirim-email', [\App\Controllers\EmailController::class, 'kirim']);
 

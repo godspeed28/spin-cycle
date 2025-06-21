@@ -36,7 +36,6 @@
                         <div class="card-body">
                             <h5 class="card-title text">Express Laundry</h5>
                             <p class="card-text">Layanan cepat, pakaian bersih dan rapi dalam 4–6 jam saja.</p>
-                            <br>
                             <a href="/expresslaundry" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
                         </div>
                     </div>
@@ -60,7 +59,7 @@
                         <img width="50" height="50" src="https://img.icons8.com/ios/50/iron.png" class="icon mx-auto mt-5" alt="ironing" />
                         <div class="card-body">
                             <h5 class="card-title text">Ironing Only</h5>
-                            <p class="card-text">Setrika pakaian kamu biar makin rapi dan siap dipakai.</p><br>
+                            <p class="card-text">Setrika pakaian kamu biar makin rapi dan siap dipakai.</p>
                             <a href="/ironingonly" class="bg-info text-light p-2 fw-bold text-decoration-none">More Info</a>
                         </div>
                     </div>

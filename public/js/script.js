@@ -26,10 +26,9 @@ if (carousel && dots.length > 0) {
   });
 }
 
-// Scroll to top button
 const scrollBtn = document.getElementById("scrollTopBtn");
 
-if (scrollBtn) {
+if (scrollBtn && window.location.pathname !== "/profil-customer") {
   window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
       scrollBtn.style.display = "block";
@@ -41,7 +40,10 @@ if (scrollBtn) {
   scrollBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+} else if (scrollBtn) {
+  scrollBtn.style.display = "none"; // Pastikan sembunyi jika di /profil-customer
 }
+
 
 // jam
 function updateClock() {

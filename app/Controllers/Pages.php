@@ -20,7 +20,7 @@ class Pages extends BaseController
             'title' => 'Home | Spin Cycle',
             'tel' => '+62 812-3626-2924',
             'phone' => '6281236262924',
-            'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
+            'count' => model('OrderModel')->where('status !=', 'selesai')->where('user_id', $userId)->countAllResults()
 
         ];
         return view('pages/home', $data);
@@ -36,7 +36,7 @@ class Pages extends BaseController
             'tel' => '+62 812-3626-2924',
             'test' => ['Alfa', 'Emen', 'Abe'],
             'phone' => '6281236262924',
-            'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
+            'count' => model('OrderModel')->where('status !=', 'selesai')->where('user_id', $userId)->countAllResults()
         ];
         return view('pages/about', $data);
     }
@@ -50,7 +50,7 @@ class Pages extends BaseController
             'title' => 'Services | Spin Cycle',
             'tel' => '+62 812-3626-2924',
             'phone' => '6281236262924',
-            'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
+            'count' => model('OrderModel')->where('status !=', 'selesai')->where('user_id', $userId)->countAllResults()
 
         ];
         return view('pages/services', $data);
@@ -89,7 +89,7 @@ class Pages extends BaseController
             'hargaLayanan' => $hargaLayanan,
             'items' => $dataItemModel,
             'itemsfull' => $dataPakaianModel,
-            'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
+            'count' => model('OrderModel')->where('status !=', 'selesai')->where('user_id', $userId)->countAllResults()
 
         ];
         return view('pages/prices', $data);
@@ -104,7 +104,7 @@ class Pages extends BaseController
             'title' => 'Contact | Spin Cycle',
             'tel' => '+62 812-3626-2924',
             'phone' => '6281236262924',
-            'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
+            'count' => model('OrderModel')->where('status !=', 'selesai')->where('user_id', $userId)->countAllResults()
 
         ];
         return view('pages/contact', $data);

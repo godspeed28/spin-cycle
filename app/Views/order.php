@@ -40,9 +40,6 @@
             <?php if (empty($orders)): ?>
                 <div class="alert alert-info">Belum ada pesanan.</div>
             <?php else: ?>
-                <p class="text-start">
-                    <a class="btn btn-primary rounded-0" href="/test-download"> 📄 Cetak Invoice </a>
-                </p>
                 <div class="accordion rounded-0" id="ordersAccordion">
                     <?php foreach ($orders as $index => $order): ?>
                         <div class="accordion-item mb-3 rounded-0">

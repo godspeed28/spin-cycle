@@ -14,6 +14,8 @@
         <?php endif; ?>
 
         <form action="/Login/auth" method="post">
+            <?= csrf_field() ?>
+
             <div class="mb-3 text-start">
                 <div class="input-group">
                     <span class="input-group-text rounded-0 bg-light">
@@ -32,11 +34,17 @@
                 </div>
             </div>
 
+            <div class="form-check d-flex mb-3">
+                <input class="form-check-input" type="checkbox" name="remember" id="remember">
+                <label class="form-check-label justify-content-start text-muted" for="remember">&nbsp;
+                    Ingat saya
+                </label>
+            </div>
+
             <button type="submit" class="btn btn-info rounded-0 text-white w-100">Login</button>
         </form>
 
         <p class="text-center mt-3">Belum punya akun? <a href="/Daftar/">Daftar</a></p>
-        
     </div>
 </div>
 <?= $this->endSection(); ?>

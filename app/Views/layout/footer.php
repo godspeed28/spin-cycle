@@ -27,3 +27,14 @@
         </div>
     </footer>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (window.location.href.includes("/profil-customer")) {
+            const scrollTopBtn = document.getElementById("scrollTopBtn");
+            if (scrollTopBtn) {
+                scrollTopBtn.style.display = "none"; // Sembunyikan tombol
+            }
+        }
+    });
+</script>

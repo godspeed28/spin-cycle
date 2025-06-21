@@ -17,7 +17,7 @@ class ServicesItemController extends BaseController
             'item' => 'Regular Wash & Fold',
             'tel' => '+62 812-3626-2924',
             'phone' => '6281236262924',
-            'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
+            'count' => model('OrderModel')->where('status !=', 'selesai')->where('user_id', $userId)->countAllResults()
 
         ];
         return view('pages/washfold', $data);
@@ -34,7 +34,7 @@ class ServicesItemController extends BaseController
             'item' => 'Express Laundry',
             'tel' => '+62 812-3626-2924',
             'phone' => '6281236262924',
-            'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
+            'count' => model('OrderModel')->where('status !=', 'selesai')->where('user_id', $userId)->countAllResults()
         ];
         return view('pages/expresslaundry', $data);
     }
@@ -50,7 +50,7 @@ class ServicesItemController extends BaseController
             'item' => 'Dry Cleaning',
             'tel' => '+62 812-3626-2924',
             'phone' => '6281236262924',
-            'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
+            'count' => model('OrderModel')->where('status !=', 'selesai')->where('status !=', 'selesai')->where('user_id', $userId)->countAllResults()
         ];
         return view('pages/drycleaning', $data);
     }
@@ -67,7 +67,7 @@ class ServicesItemController extends BaseController
             'item' => 'Ironing Only',
             'tel' => '+62 812-3626-2924',
             'phone' => '6281236262924',
-            'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
+            'count' => model('OrderModel')->where('status !=', 'selesai')->where('user_id', $userId)->countAllResults()
         ];
         return view('pages/ironingonly', $data);
     }

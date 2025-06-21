@@ -6,9 +6,15 @@ use CodeIgniter\HTTP\Request;
 
 use App\Models\PakaianModel;
 use App\Models\LayananModel;
+use App\Models\UserModel;
 
 class Wash extends BaseController
 {
+    protected $userModel;
+    public function __construct()
+    {
+        $this->userModel = new UserModel();
+    }
     public function index()
     {
         if (session()->get('logged_in_admin')) {
@@ -30,7 +36,8 @@ class Wash extends BaseController
             'validation' => session()->get('validation'),
             'pakaian' => $dataPakaianModel,
             'jenis_layanan' => $datalayananModel,
-            'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
+            'user' => $this->userModel->find($userId),
+            'count' => model('OrderModel')->where('status !=', 'selesai')->where('user_id', $userId)->countAllResults()
         ];
         return view('wash', $data);
     }
@@ -172,7 +179,7 @@ class Wash extends BaseController
             'noHp' => $noHp,
             'iconPakaian' => $pakaianIcon,
             'total_harga' => $total_harga,
-            'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
+            'count' => model('OrderModel')->where('status !=', 'selesai')->where('user_id', $userId)->countAllResults()
 
         ];
 

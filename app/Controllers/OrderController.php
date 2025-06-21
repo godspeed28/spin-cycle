@@ -25,9 +25,10 @@ class OrderController extends BaseController
         $orderItemModel = new OrderItemsModel();
 
         // Ambil semua pesanan milik user
-        $orders = $orderModel->where('user_id', $userId)->findAll();
-
-        // Ambil status untuk semua pesanan user
+        $orders = $orderModel
+            ->where('user_id', $userId)
+            ->where('status !=', 'selesai')
+            ->findAll();
 
         $data = [
             'title' => 'Orders | Spin Cycle',
@@ -37,7 +38,9 @@ class OrderController extends BaseController
             'icon' => 'list-alt',
             'orders' => $orders,
             'orderItem' => $orderItemModel->getItemsByUserId($userId),
-            'count' => model('OrderModel')->where('user_id', $userId)->countAllResults()
+            'count' => model('OrderModel')
+                ->where('status !=', 'selesai')
+                ->where('user_id', $userId)->countAllResults()
         ];
 
         return view('order', $data);

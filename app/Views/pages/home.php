@@ -262,7 +262,7 @@
 <hr class="text-info w-50 mx-auto">
 
 <div class="container d-md-flex mt-5">
-    <div class="container text-start mt-100px">
+    <div class="container text-start mt-10px">
         <p><b class="text-info">Get Your Clothes Collected & Delivered</b></p>
         <p class="intro-home">How We Work</p>
         <p style="max-width: 500px;">
