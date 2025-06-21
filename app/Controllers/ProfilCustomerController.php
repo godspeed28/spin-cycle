@@ -31,6 +31,7 @@ class ProfilCustomerController extends BaseController
 
         $data = [
             'title' => 'Profil | Spin Cycle',
+
             'tel' => '+62 812-3626-2924',
             'phone' => '6281236262924',
             'count' => model('OrderModel')->where('status !=', 'selesai')->where('user_id', $userId)->countAllResults(),
