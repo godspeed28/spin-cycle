@@ -50,6 +50,48 @@
 ### 1. Clone Repositori
 
 ```bash
-git clone https://github.com/username/spin-cycle.git
+git clone https://github.com/godspeed28/spin-cycle.git
 cd spin-cycle
+```
+
+### 2. Setup File .env
+
+```bash
+app.baseURL = 'http://localhost:8080/'
+database.default.hostname = localhost
+database.default.database = spin_cycle_db
+database.default.username = root
+database.default.password =
+database.default.DBDriver = MySQLi
+```
+
+### 3. Setup Database
+
+```bash
+php spark migrate
+php spark db:seed UserSeeder
+```
+
+### 4. Jalankan Aplikasi
+
+```bash
+php spark serve
+```
+
+### 🗂 Struktur Folder
+
+```bash
+spin-cycle/
+├── app/
+│   ├── Config/
+│   ├── Controllers/
+│   ├── Models/
+│   └── Views/
+├── public/
+│   ├── assets/
+│   └── index.php
+├── writable/
+├── .env
+├── composer.json
+└── README.md
 ```
