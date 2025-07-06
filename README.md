@@ -95,10 +95,16 @@ spin-cycle/
 └── README.md
 ```
 
+---
+
 ## 📄 Lisensi
 
 Aplikasi ini dilisensikan di bawah MIT License.
 
+---
+
 ## 🙌 Terima Kasih
 
 Terima kasih telah menggunakan Spin Cycle. Semoga aplikasi ini membantu mempermudah pengelolaan usaha laundry Anda. 💙
+
+---
