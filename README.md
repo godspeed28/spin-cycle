@@ -10,8 +10,6 @@
 - [Teknologi yang Digunakan](#teknologi-yang-digunakan)
 - [Instalasi](#instalasi)
 - [Struktur Folder](#struktur-folder)
-- [Akun Default](#akun-default)
-- [Screenshot](#screenshot)
 - [Lisensi](#lisensi)
 
 ---
