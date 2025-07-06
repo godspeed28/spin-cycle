@@ -77,7 +77,7 @@ php spark db:seed UserSeeder
 php spark serve
 ```
 
-### 🗂 Struktur Folder
+## 🗂 Struktur Folder
 
 ```bash
 spin-cycle/
@@ -95,7 +95,7 @@ spin-cycle/
 └── README.md
 ```
 
-### 📄 Lisensi
+## 📄 Lisensi
 
 MIT License
 
@@ -119,6 +119,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN  
 THE SOFTWARE.
 
-### 🙌 Terima Kasih
+## 🙌 Terima Kasih
 
 Terima kasih telah menggunakan Spin Cycle. Semoga aplikasi ini membantu mempermudah pengelolaan usaha laundry Anda. 💙
