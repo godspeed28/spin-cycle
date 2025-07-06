@@ -9,7 +9,7 @@
 </style>
 
 <div class="text-start d-flex flex-column bg-page">
-    <h5 class="align-self-start" style="margin-left:150px;"><a href="/" class="hover-menu text-decoration-none text-info">Home</a> / Wash</h5>
+    <h6 class="align-self-start" style="margin-left:150px;"><a href="/" class="hover-menu text-decoration-none text-info">Home</a> / Wash</h6>
     <br>
     <h1 class="align-self-start fw-bold" style="margin-left:150px;">Wash</h1>
 </div>
@@ -24,39 +24,29 @@
     <?php endif; ?>
 </div>
 
-<div class="container my-4">
-    <div class="card border-0 shadow-lg">
-        <div class="card-header bg-primary text-white rounded-top-3">
-            <div class="d-flex justify-content-between align-items-center">
-                <h4 class="mb-0"><i class="bi bi-bag-plus me-2"></i>PENJEMPUTAN LAUNDRY</h4>
-                <span class="badge bg-white text-primary fs-6">1 Langkah</span>
-            </div>
+<div class="container mt-5">
+    <div class="card shadow-none border-0">
+        <div class="card-header text-white rounded-0" style="background-color:rgb(247, 242, 242);">
+            <h4><i class="fs-5 fa fa-<?= $icon ?> me-2" style="color: black;"></i></h4>
         </div>
-
-        <div class="card-body p-4">
+        <div class="card-body p-4 text-start">
             <form id="pickupForm" action="<?= base_url('/Wash/checkout') ?>" method="post">
                 <?= csrf_field(); ?>
-
-                <!-- Progress Bar -->
-                <div class="progress mb-5" style="height: 8px;">
-                    <div class="progress-bar bg-success" style="width: 100%" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-
                 <!-- Bagian Informasi Pesanan -->
                 <div class="row g-4">
                     <!-- Kolom Kiri -->
                     <div class="col-lg-6">
-                        <div class="sticky-top" style="top: 20px;">
+                        <div class="sticky-top" style="top: 20px; z-index: 1;">
                             <!-- Informasi Pelanggan -->
-                            <div class="mb-4 p-3 bg-light rounded-2">
-                                <h5 class="fw-bold text-primary mb-3">
+                            <div class="mb-4 p-3 bg-light rounded-0">
+                                <h6 class="fw-bold text-dark mb-3">
                                     <i class="bi bi-person-circle me-2"></i>Informasi Pelanggan
-                                </h5>
+                                </h6>
 
                                 <div class="mb-3">
                                     <label class="form-label fw-semibold">Nama Lengkap <span class="text-danger">*</span></label>
                                     <input type="text" value="<?= old('nama') ?>"
-                                        class="form-control <?= (isset($validation) && $validation->hasError('nama') ? 'is-invalid' : ''); ?>"
+                                        class="form-control rounded-0  <?= (isset($validation) && $validation->hasError('nama') ? 'is-invalid' : ''); ?>"
                                         name="nama" placeholder="Nama sesuai KTP">
                                     <div class="invalid-feedback">
                                         <?= isset($validation) ? $validation->getError('nama') : '' ?>
@@ -65,7 +55,7 @@
 
                                 <div class="mb-3">
                                     <label class="form-label fw-semibold">Alamat Penjemputan <span class="text-danger">*</span></label>
-                                    <textarea class="form-control <?= (isset($validation) && $validation->hasError('alamat') ? 'is-invalid' : ''); ?>"
+                                    <textarea class="form-control rounded-0 <?= (isset($validation) && $validation->hasError('alamat') ? 'is-invalid' : ''); ?>"
                                         name="alamat" rows="3" placeholder="Lengkap dengan RT/RW dan patokan"><?= old('alamat', $user['alamat'] ?? '') ?></textarea>
                                     <div class="invalid-feedback">
                                         <?= isset($validation) ? $validation->getError('alamat') : '' ?>
@@ -77,14 +67,14 @@
                             </div>
 
                             <!-- Pilihan Layanan -->
-                            <div class="mb-4 p-3 bg-light rounded-2">
-                                <h5 class="fw-bold text-primary mb-3">
+                            <div class="mb-4 p-3 bg-light rounded-0">
+                                <h6 class="fw-bold text-dark mb-3">
                                     <i class="bi bi-list-check me-2"></i>Pilihan Layanan
-                                </h5>
+                                </h6>
 
                                 <div class="mb-3">
                                     <label class="form-label fw-semibold">Jenis Layanan <span class="text-danger">*</span></label>
-                                    <select class="form-select <?= (isset($validation) && $validation->hasError('jenis_layanan') ? 'is-invalid' : ''); ?>"
+                                    <select class="form-select rounded-0 <?= (isset($validation) && $validation->hasError('jenis_layanan') ? 'is-invalid' : ''); ?>"
                                         name="jenis_layanan" id="layananSelect">
                                         <option value="" disabled <?= old('jenis_layanan') ? '' : 'selected' ?>>-- Pilih Layanan --</option>
                                         <?php foreach ($jenis_layanan as $item) : ?>
@@ -102,7 +92,7 @@
                                 <div class="mb-3">
                                     <label class="form-label fw-semibold">Pilih Pakaian <span class="text-danger">*</span></label>
                                     <div class="input-group">
-                                        <select class="form-select" id="jenisPakaian">
+                                        <select class="form-select rounded-0" id="jenisPakaian">
                                             <option value="" selected disabled>-- Jenis Pakaian --</option>
                                             <?php foreach ($pakaian as $item): ?>
                                                 <option value="<?= $item['nama'] ?>" data-berat="<?= $item['berat'] ?>">
@@ -126,7 +116,7 @@
                                                     </span>
                                                     <div class="input-group" style="width: 120px;">
                                                         <button class="btn btn-outline-secondary btn-sm decrement" type="button">-</button>
-                                                        <input type="number" class="form-control form-control-sm text-center item-input"
+                                                        <input type="number" class="form-control rounded-0 form-control rounded-0-sm text-center item-input"
                                                             name="<?= $item['nama'] ?>" data-weight="<?= $item['berat'] ?>"
                                                             value="0" min="0">
                                                         <button class="btn btn-outline-secondary btn-sm increment" type="button">+</button>
@@ -140,14 +130,14 @@
                                     </div>
                                 </div>
 
-                                <div class="alert alert-info py-2 small" id="output">
+                                <div class="alert rounded-0 alert-info py-2 small" id="output">
                                     <div class="text-center">Belum ada pakaian dipilih</div>
                                 </div>
 
                                 <!-- Total Berat -->
                                 <div class="input-group mb-3">
-                                    <span class="input-group-text fw-semibold bg-white">Total Berat</span>
-                                    <input type="text" class="form-control fw-bold <?= (isset($validation) && $validation->hasError('berat') ? 'is-invalid' : ''); ?>"
+                                    <span class="input-group-text rounded-0 fw-semibold bg-white">Total Berat</span>
+                                    <input type="text" class="form-control rounded-0 fw-bold <?= (isset($validation) && $validation->hasError('berat') ? 'is-invalid' : ''); ?>"
                                         id="total_berat" name="berat" readonly>
                                     <span class="input-group-text bg-white">kg</span>
                                     <div class="invalid-feedback">
@@ -174,10 +164,10 @@
                     <!-- Kolom Kanan -->
                     <div class="col-lg-6">
                         <!-- Jadwal Penjemputan -->
-                        <div class="mb-4 p-3 bg-light rounded-2">
-                            <h5 class="fw-bold text-primary mb-3">
+                        <div class="mb-4 p-3 bg-light rounded-0">
+                            <h6 class="fw-bold text-dark mb-3">
                                 <i class="bi bi-calendar2-check me-2"></i>Jadwal Penjemputan
-                            </h5>
+                            </h6>
 
                             <div class="row g-2">
                                 <div class="col-md-6">
@@ -185,7 +175,7 @@
                                     <div class="input-group">
                                         <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
                                         <input type="date" value="<?= old('tanggal') ?>" name="tanggal" id="tanggal"
-                                            class="form-control" min="<?= date('Y-m-d') ?>">
+                                            class="form-control rounded-0" min="<?= date('Y-m-d') ?>">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -193,7 +183,7 @@
                                     <div class="input-group">
                                         <span class="input-group-text"><i class="bi bi-clock"></i></span>
                                         <input type="time" name="waktu" value="<?= old('waktu') ?>" id="waktu"
-                                            class="form-control">
+                                            class="form-control rounded-0">
                                     </div>
                                 </div>
                             </div>
@@ -201,11 +191,10 @@
                             <!-- Informasi Jam Operasional -->
                             <div class="alert alert-secondary mt-3 py-2 small">
                                 <div class="d-flex">
-                                    <i class="bi bi-info-circle-fill me-2 mt-1"></i>
                                     <div>
-                                        <h6 class="fw-bold mb-1">Jam Operasional:</h6>
+                                        <h6 class="fw-bold mb-1"> <i class="bi bi-info-circle-fill me-2 mt-1"></i>Jam Operasional:</h6>
                                         <ul class="mb-0">
-                                            <li><strong>Senin-Jumat:</strong> 08:00 - 17:00 WIB</li>
+                                            <li class="text-start"><strong>Senin-Jumat:</strong> 08:00 - 17:00 WIB</li>
                                             <li><strong>Sabtu-Minggu:</strong> 10:00 - 17:00 WIB</li>
                                         </ul>
                                         <p class="mb-0 mt-1"><strong>Layanan Express:</strong> Hanya untuk penjemputan sebelum jam 11:00</p>
@@ -215,12 +204,12 @@
                         </div>
 
                         <!-- Catatan Tambahan -->
-                        <div class="mb-4 p-3 bg-light rounded-2">
-                            <h5 class="fw-bold text-primary mb-3">
+                        <div class="mb-4 p-3 bg-light rounded-0">
+                            <h6 class="fw-bold text-dark mb-3">
                                 <i class="bi bi-pencil-square me-2"></i>Catatan Tambahan
-                            </h5>
+                            </h6>
 
-                            <textarea class="form-control" name="catatan" rows="5"
+                            <textarea class="form-control rounded-0" name="catatan" rows="5"
                                 placeholder="Contoh: 
 - Ada noda membandel di baju putih
 - Gunakan detergen khusus bayi
@@ -229,10 +218,10 @@
                         </div>
 
                         <!-- Ringkasan Biaya -->
-                        <div class="p-3 bg-light rounded-2">
-                            <h5 class="fw-bold text-primary mb-3">
+                        <div class="p-3 bg-light rounded-0">
+                            <h6 class="fw-bold text-dark mb-3">
                                 <i class="bi bi-receipt me-2"></i>Perkiraan Biaya
-                            </h5>
+                            </h6>
 
                             <div class="bg-white rounded-1 p-3 border">
                                 <div class="d-flex justify-content-between mb-2">
@@ -274,7 +263,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title" id="alamatModalLabel">Gunakan Lokasi Saat Ini</h5>
+                <h6 class="modal-title" id="alamatModalLabel">Gunakan Lokasi Saat Ini</h6>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -577,12 +566,74 @@
         console.log('Map initialized');
     });
 
-    // Konfirmasi lokasi
     document.getElementById('confirmLocation').addEventListener('click', function() {
-        // Implementasi geolocation akan ditambahkan di sini
-        showAlert('success', 'Lokasi Diterima', 'Lokasi Anda telah berhasil disimpan');
-        const modal = bootstrap.Modal.getInstance(document.getElementById('alamatModal'));
-        modal.hide();
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                function(position) {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+
+                    const apiKey = 'pk.bb4a60a3e125725f16bb0efbd3da2fae';
+
+                    fetch(`https://us1.locationiq.com/v1/reverse.php?key=${apiKey}&lat=${lat}&lon=${lon}&format=json`)
+                        .then(response => response.json())
+                        .then(data => {
+                            const alamat = data.display_name;
+                            document.querySelector('textarea[name="alamat"]').value = alamat;
+
+                            showAlert('success', 'Lokasi Ditemukan', 'Alamat Anda berhasil diisi otomatis dari lokasi saat ini.');
+                            const modal = bootstrap.Modal.getInstance(document.getElementById('alamatModal'));
+                            modal.hide();
+                        })
+                        .catch(error => {
+                            console.error(error);
+                            showAlert('error', 'Gagal Mengambil Alamat', 'Terjadi kesalahan saat mengambil alamat dari lokasi.');
+                        });
+                },
+                function(error) {
+                    showAlert('error', 'Izin Lokasi Ditolak', 'Tidak dapat mengakses lokasi. Pastikan izin lokasi sudah diaktifkan.');
+                }
+            );
+        } else {
+            showAlert('error', 'Browser Tidak Mendukung', 'Perangkat Anda tidak mendukung fitur lokasi.');
+        }
+    });
+
+    let map; // Global agar bisa diakses ulang
+    let marker;
+
+    document.getElementById('alamatModal').addEventListener('shown.bs.modal', function() {
+        if (!map) {
+            map = L.map('map').setView([0, 0], 13); // Set default awal
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+
+                    map.setView([lat, lon], 16);
+
+                    if (marker) {
+                        marker.setLatLng([lat, lon]);
+                    } else {
+                        marker = L.marker([lat, lon]).addTo(map)
+                            .bindPopup('Lokasi Anda Saat Ini')
+                            .openPopup();
+                    }
+                }, function(err) {
+                    console.error(err);
+                    showAlert('error', 'Gagal Mengakses Lokasi', 'Pastikan Anda memberikan izin lokasi ke browser.');
+                });
+            } else {
+                showAlert('error', 'Tidak Didukung', 'Browser tidak mendukung fitur lokasi.');
+            }
+        } else {
+            map.invalidateSize(); // Jika sudah ada, atur ulang tampilan
+        }
     });
 </script>
 
