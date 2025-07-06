@@ -24,7 +24,7 @@
 - 🧺 Pemilihan kategori pakaian berdasarkan jenis
 - ⚖️ Perhitungan berat otomatis per jenis pakaian
 - 🧾 Checkout dan pembayaran otomatis
-- 👥 Role user: Admin, Kasir, Pelanggan
+- 👥 Role user: admin, customer
 - 🔐 Sistem login aman dengan hash bcrypt
 - 📊 Laporan transaksi harian dan bulanan
 - 📱 Antarmuka responsif (mobile-friendly)
