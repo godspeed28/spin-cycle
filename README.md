@@ -10,7 +10,6 @@
 - [Teknologi yang Digunakan](#teknologi-yang-digunakan)
 - [Instalasi](#instalasi)
 - [Struktur Folder](#struktur-folder)
-- [Lisensi](#lisensi)
 
 ---
 
@@ -92,12 +91,6 @@ spin-cycle/
 ├── composer.json
 └── README.md
 ```
-
----
-
-## 📄 Lisensi
-
-Aplikasi ini dilisensikan di bawah MIT License.
 
 ---
 
